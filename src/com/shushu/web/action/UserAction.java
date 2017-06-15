@@ -90,14 +90,14 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 		// 上传头像
 		if (upload != null) {
 			String avatarName = UUID.randomUUID().toString();
-			String path = "/user/avatars/" + avatarName + "."
+			String path = "user/avatars/" + avatarName + "."
 					+ uploadFileName.split("\\.")[1];
 			File destFile = new File(ServletActionContext.getServletContext()
 					.getRealPath(path));
 			FileUtils.copyFile(upload, destFile);
 			user.setAvatarpath(path);
 		} else {
-			user.setAvatarpath("/user/avatars/f4d5575a-d5aa-4cdd-9898-fcd6aee28c2f.png");
+			user.setAvatarpath("user/avatars/f4d5575a-d5aa-4cdd-9898-fcd6aee28c2f.png");
 		}
 		// System.out.println(user.toString());
 		UserService userService = new UserService();
@@ -132,7 +132,7 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 		// 删除头像
 		user = userService.findById(user.getId());
 		if (!user.getAvatarpath().equals(
-				"/user/avatars/f4d5575a-d5aa-4cdd-9898-fcd6aee28c2f.png")) {
+				"user/avatars/f4d5575a-d5aa-4cdd-9898-fcd6aee28c2f.png")) {
 			File file = new File(ServletActionContext.getServletContext()
 					.getRealPath(user.getAvatarpath()));
 			file.delete();
@@ -183,7 +183,7 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 			// 用户上传了新头像
 			// 1.上传新头像
 			String avatarName = UUID.randomUUID().toString();
-			String path = "/user/avatars/" + avatarName + "."
+			String path = "user/avatars/" + avatarName + "."
 					+ uploadFileName.split("\\.")[1];
 			File destFile = new File(ServletActionContext.getServletContext()
 					.getRealPath(path));
@@ -192,7 +192,7 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 			// 2.删除旧头像
 			User oldUser = userService.findById(user.getId());
 			if (!oldUser.getAvatarpath().equals(
-					"/user/avatars/f4d5575a-d5aa-4cdd-9898-fcd6aee28c2f.png")) {
+					"user/avatars/f4d5575a-d5aa-4cdd-9898-fcd6aee28c2f.png")) {
 				File oldFile = new File(ServletActionContext
 						.getServletContext().getRealPath(
 								oldUser.getAvatarpath()));

@@ -381,11 +381,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									</li>
 									<li class="nav-parent">
 										<a>
-											<i class="fa fa-list-alt" aria-hidden="true"></i><span>Forms</span>
+											<i class="fa fa-list-alt" aria-hidden="true"></i><span>类别管理</span>
 										</a>
 										<ul class="nav nav-children">
-											<li><a href="form-elements.html"><span class="text"> Elements</span></a></li>
-											<li><a href="form-wizard.html"><span class="text"> Wizard</span></a></li>
+											<li><a href="form-elements.html"><span class="text">类别列表</span></a></li>
+											<li><a href="${pageContext.request.contextPath }/kind/kind-add.jsp"><span class="text"> 添加类别</span></a></li>
 											<li><a href="form-validation.html"><span class="text"> Validation</span></a></li>
 											<li><a href="form-dropzone.html"><span class="text"> Dropzone Upload</span></a></li>
 											<li><a href="form-editors.html"><span class="text"> Editors</span></a></li>
@@ -506,11 +506,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bk-vcenter text-center">                                
 												<div class="bk-avatar">
 													<%--<img src="assets/img/avatar.jpg" alt="" class="img-circle bk-img-120 bk-border-light-gray bk-border-3x" />--%>
-													<img id="preview" src="<s:if test="%{op=='login'}">
-														${loginUser.avatarpath }
+													<img id="preview" src="
+													<s:if test="%{op=='login'}">
+														 <s:property value="%{#session.loginUser.avatarpath}"/>
 													</s:if>
 													<s:elseif test="%{model==null}">
-														${loginUser.avatarpath }
+														 <s:property value="%{#session.loginUser.avatarpath}"/>
 													</s:elseif>
 													<s:else>
 														 <s:property value="model.avatarpath"/>
@@ -521,8 +522,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												</div>
 												<h4 class="bk-margin-top-10 bk-docs-font-weight-300">
 													<s:if test="%{op=='login'}">
-														${loginUser.name }
+													 <s:property value="%{#session.loginUser.name}"/>
 													</s:if>
+													<s:elseif test="%{model==null}">
+														 <s:property value="%{#session.loginUser.name}"/>
+													</s:elseif>
 													<s:else>
 														 <s:property value="model.name"/>
 													</s:else>
@@ -533,8 +537,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												<a class="col-xs-4 bk-bg-white bk-fg-primary bk-padding-top-20 bk-padding-bottom-20 text-center">
 													<i class="fa fa-phone">&nbsp;
 														<s:if test="%{op=='login'}">
-															${loginUser.tel }
+															 <s:property value="%{#session.loginUser.tel}"/>
 														</s:if>
+														<s:elseif test="%{model==null}">
+														 <s:property value="%{#session.loginUser.tel}"/>
+														</s:elseif>
 														<s:else>
 															 <s:property value="model.tel"/>
 														</s:else>
@@ -543,8 +550,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												<a class="col-xs-4 bk-bg-white bk-fg-success bk-padding-top-20 bk-padding-bottom-20 text-center">
 													<i class="fa fa-envelope">&nbsp;
 														<s:if test="%{op=='login'}">
-															${loginUser.email }
+															 <s:property value="%{#session.loginUser.email}"/>
 														</s:if>
+														<s:elseif test="%{model==null}">
+														 <s:property value="%{#session.loginUser.email}"/>
+														</s:elseif>
 														<s:else>
 															 <s:property value="model.email"/>
 														</s:else>
@@ -553,8 +563,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												<a class="col-xs-4 bk-bg-white bk-fg-danger bk-padding-top-20 bk-padding-bottom-20 text-center">
 													<i class="fa fa-male">&nbsp;
 														<s:if test="%{op=='login'}">
-															${loginUser.gender }
+															 <s:property value="%{#session.loginUser.gender}"/>
 														</s:if>
+														<s:elseif test="%{model==null}">
+														 <s:property value="%{#session.loginUser.gender}"/>
+														</s:elseif>
 														<s:else>
 															 <s:property value="model.gender"/>
 														</s:else>
@@ -688,51 +701,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 				<!-- End Main Page -->		
 		
-				<!-- Footer -->
-				<div id="footer">
-					<ul>
-						<li>
-							<div class="title">Memory</div>
-							<div class="bar">
-								<div class="progress light progress-sm  progress-striped active">
-									<div class="progress-bar progress-squared progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-										60%
-									</div>
-								</div>
-							</div>			
-							<div class="desc">4GB of 8GB</div>
-						</li>
-						<li>
-							<div class="title">HDD</div>
-							<div class="bar">
-								<div class="progress light progress-sm  progress-striped active">
-									<div class="progress-bar progress-squared progress-bar-primary" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-										40%
-									</div>
-								</div>
-							</div>			
-							<div class="desc">250GB of 1TB</div>
-						</li>
-						<li>
-							<div class="title">SSD</div>
-							<div class="bar">
-								<div class="progress light progress-sm  progress-striped active">
-									<div class="progress-bar progress-squared progress-bar-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-										70%
-									</div>
-								</div>
-							</div>			
-							<div class="desc">700GB of 1TB</div>
-						</li>
-						<li>
-							<div class="copyright">
-								<p class="text-muted text-right">Fire <i class="fa fa-coffee"></i> Collect from <a href="http://www.cssmoban.com/" title="ç½é¡µæ¨¡æ¿" target="_blank">ç½é¡µæ¨¡æ¿</a> - More Templates <a href="http://www.cssmoban.com/" target="_blank" title="æ¨¡æ¿ä¹å®¶">æ¨¡æ¿ä¹å®¶</a></p>
-							</div>
-						</li>				
-					</ul>	
-				</div>
-				<!-- End Footer -->
-			
+	
 			</div>
 		</div><!--/container-->
 			

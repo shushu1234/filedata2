@@ -213,8 +213,8 @@
 		var validated = $('#w4 form').valid();
 		if ( validated ) {
 			new PNotify({
-				title: 'Congratulations',
-				text: 'You completed the wizard form.',
+				title: '恭喜你',
+				text: '该文件已成功上传，等待管理员审核.',
 				type: 'custom',
 				addclass: 'notification-success',
 				icon: 'fa fa-check'

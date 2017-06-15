@@ -76,6 +76,11 @@
 				<param name="fileUpload.maximumSize">20971520</param>
 			</interceptor-ref>
 		</action>
+    	
+    	<!-- 类别操作 -->
+    	<action name="kind_*" class="com.shushu.web.action.KindAction" method="{1}">
+    		<result name="addSUCCESS">/user/user-info.jsp</result>
+    	</action>
     </package>
 
 </struts>

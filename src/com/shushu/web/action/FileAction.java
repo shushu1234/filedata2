@@ -26,6 +26,11 @@ public class FileAction extends ActionSupport implements
 	private String uploadContentType;
 	private String uploadFileName;
 	private List<UploadFile> uploadFiles;
+	private InputStream inputStream;
+
+	public void setInputStream(InputStream inputStream) {
+		this.inputStream = inputStream;
+	}
 
 	public void setUpload(File upload) {
 		this.upload = upload;
@@ -122,6 +127,9 @@ public class FileAction extends ActionSupport implements
 		uploadFileService.addDowncount(uploadFile.getId(),
 				uploadFile.getDowncount());
 		InputStream inputStream = new FileInputStream(file);
+		if (inputStream == null) {
+			this.addActionError("申请下载错误，请稍后再试，或联系管理员...");
+		}
 		System.out.println(inputStream);
 		return inputStream;
 	}
