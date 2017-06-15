@@ -107,7 +107,7 @@
 				.on('click', 'a.save-row', function( e ) {
 					e.preventDefault();
 
-					_self.rowSave( $(this).closest( 'tr' ) );table
+					_self.rowSave( $(this).closest( 'tr' ) );
 				})
 				.on('click', 'a.cancel-row', function( e ) {
 					e.preventDefault();

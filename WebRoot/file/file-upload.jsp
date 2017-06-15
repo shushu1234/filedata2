@@ -18,40 +18,40 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 		<!-- Favicon and touch icons -->
-		<link rel="shortcut icon" href="../assets/ico/favicon.ico" type="image/x-icon" />
-		<link rel="apple-touch-icon" href="../assets/ico/apple-touch-icon.png" />
-		<link rel="apple-touch-icon" sizes="57x57" href="../assets/ico/apple-touch-icon-57x57.png" />
-		<link rel="apple-touch-icon" sizes="72x72" href="../assets/ico/apple-touch-icon-72x72.png" />
-		<link rel="apple-touch-icon" sizes="76x76" href="../assets/ico/apple-touch-icon-76x76.png" />
-		<link rel="apple-touch-icon" sizes="114x114" href="../assets/ico/apple-touch-icon-114x114.png" />
-		<link rel="apple-touch-icon" sizes="120x120" href="../assets/ico/apple-touch-icon-120x120.png" />
-		<link rel="apple-touch-icon" sizes="144x144" href="../assets/ico/apple-touch-icon-144x144.png" />
-		<link rel="apple-touch-icon" sizes="152x152" href="../assets/ico/apple-touch-icon-152x152.png" />
+		<link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/ico/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="57x57" href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-76x76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-152x152.png" />
 		
 	    <!-- start: CSS file-->
 		
 		<!-- Vendor CSS-->
-		<link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-		<link href="../assets/vendor/skycons/css/skycons.css" rel="stylesheet" />
-		<link href="../assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-		<link href="../assets/vendor/css/pace.preloader.css" rel="stylesheet" />
+		<link href="${pageContext.request.contextPath}/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="${pageContext.request.contextPath}/assets/vendor/skycons/css/skycons.css" rel="stylesheet" />
+		<link href="${pageContext.request.contextPath}/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="${pageContext.request.contextPath}/assets/vendor/css/pace.preloader.css" rel="stylesheet" />
 		
 		<!-- Plugins CSS-->
-		<link href="../assets/plugins/bootkit/css/bootkit.css" rel="stylesheet" />
-		<link href="../assets/plugins/pnotify/css/pnotify.custom.css" rel="stylesheet" />
+		<link href="${pageContext.request.contextPath}/assets/plugins/bootkit/css/bootkit.css" rel="stylesheet" />
+		<link href="${pageContext.request.contextPath}/assets/plugins/pnotify/css/pnotify.custom.css" rel="stylesheet" />
 		
 		<!-- Theme CSS -->
-		<link href="../assets/css/jquery.mmenu.css" rel="stylesheet" />
+		<link href="${pageContext.request.contextPath}/assets/css/jquery.mmenu.css" rel="stylesheet" />
 		
 		<!-- Page CSS -->		
-		<link href="../assets/css/style.css" rel="stylesheet" />
-		<link href="../assets/css/add-ons.min.css" rel="stylesheet" />
+		<link href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet" />
+		<link href="${pageContext.request.contextPath}/assets/css/add-ons.min.css" rel="stylesheet" />
 		
 		<!-- end: CSS file-->	
 	    
 		
 		<!-- Head Libs -->
-		<script src="../assets/plugins/modernizr/js/modernizr.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/plugins/modernizr/js/modernizr.js"></script>
 		
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -122,35 +122,35 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								</li>
 								<li class="avatar">
 									<a href="page-inbox.html">
-										<img class="avatar" src="../assets/img/avatar1.jpg" alt="" />
+										<img class="avatar" src="${pageContext.request.contextPath}/assets/img/avatar1.jpg" alt="" />
 										<div><div class="point point-primary point-lg"></div>New message</div>
 										<span><small>1 minute ago</small></span>							
 									</a>
 								</li>
 								<li class="avatar">
 									<a href="page-inbox.html">
-										<img class="avatar" src="../assets/img/avatar2.jpg" alt="" />
+										<img class="avatar" src="${pageContext.request.contextPath}/assets/img/avatar2.jpg" alt="" />
 										<div><div class="point point-primary point-lg"></div>New message</div>
 										<span><small>3 minute ago</small></span>								
 									</a>
 								</li>
 								<li class="avatar">
 									<a href="page-inbox.html">
-										<img class="avatar" src="../assets/img/avatar3.jpg" alt="" />
+										<img class="avatar" src="${pageContext.request.contextPath}/assets/img/avatar3.jpg" alt="" />
 										<div><div class="point point-primary point-lg"></div>New message</div>
 										<span><small>4 minute ago</small></span>								
 									</a>
 								</li>
 								<li class="avatar">
 									<a href="page-inbox.html">
-										<img class="avatar" src="../assets/img/avatar4.jpg" alt="" />
+										<img class="avatar" src="${pageContext.request.contextPath}/assets/img/avatar4.jpg" alt="" />
 										<div><div class="point point-primary point-lg"></div>New message</div>
 										<span><small>30 minute ago</small></span>
 									</a>
 								</li>
 								<li class="avatar">
 									<a href="page-inbox.html">
-										<img class="avatar" src="../assets/img/avatar5.jpg" alt="" />
+										<img class="avatar" src="${pageContext.request.contextPath}/assets/img/avatar5.jpg" alt="" />
 										<div><div class="point point-primary point-lg"></div>New message</div>
 										<span><small>1 hours ago</small></span>
 									</a>
@@ -221,7 +221,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div class="userbox">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							<figure class="profile-picture hidden-xs">
-								<img src="../assets/img/avatar.jpg" class="img-circle" alt="" />
+								<img src="${pageContext.request.contextPath}/assets/img/avatar.jpg" class="img-circle" alt="" />
 							</figure>
 							<div class="profile-info">
 								<span class="name">John Smith Doe</span>
@@ -272,7 +272,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div class="sidebar-collapse">
 						<!-- Sidebar Header Logo-->
 						<div class="sidebar-header">
-							<img src="../assets/img/logo.png" class="img-responsive" alt="" />
+							<img src="${pageContext.request.contextPath}/assets/img/logo.png" class="img-responsive" alt="" />
 						</div>
 						<!-- Sidebar Menu-->
 						<div class="sidebar-menu">						
@@ -280,7 +280,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<ul class="nav nav-sidebar">
 									<div class="panel-body text-center">								
 										<div class="flag">
-											<img src="../assets/img/flags/USA.png" class="img-flags" alt="" />
+											<img src="${pageContext.request.contextPath}/assets/img/flags/USA.png" class="img-flags" alt="" />
 										</div>
 									</div>
 									<li>
@@ -582,26 +582,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<!-- start: JavaScript-->
 		
 		<!-- Vendor JS-->				
-		<script src="../assets/vendor/js/jquery.min.js"></script>
-		<script src="../assets/vendor/js/jquery-2.1.1.min.js"></script>
-		<script src="../assets/vendor/js/jquery-migrate-1.2.1.min.js"></script>
-		<script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-		<script src="../assets/vendor/skycons/js/skycons.js"></script>
-		<script src="../assets/vendor/js/pace.min.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/vendor/js/jquery.min.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/vendor/js/jquery-2.1.1.min.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/vendor/js/jquery-migrate-1.2.1.min.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/vendor/skycons/js/skycons.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/vendor/js/pace.min.js"></script>
 		
 		<!-- Plugins JS-->
-		<script src="../assets/plugins/autosize/jquery.autosize.min.js"></script>
-		<script src="../assets/plugins/jquery-validation/js/jquery.validate.js"></script>
-		<script src="../assets/plugins/wizard/js/jquery.bootstrap.wizard.min.js"></script>
-		<script src="../assets/plugins/pnotify/js/pnotify.custom.js"></script>
-		<script src="../assets/plugins/sparkline/js/jquery.sparkline.min.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/plugins/autosize/jquery.autosize.min.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/plugins/jquery-validation/js/jquery.validate.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/plugins/wizard/js/jquery.bootstrap.wizard.min.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/plugins/pnotify/js/pnotify.custom.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/plugins/sparkline/js/jquery.sparkline.min.js"></script>
 		
 		<!-- Theme JS -->		
-		<script src="../assets/js/jquery.mmenu.min.js"></script>
-		<script src="../assets/js/core.min.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/js/jquery.mmenu.min.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/js/core.min.js"></script>
 		
 		<!-- Pages JS -->
-		<script src="../assets/js/pages/form-wizard.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/js/pages/form-wizard.js"></script>
 		
 		<!-- end: JavaScript-->
 		

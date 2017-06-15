@@ -366,7 +366,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										<ul class="nav nav-children">
 											<li><a href="${pageContext.request.contextPath }/file/file-upload.jsp"><span class="text">文件上传</span></a></li>
 											<li><a href="${pageContext.request.contextPath }/file_list.action"><span class="text">文件查询</span></a></li>
-											<li><a href="ui-buttons.html"><span class="text"> Buttons</span></a></li>
+											<li><a href="${pageContext.request.contextPath }/file/file-detail.jsp">文件详情</span></a></li>
 											<li><a href="ui-progress-bars.html"><span class="text"> Progress Bars</span></a></li>
 											<li><a href="ui-sliders.html"><span class="text"> Sliders</span></a></li>
 											<li><a href="ui-panels.html"><span class="text"> Panels</span></a></li>

@@ -9605,7 +9605,7 @@
 		 *  @example
 		 *    $(document).ready( function() {
 		 *      $('#example').dataTable( {
-		 *        "lengthMenu": [[5, 10, 25, -1], [10, 25, 50, "All"]]
+		 *        "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
 		 *      } );
 		 *    } );
 		 */
@@ -10878,7 +10878,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sEmptyTable": "根据条件没有查询到任何相关项",
+			"sEmptyTable": "根据查询条件未找到任何相关项",
 	
 	
 			/**
@@ -10910,7 +10910,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "当前为 _START_ 到 _END_   总共 _TOTAL_  项",
+			"sInfo": "当前为 _START_ 到 _END_  总共 _TOTAL_ 项",
 	
 	
 			/**
@@ -10931,7 +10931,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoEmpty": "没有相关项",
+			"sInfoEmpty": "Showing 0 to 0 of 0 entries",
 	
 	
 			/**

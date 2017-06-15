@@ -226,4 +226,15 @@ public class FileAction extends ActionSupport implements
 		uploadFileService.delete(uploadFile.getId());
 		return "deleteSUCCESS";
 	}
+
+	/**
+	 * 文件详情查询
+	 * 
+	 * @return
+	 */
+	public String detail() {
+		UploadFileService uploadFileService = new UploadFileService();
+		uploadFile = uploadFileService.findById(uploadFile.getId());
+		return "detailSUCCESS";
+	}
 }

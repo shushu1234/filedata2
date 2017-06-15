@@ -25,8 +25,6 @@
 		<!-- 设置默认拦截器栈 -->
 		<default-interceptor-ref name="myStack"></default-interceptor-ref>
 		
-   
-    
 		<!-- 如果未登陆 定义全局结果集 -->
 		<global-results>
 			<result name="login">/user/user-login.jsp</result>
@@ -72,6 +70,7 @@
 			<result name="editviewSUCCESS">/file/file-edit.jsp</result>
 			<result name="editSUCCESS" type="redirectAction">file_list</result>
 			<result name="deleteSUCCESS" type="redirectAction">file_list</result>
+			<result name="detailSUCCESS">/file/file-detail.jsp</result>
 			<interceptor-ref name="defaultStack">
 				<!-- 限制最大上传文件大小为20M -->
 				<param name="fileUpload.maximumSize">20971520</param>
