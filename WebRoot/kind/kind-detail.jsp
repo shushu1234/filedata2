@@ -12,10 +12,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<!-- Basic -->
     	<meta charset="UTF-8" />
 
-		<title>Elements | Fire - Admin Template</title>
-
+		<title>Widgets | Fire - Admin Template</title>
+	   
 		<!-- Mobile Metas -->
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		
 
 		<!-- Favicon and touch icons -->
 		<link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/ico/favicon.ico" type="image/x-icon" />
@@ -36,23 +37,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<link href="${pageContext.request.contextPath}/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 		<link href="${pageContext.request.contextPath}/assets/vendor/css/pace.preloader.css" rel="stylesheet" />
 		
-		<!-- Plugins CSS-->
-		<link href="${pageContext.request.contextPath}/assets/plugins/bootkit/css/bootkit.css" rel="stylesheet" />	
-		<link href="${pageContext.request.contextPath}/assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" />
-		<link href="${pageContext.request.contextPath}/assets/plugins/bootstrap-datepicker/css/datepicker-theme.css" rel="stylesheet" />
-		<link href="${pageContext.request.contextPath}/assets/plugins/bootstrap-timepicker/css/bootstrap-timepicker.css" rel="stylesheet" />
-		<link href="${pageContext.request.contextPath}/assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css" rel="stylesheet" />
-		<link href="${pageContext.request.contextPath}/assets/plugins/bootstrap-tagsinput/css/bootstrap-tagsinput.css" rel="stylesheet" />
-		
-		<!-- Theme CSS -->
+		<!-- Plugins CSS-->	
+		<link href="${pageContext.request.contextPath}/assets/plugins/scrollbar/css/mCustomScrollbar.css" rel="stylesheet" />
+		<link href="${pageContext.request.contextPath}/assets/plugins/bootkit/css/bootkit.css" rel="stylesheet" />			
+		<link href="${pageContext.request.contextPath}/assets/plugins/jquery-ui/css/jquery-ui-1.10.4.min.css" rel="stylesheet" />
+		<link href="${pageContext.request.contextPath}/assets/plugins/magnific-popup/css/magnific-popup.css" rel="stylesheet" />
+		<link href="${pageContext.request.contextPath}/assets/plugins/pnotify/css/pnotify.custom.css" rel="stylesheet" />
+
+	<!-- Theme CSS -->
 		<link href="${pageContext.request.contextPath}/assets/css/jquery.mmenu.css" rel="stylesheet" />
 		
-		<!-- Page CSS -->
-		<link href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet" />		
-		
-		<!-- end: CSS file-->	
-	    
-		
+		<!-- Page CSS -->		
+		<link href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet" />
+		<link href="${pageContext.request.contextPath}/assets/css/add-ons.min.css" rel="stylesheet" />
+
+		<!-- end: CSS file-->
 		<!-- Head Libs -->
 		<script src="${pageContext.request.contextPath}/assets/plugins/modernizr/js/modernizr.js"></script>
 		
@@ -61,8 +60,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->		
-		
+		<![endif]-->
+
 	</head>
 	
 	<body>
@@ -336,7 +335,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											<li><a href="ui-animation.html"><span class="text"> Animation</span></a></li>											
 										</ul>
 									</li>
-									<li class="nav-parent nav-expanded active">
+									<li class="nav-parent">
 										<a>
 											<i class="fa fa-list-alt" aria-hidden="true"></i><span>Forms</span>
 										</a>
@@ -370,7 +369,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											<li><a href="chart-other.html"><span class="text"> Other</span></a></li>
 										</ul>
 									</li>									
-									<li>
+									<li class="active">
 										<a href="widgets.html">
 											<i class="fa fa-life-bouy" aria-hidden="true"></i><span>Widgets</span>
 										</a>
@@ -435,8 +434,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div>
 					<!-- End Sidebar Footer-->
 				</div>
-				<!-- End Sidebar -->			
-		
+				<!-- End Sidebar -->
+						
 				<!-- Main Page -->
 				<div class="main ">
 					<!-- Page Header -->
@@ -444,70 +443,124 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<div class="pull-left">
 							<ol class="breadcrumb visible-sm visible-md visible-lg">								
 								<li><a href="index.jsp"><i class="icon fa fa-home"></i>Home</a></li>
-								<li><a href="#"><i class="fa fa-list-alt"></i>Forms</a></li>
-								<li class="active"><i class="fa fa-indent"></i>Elements</li>
+								<li class="active"><i class="fa fa-life-bouy"></i>Widgets</li>
 							</ol>						
 						</div>
 						<div class="pull-right">
-							<h2>Form Elements</h2>
+							<h2>Widgets</h2>
 						</div>					
 					</div>
 					<!-- End Page Header -->
-
 					<div class="row">
-						<div class="col-lg-12">
-							<div class="panel panel-default bk-bg-white">
-								<div class="panel-heading bk-bg-white">
-									<h6><i class="fa fa-indent red"></i>添加类别</h6>
-									<div class="panel-actions">
-										<a href="#" class="btn-minimize"><i class="fa fa-caret-up"></i></a>
-										<a href="#" class="btn-close"><i class="fa fa-times"></i></a>
+						<div class="col-md-12">
+							<div class="panel bk-widget bk-border-off">
+								<div class="panel-body">
+									<div class="bk-bg-white text-center bk-padding-top-15 bk-padding-bottom-15">
+										<div class="row">
+											<div class="col-xs-8 text-left bk-vcenter">
+												<div class="">
+													<h2 class="bk-margin-off">类别详情</h2>
+												</div>
+											</div>
+											<div class="col-xs-4 bk-vcenter text-right">
+												<i class="fa fa-file fa-4x"></i>
+											</div>
+										</div>
 									</div>
-								</div>
-								<s:debug></s:debug>
-								<div class="panel-body bk-bg-white bk-padding-top-10 bk-padding-bottom-30">
-									<s:form cssClass="form-horizontal" namespace="/" method="post" action="kind_add" theme="simple">
-										<s:hidden name="parentid" value="%{#parameters.parentid}"></s:hidden>
-										<div class="form-group">
-											<div class="controls">
-												<div class="input-prepend input-group has-success">
-													<span class="input-group-addon">类别名称</span>
-<!-- 													<input id="prependedInput" class="form-control" size="16" type="text">
- -->													<s:textfield id="prependedInput" cssClass="form-control" name="name"></s:textfield>
-												</div>
-												<p class="help-block">请输入你要添加的类别</p>
+								
+									<ul class="list-group">
+										<li class="list-group-item">
+<%-- 											<s:text cssClass="badge bk-bg-info" ></s:text>
+ --%>											<span class="badge bk-bg-info" >
+ 													<s:property value="%{model.id}"/> </span>
+											类别id
+										</li>
+										<li class="list-group-item">
+											<span class="badge bk-bg-primary"><s:property value="%{model.name}"/></span>
+											类别名称
+										</li>
+										<li class="list-group-item">
+											<span class="badge bk-bg-inverse-darker"><s:property value="%{model.parentid}"/></span>
+											父级id
+										</li>
+										<li class="list-group-item">
+											<span class="badge bk-bg-warning"><s:property value="%{model.grade}"/></span>
+											层级
+										</li>
+										<li class="list-group-item">
+										<span class="badge bk-bg-info">
+											<s:if test="%{model.leaf==2}">
+												否
+											</s:if>
+											<s:else>
+												是
+											</s:else>
+										</span>
+											叶子节点
+										</li>										
+										<li class="list-group-item">
+
+											<span class="badge bk-bg-info">
+											<a class=" popup-with-zoom-anim btn btn-default" href="#small-dialog" style="background-color:#2dc9b7;font-size:10px;padding:0px;color:#fff;border-bottom:0px">点击查看详情</a>
+											</span>
+											<div id="small-dialog" class="dialog dialog-sm zoom-anim-dialog mfp-hide">
+											<h1>类别描述</h1>
+											<p><s:property value="%{model.descr}"/></p>
 											</div>
-										</div>
-										<div class="form-group">
-											<div class="controls">
-												<div class="input-prepend input-group has-feedback">
-													<span class="input-group-addon">类别描述</span>
-<!-- 													<input id="prependedInput" class="form-control" size="16" type="text">
- -->													<s:textfield id="prependedInput" cssClass="form-control" name="descr"></s:textfield>
-												</div>
-												<p class="help-block">请输入该类别的相关描述</p>
-											</div>
-										</div>
-										<div class="form-group col-md-12">
-											<button class="bk-margin-5 btn btn-labeled btn-success" type="submit" style="margin-right: 10px">
-												<span class="btn-label"><i class="fa fa-check"></i></span>提交
-											</button>
-											<button class="bk-margin-5 btn btn-labeled btn-info" type="reset">
-												<span class="btn-label"><i class="fa fa-refresh"></i></span>重置
-											</button>
-										</div>
-									</s:form>
+											类别描述
+										</li>
+									</ul>
+									<div>   
+                                           <%--  <s:a cssClass="btn btn-danger" action="file_delete" namespace="/">
+                                            	<s:param name="id" value="%{model.id}"></s:param>
+                                                 <i class="fa fa-trash-o "></i>
+                                            </s:a> --%>
+                                             <s:a cssClass="btn btn-info" action="kind_updateview" namespace="/">
+                                            	<s:param name="id" value="id"></s:param>
+                                                <i class="fa fa-edit "></i>
+                                            </s:a>
+                                             <a id="del" class="modal-basic btn btn-danger" href="#modalIcon" data-delid=%{model.id}><i class="fa fa-trash-o "></i></a>
+                                        <div id="modalIcon" class="modal-block modal-block-primary mfp-hide">
+                                        <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                        <h2 class="panel-title">请确认:</h2>
+                                        </div>
+                                        <div class="panel-body bk-noradius">
+                                        <div class="modal-wrapper">
+                                        <div class="modal-icon">
+                                        <i class="fa fa-question-circle"></i>
+                                        </div>
+                                        <div class="modal-text">
+                                        <p> 你确认要删除&nbsp;<span style="color:red;"
+	><s:property value="%{model.name}"></s:property></span>&nbsp;吗?</p>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div class="panel-footer">
+                                        <div class="row">
+                                        <div class="col-md-12 text-right">
+                                        <s:a action="kind_delete" namespace="/" >
+                                                 <s:param name="id" value="%{model.id}"></s:param>
+                                                 <button class="btn btn-info modal-confirm1" >确认</button>
+                                        </s:a>
+                                        <button class="btn btn-default modal-dismiss">取消</button>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        </div>
+                                      </div>
 								</div>
 							</div>
-						</div>
+					</div>
 					</div>
 				</div>
-				<!-- End Main Page -->			
-		
+				<!-- End Main Page -->
+
 
 			</div>
 		</div><!--/container-->
-			
+		
 		
 		<div class="clearfix"></div>		
 		
@@ -519,28 +572,48 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<script src="${pageContext.request.contextPath}/assets/vendor/js/jquery-2.1.1.min.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/vendor/js/jquery-migrate-1.2.1.min.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-		<script src="${pageContext.request.contextPath}/assets/vendor/skycons/js/skycons.js"></script>	
+		<script src="${pageContext.request.contextPath}/assets/vendor/skycons/js/skycons.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/vendor/js/pace.min.js"></script>
 		
 		<!-- Plugins JS-->
 		<script src="${pageContext.request.contextPath}/assets/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
-		<script src="${pageContext.request.contextPath}/assets/plugins/touchpunch/js/jquery.ui.touch-punch.min.js"></script>		
-		<script src="${pageContext.request.contextPath}/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-		<script src="${pageContext.request.contextPath}/assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
-		<script src="${pageContext.request.contextPath}/assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
-		<script src="${pageContext.request.contextPath}/assets/plugins/bootstrap-tagsinput/js/bootstrap-tagsinput.js"></script>
-		<script src="${pageContext.request.contextPath}/assets/plugins/maskedinput/js/jquery.maskedinput.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/plugins/scrollbar/js/jquery.mCustomScrollbar.concat.min.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/plugins/bootkit/js/bootkit.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/plugins/flot/js/jquery.flot.min.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/plugins/flot/js/jquery.flot.pie.min.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/plugins/flot/js/jquery.flot.resize.min.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/plugins/flot/js/jquery.flot.stack.min.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/plugins/flot/js/jquery.flot.time.min.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/plugins/flot-tooltip/js/jquery.flot.tooltip.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/plugins/sparkline/js/jquery.sparkline.min.js"></script>
-		
-		<!-- Theme JS -->		
+		<script src="${pageContext.request.contextPath}/assets/plugins/moment/js/moment.min.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/plugins/magnific-popup/js/magnific-popup.js"></script>
+	<script src="${pageContext.request.contextPath}/assets/plugins/pnotify/js/pnotify.custom.js"></script>
+
+	<!-- Theme JS -->
 		<script src="${pageContext.request.contextPath}/assets/js/jquery.mmenu.min.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/js/core.min.js"></script>
 		
 		<!-- Pages JS -->
-		<script src="${pageContext.request.contextPath}/assets/js/pages/form-elements.js"></script>
-		
-		<!-- end: JavaScript-->
-		
+		<script src="${pageContext.request.contextPath}/assets/js/pages/widgets.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/js/pages/ui-lightbox.js"></script>
+	<script src="${pageContext.request.contextPath}/assets/js/pages/ui-modals.js"></script>
+
+	<!-- end: JavaScript-->
+	<script type="text/javascript">
+	$(document).on('click', '#modal-confirm1', function (e) {
+		e.preventDefault();
+		$.magnificPopup.close();
+		var delid=$("#del").data('delid');
+		alert(delid);
+		new PNotify({
+			title: 'Success!',
+			text: 'Modal Confirm Message.',
+			type: 'success'
+		});
+	});
+
+	</script>
 	</body>
 	
 </html>

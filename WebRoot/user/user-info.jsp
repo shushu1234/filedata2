@@ -384,8 +384,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											<i class="fa fa-list-alt" aria-hidden="true"></i><span>类别管理</span>
 										</a>
 										<ul class="nav nav-children">
-											<li><a href="form-elements.html"><span class="text">类别列表</span></a></li>
-											<li><a href="${pageContext.request.contextPath }/kind/kind-add.jsp"><span class="text"> 添加类别</span></a></li>
+											<li><a href="${pageContext.request.contextPath }/kind_list.action">类别列表</span></a></li>
+											<li><a href="${pageContext.request.contextPath }/kind/kind-add.jsp"><span class="text"> 添加根类别</span></a></li>
 											<li><a href="form-validation.html"><span class="text"> Validation</span></a></li>
 											<li><a href="form-dropzone.html"><span class="text"> Dropzone Upload</span></a></li>
 											<li><a href="form-editors.html"><span class="text"> Editors</span></a></li>

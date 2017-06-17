@@ -79,7 +79,12 @@
     	
     	<!-- 类别操作 -->
     	<action name="kind_*" class="com.shushu.web.action.KindAction" method="{1}">
-    		<result name="addSUCCESS">/user/user-info.jsp</result>
+    		<result name="addSUCCESS" type="redirectAction">kind_list</result>
+    		<result name="listSUCCESS">/kind/kind-list.jsp</result>
+    		<result name="deleteSUCCESS" type="redirectAction">kind_list</result>
+    		<result name="detailSUCCESS">/kind/kind-detail.jsp</result>
+    		<result name="updateviewSUCCESS">/kind/kind-edit.jsp</result>
+    		<result name="updateSUCCESS" type="redirectAction">kind_list</result>
     	</action>
     </package>
 

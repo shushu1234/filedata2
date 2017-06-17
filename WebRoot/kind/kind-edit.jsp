@@ -466,14 +466,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								</div>
 								<s:debug></s:debug>
 								<div class="panel-body bk-bg-white bk-padding-top-10 bk-padding-bottom-30">
-									<s:form cssClass="form-horizontal" namespace="/" method="post" action="kind_add" theme="simple">
-										<s:hidden name="parentid" value="%{#parameters.parentid}"></s:hidden>
+									<s:form cssClass="form-horizontal" namespace="/" method="post" action="kind_update" theme="simple">
+										<s:hidden name="id" value="%{#parameters.id}"></s:hidden>
 										<div class="form-group">
 											<div class="controls">
 												<div class="input-prepend input-group has-success">
 													<span class="input-group-addon">类别名称</span>
 <!-- 													<input id="prependedInput" class="form-control" size="16" type="text">
- -->													<s:textfield id="prependedInput" cssClass="form-control" name="name"></s:textfield>
+ -->													<s:textfield id="prependedInput" cssClass="form-control" name="name" value="%{model.name}"></s:textfield>
 												</div>
 												<p class="help-block">请输入你要添加的类别</p>
 											</div>
@@ -483,7 +483,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												<div class="input-prepend input-group has-feedback">
 													<span class="input-group-addon">类别描述</span>
 <!-- 													<input id="prependedInput" class="form-control" size="16" type="text">
- -->													<s:textfield id="prependedInput" cssClass="form-control" name="descr"></s:textfield>
+ -->													<s:textfield id="prependedInput" cssClass="form-control" name="descr" value="%{model.descr}"></s:textfield>
 												</div>
 												<p class="help-block">请输入该类别的相关描述</p>
 											</div>

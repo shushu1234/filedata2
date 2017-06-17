@@ -1,4 +1,8 @@
-import java.util.UUID;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.shushu.domain.Kind;
+import com.shushu.service.KindService;
 
 public class test {
 
@@ -16,8 +20,14 @@ public class test {
 		// list2.add(6);
 		//
 		// System.out.println(list2.toArray());
-		String name = UUID.randomUUID().toString();
-		System.out.println(name);
+		// String name = UUID.randomUUID().toString();
+		// System.out.println(name);
+
+		List<Kind> kinds = new ArrayList<Kind>();
+		kinds = new KindService().list();
+		for (Kind kind : kinds) {
+			System.out.println(kind.toString());
+		}
 	}
 
 }

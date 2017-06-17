@@ -56,4 +56,11 @@ public class Kind {
 		this.grade = grade;
 	}
 
+	@Override
+	public String toString() {
+		return "Kind [id=" + id + ", name=" + name + ", descr=" + descr
+				+ ", parentid=" + parentid + ", leaf=" + leaf + ", grade="
+				+ grade + "]";
+	}
+
 }
