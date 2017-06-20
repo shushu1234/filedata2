@@ -10,6 +10,15 @@ public class User {
 	private int role; // 角色 0-普通用户 1-管理员
 	private String defunct; // 删除标志 Y-删除 N-未删除
 	private String avatarpath;// 头像UUID
+	private int kindid;// 类别的父id
+
+	public int getKindid() {
+		return kindid;
+	}
+
+	public void setKindid(int kindid) {
+		this.kindid = kindid;
+	}
 
 	public String getId() {
 		return id;
@@ -88,7 +97,7 @@ public class User {
 		return "User [id=" + id + ", name=" + name + ", pwd=" + pwd
 				+ ", gender=" + gender + ", tel=" + tel + ", email=" + email
 				+ ", role=" + role + ", defunct=" + defunct + ", avatarpath="
-				+ avatarpath + "]";
+				+ avatarpath + ", kindid=" + kindid + "]";
 	}
 
 }

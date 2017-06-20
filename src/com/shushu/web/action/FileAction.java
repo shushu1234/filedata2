@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -27,6 +28,21 @@ public class FileAction extends ActionSupport implements
 	private String uploadFileName;
 	private List<UploadFile> uploadFiles;
 	private InputStream inputStream;
+	private String queryuserid;
+	private List<UploadFile> userfiles = new ArrayList<UploadFile>();
+	private List<UploadFile> topfiles;
+
+	public List<UploadFile> getTopfiles() {
+		return topfiles;
+	}
+
+	public List<UploadFile> getUserfiles() {
+		return userfiles;
+	}
+
+	public void setQueryuserid(String queryuserid) {
+		this.queryuserid = queryuserid;
+	}
 
 	public void setInputStream(InputStream inputStream) {
 		this.inputStream = inputStream;
@@ -236,6 +252,16 @@ public class FileAction extends ActionSupport implements
 	}
 
 	/**
+	 * 文件审核不通过时删除
+	 * 
+	 * @param fileid
+	 */
+	public void delfile(int fileid) {
+		uploadFile.setId(fileid);
+		this.delete();
+	}
+
+	/**
 	 * 文件详情查询
 	 * 
 	 * @return
@@ -244,5 +270,25 @@ public class FileAction extends ActionSupport implements
 		UploadFileService uploadFileService = new UploadFileService();
 		uploadFile = uploadFileService.findById(uploadFile.getId());
 		return "detailSUCCESS";
+	}
+
+	/**
+	 * 单个用户上传的文件情况
+	 */
+	public String listuserfiles() {
+		// System.out.println("file" + queryuserid);
+		UploadFileService uploadFileService = new UploadFileService();
+		userfiles = uploadFileService.listuserfiles(queryuserid);
+		return "listuserfilesSUCCESS";
+	}
+
+	/**
+	 * 取出前三个
+	 */
+
+	public String topfile() {
+		UploadFileService uploadFileService = new UploadFileService();
+		topfiles = uploadFileService.topfiles();
+		return "topfileSUCCESS";
 	}
 }

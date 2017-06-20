@@ -86,6 +86,84 @@
     		<result name="updateviewSUCCESS">/kind/kind-edit.jsp</result>
     		<result name="updateSUCCESS" type="redirectAction">kind_list</result>
     	</action>
+    	
+    	<!-- 信息操作 -->
+    	<action name="message_*" class="com.shushu.web.action.MessageAction" method="{1}">
+    		<result name="detailSUCCESS">/message/message-detail.jsp</result>
+    		<result name="deleteSUCCESS">/message/message-inbox.jsp</result>
+    	</action>
     </package>
 
+	<package name="myjson" namespace="/ajax" extends="json-default">
+		<action name="checkid" class="com.shushu.web.action.UserAction" method="checkid">
+			<result name="checkidSUCCESS" type="json">
+				<param name="root">
+					action
+				</param>
+			</result>
+		</action>
+		<action name="listuserfiles" class="com.shushu.web.action.FileAction" method="listuserfiles">
+			<result name="listuserfilesSUCCESS" type="json">
+				<param name="root">
+					action
+				</param>
+			</result>
+		</action>
+		<action name="topfile" class="com.shushu.web.action.FileAction" method="topfile">
+			<result name="topfileSUCCESS" type="json">
+				<param name="root">
+					action
+				</param>
+			</result>
+		</action>
+		<action name="messageadd" class="com.shushu.web.action.MessageAction" method="messageadd">
+			<result name="messageaddSUCCESS" type="json">
+				<param name="root">
+					action
+				</param>
+			</result>
+		</action>	
+		<action name="useraddmsg" class="com.shushu.web.action.MessageAction" method="useraddmsg">
+			<result name="useraddmsgSUCCESS" type="json">
+				<param name="root">
+					action
+				</param>
+			</result>
+		</action>
+		<action name="leaflist" class="com.shushu.web.action.KindAction" method="leaflist">
+			<result name="leaflistSUCCESS" type="json">
+				<param name="root">
+					action
+				</param>
+			</result>
+		</action>
+		<action name="alllist" class="com.shushu.web.action.KindAction" method="alllist">
+			<result name="alllistSUCCESS" type="json">
+				<param name="root">
+					action
+				</param>
+			</result>
+		</action>
+		<action name="checknewmsg" class="com.shushu.web.action.MessageAction" method="checknewmsg">
+			<result name="checknewmsgSUCCESS" type="json">
+				<param name="root">
+					action
+				</param>
+			</result>
+		</action>
+		<action name="checkdelmsg" class="com.shushu.web.action.MessageAction" method="checkdelmsg">
+			<result name="checkdelmsgSUCCESS" type="json">
+				<param name="root">
+					action
+				</param>
+			</result>
+		</action>
+		<action name="checksendmsg" class="com.shushu.web.action.MessageAction" method="checksendmsg">
+			<result name="checksendmsgSUCCESS" type="json">
+				<param name="root">
+					action
+				</param>
+			</result>
+		</action>
+	</package>
 </struts>

@@ -51,4 +51,26 @@ public class UploadFileService {
 		uploadFileDao.delete(id);
 	}
 
+	public List<UploadFile> listuserfiles(String userid) {
+		// TODO Auto-generated method stub
+		UploadFileDao uploadFileDao = new UploadFileDao();
+		return uploadFileDao.listuserfiles(userid);
+	}
+
+	/**
+	 * 文件审核通过。修改开放下载
+	 * 
+	 * @param fileid
+	 */
+	public void filepass(int fileid) {
+		// TODO Auto-generated method stub
+		UploadFileDao uploadFileDao = new UploadFileDao();
+		uploadFileDao.filepass(fileid);
+	}
+
+	public List<UploadFile> topfiles() {
+		UploadFileDao uploadFileDao = new UploadFileDao();
+		return uploadFileDao.topfiles();
+	}
+
 }

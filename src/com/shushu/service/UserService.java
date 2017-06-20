@@ -60,4 +60,15 @@ public class UserService {
 		UserDao userDao = new UserDao();
 		userDao.update(user, isEditUpload);
 	}
+
+	/**
+	 * 检查用户id是否存在
+	 * 
+	 * @param userid
+	 * @return
+	 */
+	public boolean checkid(String userid) {
+		UserDao userDao = new UserDao();
+		return userDao.checkid(userid);
+	}
 }

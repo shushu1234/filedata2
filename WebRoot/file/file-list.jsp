@@ -1,8 +1,8 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@taglib uri="/struts-tags" prefix="s"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
+<%@taglib uri="/struts-tags" prefix="s" %>
 <%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,28 +21,38 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <!-- Favicon and touch icons -->
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/ico/favicon.ico" type="image/x-icon"/>
     <link rel="apple-touch-icon" href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon.png"/>
-    <link rel="apple-touch-icon" sizes="57x57" href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-57x57.png"/>
-    <link rel="apple-touch-icon" sizes="72x72" href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-72x72.png"/>
-    <link rel="apple-touch-icon" sizes="76x76" href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-76x76.png"/>
-    <link rel="apple-touch-icon" sizes="114x114" href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-114x114.png"/>
-    <link rel="apple-touch-icon" sizes="120x120" href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-120x120.png"/>
-    <link rel="apple-touch-icon" sizes="144x144" href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-144x144.png"/>
-    <link rel="apple-touch-icon" sizes="152x152" href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="57x57"
+          href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="72x72"
+          href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76"
+          href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114"
+          href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120"
+          href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144"
+          href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152"
+          href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-152x152.png"/>
 
     <!-- start: CSS file-->
 
     <!-- Vendor CSS-->
     <link href="${pageContext.request.contextPath}/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="${pageContext.request.contextPath}/assets/vendor/skycons/css/skycons.css" rel="stylesheet"/>
-    <link href="${pageContext.request.contextPath}/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="${pageContext.request.contextPath}/assets/vendor/font-awesome/css/font-awesome.min.css"
+          rel="stylesheet"/>
     <link href="${pageContext.request.contextPath}/assets/vendor/css/pace.preloader.css" rel="stylesheet"/>
 
     <!-- Plugins CSS-->
     <link href="${pageContext.request.contextPath}/assets/plugins/bootkit/css/bootkit.css" rel="stylesheet"/>
     <link href="${pageContext.request.contextPath}/assets/plugins/select2/select2.css" rel="stylesheet"/>
-    <link href="${pageContext.request.contextPath}/assets/plugins/jquery-datatables-bs3/css/datatables.css" rel="stylesheet"/>
-    <link href="${pageContext.request.contextPath}/assets/plugins/pnotify/css/pnotify.custom.css" rel="stylesheet" />
-    <link href="${pageContext.request.contextPath}/assets/plugins/magnific-popup/css/magnific-popup.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/assets/plugins/jquery-datatables-bs3/css/datatables.css"
+          rel="stylesheet"/>
+    <link href="${pageContext.request.contextPath}/assets/plugins/pnotify/css/pnotify.custom.css" rel="stylesheet"/>
+    <link href="${pageContext.request.contextPath}/assets/plugins/magnific-popup/css/magnific-popup.css"
+          rel="stylesheet"/>
 
     <!-- Theme CSS -->
 
@@ -128,7 +138,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         </li>
                         <li class="avatar">
                             <a href="page-inbox.html">
-                                <img class="avatar" src="${pageContext.request.contextPath}/assets/img/avatar1.jpg" alt=""/>
+                                <img class="avatar" src="${pageContext.request.contextPath}/assets/img/avatar1.jpg"
+                                     alt=""/>
                                 <div>
                                     <div class="point point-primary point-lg"></div>
                                     New message
@@ -138,7 +149,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         </li>
                         <li class="avatar">
                             <a href="page-inbox.html">
-                                <img class="avatar" src="${pageContext.request.contextPath}/assets/img/avatar2.jpg" alt=""/>
+                                <img class="avatar" src="${pageContext.request.contextPath}/assets/img/avatar2.jpg"
+                                     alt=""/>
                                 <div>
                                     <div class="point point-primary point-lg"></div>
                                     New message
@@ -148,7 +160,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         </li>
                         <li class="avatar">
                             <a href="page-inbox.html">
-                                <img class="avatar" src="${pageContext.request.contextPath}/assets/img/avatar3.jpg" alt=""/>
+                                <img class="avatar" src="${pageContext.request.contextPath}/assets/img/avatar3.jpg"
+                                     alt=""/>
                                 <div>
                                     <div class="point point-primary point-lg"></div>
                                     New message
@@ -158,7 +171,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         </li>
                         <li class="avatar">
                             <a href="page-inbox.html">
-                                <img class="avatar" src="${pageContext.request.contextPath}/assets/img/avatar4.jpg" alt=""/>
+                                <img class="avatar" src="${pageContext.request.contextPath}/assets/img/avatar4.jpg"
+                                     alt=""/>
                                 <div>
                                     <div class="point point-primary point-lg"></div>
                                     New message
@@ -168,7 +182,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         </li>
                         <li class="avatar">
                             <a href="page-inbox.html">
-                                <img class="avatar" src="${pageContext.request.contextPath}/assets/img/avatar5.jpg" alt=""/>
+                                <img class="avatar" src="${pageContext.request.contextPath}/assets/img/avatar5.jpg"
+                                     alt=""/>
                                 <div>
                                     <div class="point point-primary point-lg"></div>
                                     New message
@@ -303,7 +318,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         <ul class="nav nav-sidebar">
                             <div class="panel-body text-center">
                                 <div class="flag">
-                                    <img src="${pageContext.request.contextPath}/assets/img/flags/USA.png" class="img-flags" alt=""/>
+                                    <img src="${pageContext.request.contextPath}/assets/img/flags/USA.png"
+                                         class="img-flags" alt=""/>
                                 </div>
                             </div>
                             <li>
@@ -482,9 +498,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </div>
             </div>
             <!-- End Page Header -->
-    <!-- Modal Danger -->
+            <!-- Modal Danger -->
 
-    <s:form namespace="/" action="file_list" theme="simple" method="post">
+            <s:form namespace="/" action="file_list" theme="simple" method="post">
                 <div class="form-group col-md-4">
                     <label class="col-md-3 control-label" for="id">文件id</label>
                     <div class="col-md-9">
@@ -500,24 +516,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="form-group col-md-4">
                     <label class="col-md-3 control-label" for="name">用户id</label>
                     <div class="col-md-9">
-                        <s:textfield id="userid" name="userid" cssClass="form-control" placeholder="请输入上传用户id"></s:textfield>
+                        <s:textfield id="userid" name="userid" cssClass="form-control"
+                                     placeholder="请输入上传用户id"></s:textfield>
                     </div>
                 </div>
                 <div class="form-group col-md-4">
                     <label class="col-md-3 control-label" for="open">状态</label>
                     <div class="col-md-9">
-<%--                         <s:select list="#{'0':'未开放','1':'已开放下载' }" id="open" name="open" cssClass="form-control" size="1" headerKey="" headerValue="--选择状态--"></s:select>
- --%>                       <select id="open" name="open" class="form-control" size="1">
-							<option selected value="">--选择状态--</option>
-							<option value="1">未开放</option>
-							<option value="2">已开放下载</option>
-						</select>
+                            <%--                         <s:select list="#{'0':'未开放','1':'已开放下载' }" id="open" name="open" cssClass="form-control" size="1" headerKey="" headerValue="--选择状态--"></s:select>
+                             --%> <select id="open" name="open" class="form-control" size="1">
+                        <option selected value="">--选择状态--</option>
+                        <option value="1">未开放</option>
+                        <option value="2">已开放下载</option>
+                    </select>
                     </div>
                 </div>
                 <div class="form-group col-md-4">
                     <label class="col-md-3 control-label" for="kindid">类别</label>
-                    <div class="col-md-9">
-                        <s:select list="#{'1':'资料','2':'图片','3':'视频','4':'音乐' }" id="kindid" name="kindid" cssClass="form-control" size="1" headerKey="" headerValue="--选择类别--"></s:select>
+                    <div class="col-md-9" id="kindlist">
+                            <%--<s:select list="#{'1':'资料','2':'图片','3':'视频','4':'音乐' }" id="kindid" name="kindid" cssClass="form-control" size="1" headerKey="" headerValue="--选择类别--"></s:select>--%>
                     </div>
                 </div>
                 <div class="form-group col-md-12">
@@ -525,8 +542,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         <span class="btn-label"><i class="fa fa-check"></i></span>查询
                     </button>
                     <button class="bk-margin-5 btn btn-labeled btn-info" type="reset">
-						<span class="btn-label"><i class="fa fa-refresh"></i></span>重置
-					</button>
+                        <span class="btn-label"><i class="fa fa-refresh"></i></span>重置
+                    </button>
                 </div>
             </s:form>
 
@@ -555,84 +572,75 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                 </tr>
                                 </thead>
                                 <tbody>
-                                	<s:iterator value="uploadFiles" var="uploadFile" >
+                                <s:iterator value="uploadFiles" var="uploadFile">
                                     <tr>
                                         <td id="fileid">
-                                        	<s:property value="id"/>
+                                            <s:property value="id"/>
                                         </td>
                                         <td>
-                                        	<s:property value="name"/>
+                                            <s:property value="name"/>
                                         </td>
                                         <td>
-                                        	<s:if test="%{#uploadFile.kindid=='1'.toString()}">
-                                        		<span>资料</span>
-                                        	</s:if>
-                                        	<s:elseif test="%{#uploadFile.kindid=='2'.toString()}">
-                                        		<span>图片</span>
-                                        	</s:elseif>
-                                        	<s:elseif test="%{#uploadFile.kindid=='3'.toString()}">
-                                        		<span>视频</span>
-                                        	</s:elseif>
-                                        	<s:elseif test="%{#uploadFile.kindid=='4'.toString()}">
-                                        		<span>音乐</span>
-                                        	</s:elseif>
+                                            <s:property value="kind"/>
                                         </td>
                                         <td>
-                                        	<s:if test="%{#uploadFile.filesize<1048576}">
-                                        		<s:text name="global.format.number"><s:param value="filesize/1024.0"/></s:text>  
-                                        		<span>&nbsp;KB</span>
-                                        	</s:if>
-                                        	<s:else>
-                                        		<s:text name="global.format.number"><s:param value="filesize/1048576.0"/></s:text>  
-                                        		<span>&nbsp;MB</span>
-                                        	</s:else>
+                                            <s:if test="%{#uploadFile.filesize<1048576}">
+                                                <s:text name="global.format.number"><s:param
+                                                        value="filesize/1024.0"/></s:text>
+                                                <span>&nbsp;KB</span>
+                                            </s:if>
+                                            <s:else>
+                                                <s:text name="global.format.number"><s:param
+                                                        value="filesize/1048576.0"/></s:text>
+                                                <span>&nbsp;MB</span>
+                                            </s:else>
                                         </td>
                                         <td>
-                                        	<s:property value="userid"/>
+                                            <s:property value="userid"/>
                                         </td>
                                         <td>
-                                        	<s:property value="uploaddate"/>
+                                            <s:property value="uploaddate"/>
                                         </td>
                                         <td>
-	                                        <s:if test="%{#uploadFile.open==2}">
-	                                        	<span class="label label-success">已开放下载</span>
-	                                        </s:if>
-	                                        <s:else>
-	                                        	<span class="label label-danger">未开放</span>
-	                                        </s:else>
+                                            <s:if test="%{#uploadFile.open==2}">
+                                                <span class="label label-success">已开放下载</span>
+                                            </s:if>
+                                            <s:else>
+                                                <span class="label label-danger">未开放</span>
+                                            </s:else>
                                         </td>
                                         <td>
                                             <s:a class="btn btn-success" action="file_detail" namespace="/">
-                                           		 <s:param name="id" value="id"></s:param>
+                                                <s:param name="id" value="id"></s:param>
                                                 <i class="fa fa-search-plus "></i>
                                             </s:a>
-                                            
+
                                             <s:a cssClass="btn btn-info" action="file_editview" namespace="/">
-                                            	<s:param name="id" value="id"></s:param>
+                                                <s:param name="id" value="id"></s:param>
                                                 <i class="fa fa-edit "></i>
                                             </s:a>
-                                            
+
                                             <s:a cssClass="btn btn-primary" action="file_download" namespace="/">
-                                            	<s:param name="id" value="id"></s:param>
-                                            	<i class="fa fa-download "></i>
+                                                <s:param name="id" value="id"></s:param>
+                                                <i class="fa fa-download "></i>
                                             </s:a>
                                             <s:a cssClass="btn btn-danger" action="file_delete" namespace="/">
-                                            	<s:param name="id" value="id"></s:param>
-                                                 <i class="fa fa-trash-o "></i>
-                                        	</s:a>
+                                                <s:param name="id" value="id"></s:param>
+                                                <i class="fa fa-trash-o "></i>
+                                            </s:a>
                                         </td>
                                     </tr>
-                             		</s:iterator>
+                                </s:iterator>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
 
-    </div>
+            </div>
         </div>
         <!-- End Main Page -->
-   	 </div>
+    </div>
 </div><!--/container-->
 
 
@@ -640,7 +648,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
 <!-- start: JavaScript-->
-  <!-- Vendor JS-->
+<!-- Vendor JS-->
 <script src="${pageContext.request.contextPath}/assets/vendor/js/jquery.min.js"></script>
 <script src="${pageContext.request.contextPath}/assets/vendor/js/jquery-2.1.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/assets/vendor/js/jquery-migrate-1.2.1.min.js"></script>
@@ -668,6 +676,30 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
 <!-- end: JavaScript-->
+
+<script type="text/javascript">
+    function kindlist() {
+        var kindlist = $("#kindlist");
+        $.post("${pageContext.request.contextPath}/ajax/leaflist.action", function (data) {
+            var str = "<select id=\"select\" name=\"kindid\" class=\"form-control required\" size=\"1\">\n" +
+                "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option value=\"0\">--选择类别--</option>";
+            var kind = data.leaflist;
+            $.each(kind, function (n, kind) {
+                str += "<option value=\"" +
+                    kind.id +
+                    "\">" +
+                    kind.name +
+                    "</option>"
+
+            })
+            str += "</select>";
+            str.slice(10);
+            kindlist.append(str);
+        })
+    }
+
+    kindlist();
+</script>
 
 </body>
 

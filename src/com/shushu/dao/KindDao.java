@@ -21,8 +21,8 @@ public class KindDao {
 	 */
 	public void add(Kind kind) {
 		// TODO Auto-generated method stub
-		String sql = "insert into kind (name,descr) values(?,?)";
-		Object[] params = { kind.getName(), kind.getDescr() };
+		String sql = "insert into kind (name,descr,parentid) values(?,?,?)";
+		Object[] params = { kind.getName(), kind.getDescr(), kind.getParentid() };
 		try {
 			queryRunner.update(sql, params);
 		} catch (SQLException e) {
@@ -58,9 +58,9 @@ public class KindDao {
 	 * 
 	 * @return
 	 */
-	public List<Kind> list() {
+	public List<Kind> list(int userkindid) {
 		List<Kind> kindlists = new ArrayList<Kind>();
-		this.listAll(kindlists, 0);
+		this.listAll(kindlists, userkindid);
 		return kindlists;
 	}
 
@@ -156,6 +156,25 @@ public class KindDao {
 		Object[] params = { kind.getName(), kind.getDescr(), kind.getId() };
 		try {
 			queryRunner.update(sql, params);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			throw new RuntimeException();
+		}
+	}
+
+	/**
+	 * 获取所有叶子类别
+	 * 
+	 * @return
+	 */
+	public List<Kind> leaflist() {
+		// TODO Auto-generated method stub
+		String sql = "select * from kind where leaf = 1";
+		try {
+			List<Kind> leaflist = queryRunner.query(sql,
+					new BeanListHandler<Kind>(Kind.class));
+			return leaflist;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -833,7 +833,7 @@
     resize: 'none',
     iconlibrary: 'glyph',
     language: 'en',
-    initialstate: 'editor',
+    initialstate: 'preview',
 
     /* Buttons Properties */
     buttons: [

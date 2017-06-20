@@ -11,6 +11,7 @@ import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 import com.opensymphony.xwork2.interceptor.annotations.InputConfig;
+import com.shushu.domain.Kind;
 import com.shushu.domain.UploadFile;
 import com.shushu.utils.JDBCUtils;
 
@@ -25,18 +26,19 @@ public class UploadFileDao {
 	@InputConfig(resultName = "uploadINPUT")
 	public void upload(UploadFile uploadFile) {
 		// TODO Auto-generated method stub
-		String sql = "insert into file (name,kindid,remark,filesize,authorname1,authorname2,authorname3,authorname4,authorname5,open,userid,uploaddate,filepath,downcount) "
-				+ "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		String sql = "insert into file (name,kindid,kind,remark,filesize,authorname1,authorname2,authorname3,authorname4,authorname5,open,userid,uploaddate,filepath,downcount) "
+				+ "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		Date nowDate = new Date();
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(
 				"yyyy-MM-dd HH:dd:ss");
 		String nowtime = simpleDateFormat.format(nowDate);
+		Kind kind = new KindDao().findById(uploadFile.getKindid());
 		Object[] params = { uploadFile.getName(), uploadFile.getKindid(),
-				uploadFile.getRemark(), uploadFile.getFilesize(),
-				uploadFile.getAuthorname1(), uploadFile.getAuthorname2(),
-				uploadFile.getAuthorname3(), uploadFile.getAuthorname4(),
-				uploadFile.getAuthorname5(), 1, uploadFile.getUserid(),
-				nowtime, uploadFile.getFilepath(), 0 };
+				kind.getName(), uploadFile.getRemark(),
+				uploadFile.getFilesize(), uploadFile.getAuthorname1(),
+				uploadFile.getAuthorname2(), uploadFile.getAuthorname3(),
+				uploadFile.getAuthorname4(), uploadFile.getAuthorname5(), 1,
+				uploadFile.getUserid(), nowtime, uploadFile.getFilepath(), 0 };
 		try {
 			queryRunner.update(sql, params);
 		} catch (SQLException e) {
@@ -69,10 +71,12 @@ public class UploadFileDao {
 			sql += " and open = " + uploadFile.getOpen() + " ";
 			// params.add(String.valueOf(uploadFile.getOpen()));
 		}
-		if (uploadFile.getKindid() != null
-				&& uploadFile.getKindid().trim().length() > 0) {
-			sql += " and kindid = ?";
-			params.add(uploadFile.getKindid());
+		if (uploadFile.getKindid() != 0) {
+			String kindname = new KindDao().findById(uploadFile.getKindid())
+					.getName();
+			System.out.println(kindname);
+			sql += " and kind = ? ";
+			params.add(kindname);
 		}
 		try {
 			List<UploadFile> uploadFiles = queryRunner.query(sql,
@@ -125,11 +129,13 @@ public class UploadFileDao {
 	 */
 	public void edit(UploadFile uploadFile) {
 		// TODO Auto-generated method stub
-		String sql = "update file set kindid = ?,remark = ?,authorname1 = ?,authorname2 = ?,authorname3 = ?,authorname4 = ?,authorname5 = ? where id = ?";
-		Object[] params = { uploadFile.getKindid(), uploadFile.getRemark(),
-				uploadFile.getAuthorname1(), uploadFile.getAuthorname2(),
-				uploadFile.getAuthorname3(), uploadFile.getAuthorname4(),
-				uploadFile.getAuthorname5(), uploadFile.getId() };
+		String sql = "update file set kindid = ?,kind=?,remark = ?,authorname1 = ?,authorname2 = ?,authorname3 = ?,authorname4 = ?,authorname5 = ? where id = ?";
+		Kind kind = new KindDao().findById(uploadFile.getKindid());
+		Object[] params = { uploadFile.getKindid(), kind.getName(),
+				uploadFile.getRemark(), uploadFile.getAuthorname1(),
+				uploadFile.getAuthorname2(), uploadFile.getAuthorname3(),
+				uploadFile.getAuthorname4(), uploadFile.getAuthorname5(),
+				uploadFile.getId() };
 		try {
 			queryRunner.update(sql, params);
 		} catch (SQLException e) {
@@ -144,6 +150,56 @@ public class UploadFileDao {
 		String sql = "delete from file where id = ?";
 		try {
 			queryRunner.update(sql, id);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			throw new RuntimeException();
+		}
+	}
+
+	public List<UploadFile> listuserfiles(String userid) {
+		// TODO Auto-generated method stub
+		String sql = "select * from file where userid = ? order by id desc";
+		try {
+			List<UploadFile> userfiles = queryRunner.query(sql,
+					new BeanListHandler<UploadFile>(UploadFile.class), userid);
+			return userfiles;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			throw new RuntimeException();
+		}
+	}
+
+	/**
+	 * 修改开放下载
+	 * 
+	 * @param fileid
+	 */
+	public void filepass(int fileid) {
+		// TODO Auto-generated method stub
+		String sql = "update file set open = 2 where id = ?";
+		try {
+			queryRunner.update(sql, fileid);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			throw new RuntimeException();
+		}
+	}
+
+	/**
+	 * 取出下载前三个
+	 * 
+	 * @return
+	 */
+	public List<UploadFile> topfiles() {
+		// TODO Auto-generated method stub
+		String sql = "select * from file order by downcount desc limit 3";
+		try {
+			List<UploadFile> topfilelist = queryRunner.query(sql,
+					new BeanListHandler<UploadFile>(UploadFile.class));
+			return topfilelist;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

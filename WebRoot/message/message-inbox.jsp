@@ -1,8 +1,8 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@taglib  uri="/struts-tags" prefix="s"%>
+<%@taglib uri="/struts-tags" prefix="s"%>
 <%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+	String path = request.getContextPath();
+	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +12,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<!-- Basic -->
     	<meta charset="UTF-8" />
 
-		<title>文件上传</title>
+		<title>Inbox | Fire - Admin Template</title>
 	 
 		<!-- Mobile Metas -->
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -37,8 +37,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<link href="${pageContext.request.contextPath}/assets/vendor/css/pace.preloader.css" rel="stylesheet" />
 		
 		<!-- Plugins CSS-->
-		<link href="${pageContext.request.contextPath}/assets/plugins/bootkit/css/bootkit.css" rel="stylesheet" />
-		<link href="${pageContext.request.contextPath}/assets/plugins/pnotify/css/pnotify.custom.css" rel="stylesheet" />
+		<link href="${pageContext.request.contextPath}/assets/plugins/bootkit/css/bootkit.css" rel="stylesheet" />				
 		
 		<!-- Theme CSS -->
 		<link href="${pageContext.request.contextPath}/assets/css/jquery.mmenu.css" rel="stylesheet" />
@@ -239,7 +238,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									</div>							
 								</li>	
 								<li>
-									<a href="../page-profile.html"><i class="fa fa-user"></i> Profile</a>
+									<a href="page-profile.html"><i class="fa fa-user"></i> Profile</a>
 								</li>
 								<li>
 									<a href="#"><i class="fa fa-wrench"></i> Settings</a>
@@ -251,7 +250,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									<a href="#"><i class="fa fa-file"></i> File</a>
 								</li>
 								<li>
-									<a href="../page-login.html"><i class="fa fa-power-off"></i> Logout</a>
+									<a href="page-login.html"><i class="fa fa-power-off"></i> Logout</a>
 								</li>
 							</ul>
 						</div>						
@@ -284,12 +283,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										</div>
 									</div>
 									<li>
-										<a href="../index.jsp">
+										<a href="index.jsp">
 											<i class="fa fa-laptop" aria-hidden="true"></i><span>Dashboard</span>
 										</a>
 									</li>
-									<li>
-										<a href="../mailbox-inbox.html">
+									<li class="active">
+										<a href="mailbox-inbox.html">
 											<span class="pull-right label label-danger">235</span>
 											<i class="fa fa-envelope" aria-hidden="true"></i><span>Mail</span>
 										</a>
@@ -299,18 +298,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											<i class="fa fa-copy" aria-hidden="true"></i><span>Pages</span>
 										</a>
 										<ul class="nav nav-children">
-											<li><a href="../page-profile.html"><span class="text"> Profile</span></a></li>
-											<li><a href="../page-activity.html"><span class="text"> Activity</span></a></li>
-											<li><a href="../page-timeline.html"><span class="text"> Timeline</span></a></li>
-											<li><a href="../page-invoice.html"><span class="text"> Invoice</span></a></li>
-											<li><a href="../page-pricing-tables.html"><span class="text"> Pricing Tables</span></a></li>
-											<li><a href="../page-login.html"><span class="text"> Login Page</span></a></li>
-											<li><a href="../page-register.html"><span class="text"> Register Page</span></a></li>
-											<li><a href="../page-recover-password.html"><span class="text"> Recover Password</span></a></li>
-											<li><a href="../page-lockscreen1.html"><span class="text"> Lock Screen 1</span></a></li>
-											<li><a href="../page-lockscreen2.html"><span class="text"> Lock Screen 2</span></a></li>
-											<li><a href="../page-404.html"><span class="text"> Page 404</span></a></li>
-											<li><a href="../page-500.html"><span class="text"> Page 500</span></a></li>
+											<li><a href="page-profile.html"><span class="text"> Profile</span></a></li>
+											<li><a href="page-activity.html"><span class="text"> Activity</span></a></li>
+											<li><a href="page-timeline.html"><span class="text"> Timeline</span></a></li>
+											<li><a href="page-invoice.html"><span class="text"> Invoice</span></a></li>
+											<li><a href="page-pricing-tables.html"><span class="text"> Pricing Tables</span></a></li>
+											<li><a href="page-login.html"><span class="text"> Login Page</span></a></li>
+											<li><a href="page-register.html"><span class="text"> Register Page</span></a></li>
+											<li><a href="page-recover-password.html"><span class="text"> Recover Password</span></a></li>
+											<li><a href="page-lockscreen1.html"><span class="text"> Lock Screen 1</span></a></li>
+											<li><a href="page-lockscreen2.html"><span class="text"> Lock Screen 2</span></a></li>
+											<li><a href="page-404.html"><span class="text"> Page 404</span></a></li>
+											<li><a href="page-500.html"><span class="text"> Page 500</span></a></li>
 										</ul>
 									</li>
 									<li class="nav-parent">
@@ -318,32 +317,32 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											<i class="fa fa-tasks" aria-hidden="true"></i><span>UI Elements</span>
 										</a>
 										<ul class="nav nav-children">
-											<li><a href="../ui-basic-elements.html"><span class="text"> Basic Elements</span></a></li>
-											<li><a href="../ui-nestable-list.html"><span class="text"> Nestable</span></a></li>
-											<li><a href="../ui-buttons.html"><span class="text"> Buttons</span></a></li>
-											<li><a href="../ui-progress-bars.html"><span class="text"> Progress Bars</span></a></li>
-											<li><a href="../ui-sliders.html"><span class="text"> Sliders</span></a></li>
-											<li><a href="../ui-panels.html"><span class="text"> Panels</span></a></li>
-											<li><a href="../ui-tabs.html"><span class="text"> Tabs</span></a></li>
-											<li><a href="../ui-notifications.html"><span class="text"> Notifications</span></a></li>
-											<li><a href="../ui-modals.html"><span class="text"> Modals</span></a></li>
-											<li><a href="../ui-portlets.html"><span class="text"> Portlets</span></a></li>
-											<li><a href="../ui-lightbox.html"><span class="text"> Lightbox</span></a></li>
-											<li><a href="../ui-carousels.html"><span class="text"> Carousels</span></a></li>
-											<li><a href="../ui-animation.html"><span class="text"> Animation</span></a></li>
+											<li><a href="ui-basic-elements.html"><span class="text"> Basic Elements</span></a></li>
+											<li><a href="ui-nestable-list.html"><span class="text"> Nestable</span></a></li>
+											<li><a href="ui-buttons.html"><span class="text"> Buttons</span></a></li>
+											<li><a href="ui-progress-bars.html"><span class="text"> Progress Bars</span></a></li>
+											<li><a href="ui-sliders.html"><span class="text"> Sliders</span></a></li>
+											<li><a href="ui-panels.html"><span class="text"> Panels</span></a></li>
+											<li><a href="ui-tabs.html"><span class="text"> Tabs</span></a></li>
+											<li><a href="ui-notifications.html"><span class="text"> Notifications</span></a></li>
+											<li><a href="ui-modals.html"><span class="text"> Modals</span></a></li>
+											<li><a href="ui-portlets.html"><span class="text"> Portlets</span></a></li>	
+											<li><a href="ui-lightbox.html"><span class="text"> Lightbox</span></a></li>
+											<li><a href="ui-carousels.html"><span class="text"> Carousels</span></a></li>
+											<li><a href="ui-animation.html"><span class="text"> Animation</span></a></li>											
 										</ul>
 									</li>
-									<li class="nav-parent nav-expanded active">
+									<li class="nav-parent">
 										<a>
 											<i class="fa fa-list-alt" aria-hidden="true"></i><span>Forms</span>
 										</a>
 										<ul class="nav nav-children">
-											<li><a href="../form-elements.html"><span class="text"> Elements</span></a></li>
-											<li><a href="../form-wizard.html"><span class="text"> Wizard</span></a></li>
-											<li><a href="../form-validation.html"><span class="text"> Validation</span></a></li>
-											<li><a href="../form-dropzone.html"><span class="text"> Dropzone Upload</span></a></li>
-											<li><a href="../form-editors.html"><span class="text"> Editors</span></a></li>
-											<li><a href="../form-x-editable.html"><span class="text"> X-Editable</span></a></li>
+											<li><a href="form-elements.html"><span class="text"> Elements</span></a></li>
+											<li><a href="form-wizard.html"><span class="text"> Wizard</span></a></li>
+											<li><a href="form-validation.html"><span class="text"> Validation</span></a></li>
+											<li><a href="form-dropzone.html"><span class="text"> Dropzone Upload</span></a></li>
+											<li><a href="form-editors.html"><span class="text"> Editors</span></a></li>
+											<li><a href="form-x-editable.html"><span class="text"> X-Editable</span></a></li>
 										</ul>
 									</li>
 									<li class="nav-parent">
@@ -351,10 +350,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											<i class="fa fa-table" aria-hidden="true"></i><span>Tables</span>
 										</a>
 										<ul class="nav nav-children">
-											<li><a href="../table-basic.html"><span class="text"> Basic</span></a></li>
-											<li><a href="../table-advanced.html"><span class="text"> Advanced</span></a></li>
-											<li><a href="../table-responsive.html"><span class="text"> Responsive</span></a></li>
-											<li><a href="../table-editable.html"><span class="text"> Editable</span></a></li>
+											<li><a href="table-basic.html"><span class="text"> Basic</span></a></li>
+											<li><a href="table-advanced.html"><span class="text"> Advanced</span></a></li>
+											<li><a href="table-responsive.html"><span class="text"> Responsive</span></a></li>
+											<li><a href="table-editable.html"><span class="text"> Editable</span></a></li>
 										</ul>
 									</li>
 									<li class="nav-parent">
@@ -362,23 +361,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											<i class="fa fa-random" aria-hidden="true"></i><span>Visual Chart</span>
 										</a>
 										<ul class="nav nav-children">
-											<li><a href="../chart-flot.html"><span class="text"> Flot Chart</span></a></li>
-											<li><a href="../chart-xchart.html"><span class="text"> xChart</span></a></li>
-											<li><a href="../chart-other.html"><span class="text"> Other</span></a></li>
+											<li><a href="chart-flot.html"><span class="text"> Flot Chart</span></a></li>
+											<li><a href="chart-xchart.html"><span class="text"> xChart</span></a></li>
+											<li><a href="chart-other.html"><span class="text"> Other</span></a></li>
 										</ul>
 									</li>									
 									<li>
-										<a href="../widgets.html">
+										<a href="widgets.html">
 											<i class="fa fa-life-bouy" aria-hidden="true"></i><span>Widgets</span>
 										</a>
 									</li>
 									<li>
-										<a href="../gallery.html">
+										<a href="gallery.html">
 											<i class="fa fa-picture-o" aria-hidden="true"></i><span>Gallery</span>
 										</a>
 									</li>
 									<li>
-										<a href="../calendar.html">
+										<a href="calendar.html">
 											<i class="fa fa-calendar" aria-hidden="true"></i><span>Calendar</span>
 										</a>
 									</li>
@@ -387,12 +386,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											<i class="fa fa-map-marker" aria-hidden="true"></i><span>Maps</span>
 										</a>
 										<ul class="nav nav-children">
-											<li><a href="../map-basic.html"><span class="text"> Basic</span></a></li>
-											<li><a href="../map-vector.html"><span class="text"> Vector</span></a></li>
+											<li><a href="map-basic.html"><span class="text"> Basic</span></a></li>
+											<li><a href="map-vector.html"><span class="text"> Vector</span></a></li>
 										</ul>
 									</li>
 									<li>
-										<a href="../typography.html">
+										<a href="typography.html">
 											<i class="fa fa-font" aria-hidden="true"></i><span>Typography</span>
 										</a>
 									</li>
@@ -401,9 +400,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											<i class="fa fa-bolt" aria-hidden="true"></i><span>Icons</span>
 										</a>
 										<ul class="nav nav-children">
-											<li><a href="../icons-font-awesome.html"><span class="text"> Font Awesome</span></a></li>
-											<li><a href="../icons-weathericons.html"><span class="text"> Weather Icons</span></a></li>
-											<li><a href="../icons-glyphicons.html"><span class="text"> Glyphicons</span></a></li>
+											<li><a href="icons-font-awesome.html"><span class="text"> Font Awesome</span></a></li>
+											<li><a href="icons-weathericons.html"><span class="text"> Weather Icons</span></a></li>
+											<li><a href="icons-glyphicons.html"><span class="text"> Glyphicons</span></a></li>
 										</ul>
 									</li>
 								</ul>
@@ -433,154 +432,81 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<!-- End Sidebar Footer-->
 				</div>
 				<!-- End Sidebar -->
-						
+		
 				<!-- Main Page -->
 				<div class="main ">
 					<!-- Page Header -->
 					<div class="page-header">
 						<div class="pull-left">
 							<ol class="breadcrumb visible-sm visible-md visible-lg">								
-								<li><a href="../index.jsp"><i class="icon fa fa-home"></i>Home</a></li>
-								<li><a href="#"><i class="fa fa-list-alt"></i>Forms</a></li>
-								<li class="active"><i class="fa fa-tags"></i>Wizard</li>
+								<li><a href="index.jsp"><i class="icon fa fa-home"></i>Home</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i>Mail</a></li>
+								<li class="active"><i class="fa fa-inbox"></i>Inbox</li>
 							</ol>						
 						</div>
 						<div class="pull-right">
-							<h2>Wizard</h2>
+							<h2>Inbox</h2>
 						</div>					
 					</div>
-					<!-- End Page Header -->
-					<div class="row">
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-							<div class="panel panel-default form-wizard" id="w4">
-								<div class="panel-heading">
-									<h6><i class="fa fa-tags bk-fg-warning"></i>用户文件上传</h6>
-									<div class="panel-actions">
-										<a href="#" class="btn-minimize"><i class="fa fa-caret-up"></i></a>
-										<a href="#" class="btn-close"><i class="fa fa-times"></i></a>
+					<!-- End Page Header -->					
+					<div class="row mailbox">					
+						<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+							<div class="panel">
+								<div class="panel-body bk-bg-very-light-gray mailbox-menu">
+									<a href="message-compose.html" class="btn btn-primary btn-block">栏目</a>
+									<ul>
+										<li>
+											<a href="${pageContext.request.contextPath}/message/message-compose.jsp">发邮件</a>
+										</li>
+										<li>
+											<a href="${pageContext.request.contextPath}/message/message-inbox.jsp">收件箱<span class="label label-primary" id="unreadcount"></span></a>
+										</li>
+										<li>
+											<a href="${pageContext.request.contextPath}/message/message-send.jsp">发件箱<span class="label label-success" id="sendcount"></span></a>
+										</li>
+										<li>
+											<a href="${pageContext.request.contextPath}/message/message-delete.jsp">回收站<span class="label label-danger" id="trashcount"></span></a>
+										</li>
+
+									</ul>									
+								</div>									
+							</div>							
+						</div>
+						<div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
+							<div class="panel">
+								<div class="panel-body bk-bg-very-light-gray">
+									<div class="mailbox-email-header">
+										<h3 class="mailbox-email-subject bk-fg-primary">
+											收件箱
+										</h3>
 									</div>
 								</div>
+							</div>
+							<div class="panel bk-bg-white">
 								<div class="panel-body">
-									<div class="wizard-progress wizard-progress-lg">
-										<div class="steps-progress">
-											<div class="progress-indicator"></div>
-										</div>
-										<ul class="wizard-steps">
-											<li class="active">
-												<a href="#w4-account" data-toggle="tab"><span>1</span>文件选择</a>
-											</li>
-											<li>
-												<a href="#w4-profile" data-toggle="tab"><span>2</span>文件作者</a>
-											</li>
-											<li>
-												<a href="#w4-billing" data-toggle="tab"><span>3</span>文件分类</a>
-											</li>
-											<li>
-												<a href="#w4-confirm" data-toggle="tab"><span>4</span>文件备注</a>
-											</li>
+									<%--<div class="col-md-12">--%>
+										<%--<div class="btn-group bk-margin-bottom-10 bk-margin-top-10 pull-right">--%>
+											<%--<button class="btn btn-sm btn-default">1-10 of 500</button>--%>
+											<%--<button class="btn btn-sm btn-default"><span class="fa fa-chevron-left"></span></button>--%>
+											<%--<button class="btn btn-sm btn-default"><span class="fa fa-chevron-right"></span></button>--%>
+										<%--</div>--%>
+									<%--</div>--%>
+								</div>
+								<div class="panel-body">
+									<div class="col-md-12">
+										<ul class="messages-list" id="messages-list">
 										</ul>
 									</div>
-									<%-- <s:actionerror cssStyle="list-style:none;" cssClass="alert alert-danger"/> --%>
-									<s:fielderror cssStyle="list-style:none;" cssClass="alert alert-danger"></s:fielderror>
-									<s:form cssClass="form-horizontal" action="file_upload" namespace="/" theme="simple" method="post"  novalidate="novalidate" enctype="multipart/form-data" name="uploadform">
-										
-										<s:hidden name="userid" value="%{#session.loginUser.id}"></s:hidden>
-										<div class="tab-content">
-											<div id="w4-account" class="tab-pane active">
-												<div class="form-group">
-													<label class="col-md-3 control-label" for="file-input">选择文件</label>
-													<div class="col-md-9">
-													<!-- 	<input type="file" id="file-input" name="file-input" required> -->
-														<s:file id="file-input" name="upload" cssClass="required"></s:file>
-													</div>
-												</div>
-											</div>
-											<div id="w4-profile" class="tab-pane">
-												<div class="form-group">
-													<label class="col-sm-3 control-label" for="w4-first-name">第1作者姓名</label>
-													<div class="col-sm-9">
-														<!-- <input type="text" class="form-control" name="first-name" id="w4-first-name" required> -->
-														<s:textfield cssClass="form-control required" name="authorname1" id="w4-first-name"></s:textfield>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label" for="w4-last-name">第2作者姓名</label>
-													<div class="col-sm-9">
-														<!-- <input type="text" class="form-control" name="last-name" id="w4-last-name" > -->
-														<s:textfield cssClass="form-control" name="authorname2" id="w4-last-name"></s:textfield>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label" for="w4-last-name">第3作者姓名</label>
-													<div class="col-sm-9">
-														<!-- <input type="text" class="form-control" name="last-name" id="w4-last-name" > -->
-														<s:textfield cssClass="form-control" name="authorname3" id="w4-last-name"></s:textfield>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label" for="w4-last-name">第4作者姓名</label>
-													<div class="col-sm-9">
-														<!-- <input type="text" class="form-control" name="last-name" id="w4-last-name" > -->
-														<s:textfield cssClass="form-control" name="authorname4" id="w4-last-name"></s:textfield>
-													</div>
-												</div>
-												<div class="form-group">
-													<label class="col-sm-3 control-label" for="w4-last-name">第5作者姓名</label>
-													<div class="col-sm-9">
-														<!-- <input type="text" class="form-control" name="last-name" id="w4-last-name" > -->
-														<s:textfield cssClass="form-control" name="authorname5" id="w4-last-name"></s:textfield>
-													</div>
-												</div>
-											</div>
-											<div id="w4-billing" class="tab-pane">
-												<div class="form-group">
-													<label class="col-md-3 control-label" for="select">选择分类</label>
-													<div id="kindlist" class="col-md-9">
-														<%--<s:select list="#{'1':'资料','2':'图片','3':'视频','4':'音乐'}" cssClass="form-control required" id="select" name="kindid" size="1" headerKey="" headerValue="--选择分类--"></s:select>--%>
-															<%--<select id="select" name="kindid" class="form-control required" size="1">--%>
-																<%--<option value="0">请选择类别</option>--%>
-																<%--<option value="1">Option #1</option>--%>
-																<%--<option value="2">Option #2</option>--%>
-																<%--<option value="3">Option #3</option>--%>
-															<%--</select>--%>
-													</div>
-												</div>
-											</div>
-											<div id="w4-confirm" class="tab-pane">
-												<div class="form-group">
-													<label class="col-md-3 control-label" for="textarea-input">文件备注</label>
-													<div class="col-md-9">
-														<s:textarea id="textarea-input" name="remark" rows="9" cssClass="form-control" placeholder="请输入文件的备注信息，有助于管理员的审核..." ></s:textarea>
-													</div>
-												</div>
-											<!-- 	<input type="submit" value="提交" /> -->
-											</div>
-											<div class="panel-footer bk-bg-very-light-gray bk-radius">
-												<ul class="pager bk-margin-off">
-													<li class="previous disabled">
-														<a><i class="fa fa-angle-left"></i> 上一页</a>
-													</li>
-													<li class="finish hidden pull-right">
-														<a href="#" onclick="uploadform.submit();">提交</a>
-													</li>
-													<li class="next">
-														<a>下一页 <i class="fa fa-angle-right"></i></a>
-													</li>
-												</ul>
-											</div>
-										</div>
-					
-									</s:form>
-								</div>								
+								</div>					
 							</div>
 						</div>
 					</div>
 				</div>
 				<!-- End Main Page -->	
-
+			
 			</div>
 		</div><!--/container-->
-		
+			
 		
 		<div class="clearfix"></div>		
 		
@@ -595,11 +521,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<script src="${pageContext.request.contextPath}/assets/vendor/skycons/js/skycons.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/vendor/js/pace.min.js"></script>
 		
-		<!-- Plugins JS-->
-		<script src="${pageContext.request.contextPath}/assets/plugins/autosize/jquery.autosize.min.js"></script>
-		<script src="${pageContext.request.contextPath}/assets/plugins/jquery-validation/js/jquery.validate.js"></script>
-		<script src="${pageContext.request.contextPath}/assets/plugins/wizard/js/jquery.bootstrap.wizard.min.js"></script>
-		<script src="${pageContext.request.contextPath}/assets/plugins/pnotify/js/pnotify.custom.js"></script>
+		<!-- Plugins JS-->	
 		<script src="${pageContext.request.contextPath}/assets/plugins/sparkline/js/jquery.sparkline.min.js"></script>
 		
 		<!-- Theme JS -->		
@@ -607,41 +529,61 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<script src="${pageContext.request.contextPath}/assets/js/core.min.js"></script>
 		
 		<!-- Pages JS -->
-		<script src="${pageContext.request.contextPath}/assets/js/pages/form-wizard.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/js/pages/mailbox.js"></script>
 		
 		<!-- end: JavaScript-->
-
 		<script type="text/javascript">
-            function kindlist() {
-                var kindlist=$("#kindlist");
-                $.post("${pageContext.request.contextPath}/ajax/alllist.action",function (data) {
-                    var str="<select id=\"select\" name=\"kindid\" class=\"form-control required\" size=\"1\">\n" +
-                        "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<option value=\"0\">--选择类别--</option>";
-                    var kind=data.alllist;
-                    $.each(kind,function (n,kind) {
-                        if (kind.leaf==2){
-                            str+="</optgroup>";
-                            str+="<optgroup label=\"" +
-                                kind.name +
-                                "\">"
-                        }
-                        else {
-                            str+="<option value=\"" +
-                                kind.id +
-                                "\">" +
-                                kind.name +
-                                "</option>"
-                        }
-                    })
-                    str+="</optgroup>";
-                    str+="</select>";
-                    str.slice(10);
-                    kindlist.append(str);
-                })
-            }
-            kindlist();
-		</script>
 
+            $(function () {
+                setInterval(checkmessage,1000);
+
+                function checkmessage() {
+                    $.post("${pageContext.request.contextPath}/ajax/checknewmsg.action",function (data) {
+                        var str="";
+                        var ul=$("#messages-list");
+                        ul.find("li").remove(); 
+                        var newmsgs=data.newmsgs;
+                        $("#unreadcount").text(data.unreadcount);
+                        $("#trashcount").text(data.trashcount);
+                        $("#sendcount").text(data.sendcount);
+                        $.each(newmsgs,function (n,newmsg) {
+                            if(newmsg.hasread==1){
+                                str+="<li class=\"unread\">";
+                            }else {
+                                str+="<li>";
+                            }
+                            str+="<a href=\"" +
+                                "${pageContext.request.contextPath}/message_detail.action?id=" +
+                                newmsg.id+
+                                "\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"header\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"from\">" +
+                                newmsg.sendername +
+                                "</span>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"date\"><i class=\"fa fa-paperclip\"></i>" +
+                                newmsg.sendtime +
+                                "</span>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"title\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"action\"><i class=\"fa fa-star\"></i></span>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t\t" +
+                                newmsg.title +
+                                "\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\t\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"description\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t\t" +
+                                newmsg.content.slice(20)+
+                                "\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t</a>\t\t\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t</li>"
+                        })
+                        ul.append(str)
+                    })
+                }
+
+            })
+		</script>
 	</body>
 	
 </html>

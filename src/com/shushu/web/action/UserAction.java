@@ -26,6 +26,16 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 	private String uploadContentType;
 	private String uploadFileName;
 	private List<User> users;
+	private boolean isExist;
+	private String userid;
+
+	public boolean getIsExist() {
+		return isExist;
+	}
+
+	public void setUserid(String userid) {
+		this.userid = userid;
+	}
 
 	public void setUpload(File upload) {
 		this.upload = upload;
@@ -202,5 +212,12 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 			userService.edit(user, true);
 		}
 		return "editSUCCESS";
+	}
+
+	public String checkid() {
+		UserService userService = new UserService();
+		// System.out.println(userid);
+		isExist = userService.checkid(userid);
+		return "checkidSUCCESS";
 	}
 }

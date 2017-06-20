@@ -139,4 +139,21 @@ public class UserDao {
 		}
 	}
 
+	public boolean checkid(String userid) {
+		String sql = "select * from user where id = ?";
+		try {
+			User user = queryRunner.query(sql,
+					new BeanHandler<User>(User.class), userid);
+			if (user == null) {
+				return false;
+			} else {
+				return true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			throw new RuntimeException();
+		}
+	}
+
 }

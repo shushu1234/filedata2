@@ -3,14 +3,38 @@ package com.shushu.web.action;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.struts2.ServletActionContext;
+
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.shushu.domain.Kind;
+import com.shushu.domain.User;
 import com.shushu.service.KindService;
+import com.shushu.utils.ListUitls;
 
 public class KindAction extends ActionSupport implements ModelDriven<Kind> {
 	private Kind kind = new Kind();
 	private List<Kind> kinds = new ArrayList<Kind>();
+	private List<Kind> leaflist = new ArrayList<Kind>();
+	private List<Kind> alllist = new ArrayList<Kind>();
+	private int userkindid;
+
+	public void setUserkindid() {
+		this.userkindid = ((User) ServletActionContext.getRequest()
+				.getSession().getAttribute("loginUser")).getKindid();
+	}
+
+	public int getUserkindid() {
+		return userkindid;
+	}
+
+	public List<Kind> getAlllist() {
+		return alllist;
+	}
+
+	public List<Kind> getLeaflist() {
+		return leaflist;
+	}
 
 	@Override
 	public Kind getModel() {
@@ -32,9 +56,11 @@ public class KindAction extends ActionSupport implements ModelDriven<Kind> {
 	 * @return
 	 */
 	public String add() {
+		this.setUserkindid();
 		KindService kindService = new KindService();
 		System.out.println(kind.getParentid());
 		if (kind.getParentid() == 0) {
+			kind.setParentid(userkindid);
 			kindService.add(kind);
 		} else {
 			kindService.addChildKind(kind);
@@ -48,8 +74,9 @@ public class KindAction extends ActionSupport implements ModelDriven<Kind> {
 	 * @return
 	 */
 	public String list() {
+		this.setUserkindid();
 		KindService kindService = new KindService();
-		kinds = kindService.list();
+		kinds = kindService.list(userkindid);
 		return "listSUCCESS";
 	}
 
@@ -86,5 +113,26 @@ public class KindAction extends ActionSupport implements ModelDriven<Kind> {
 		KindService kindService = new KindService();
 		kindService.update(kind);
 		return "updateSUCCESS";
+	}
+
+	/**
+	 * 读取所有叶子list
+	 */
+	public String leaflist() {
+		KindService kindService = new KindService();
+		leaflist = kindService.leaflist();
+		leaflist = new ListUitls().removedRepeat(leaflist);
+		return "leaflistSUCCESS";
+	}
+
+	/**
+	 * 类别选择列出该用户所有kind
+	 */
+
+	public String alllist() {
+		this.setUserkindid();
+		KindService kindService = new KindService();
+		alllist = kindService.list(userkindid);
+		return "alllistSUCCESS";
 	}
 }

@@ -43,6 +43,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<link href="${pageContext.request.contextPath}/assets/plugins/jquery-ui/css/jquery-ui-1.10.4.min.css" rel="stylesheet" />
 		<link href="${pageContext.request.contextPath}/assets/plugins/magnific-popup/css/magnific-popup.css" rel="stylesheet" />
 		<link href="${pageContext.request.contextPath}/assets/plugins/pnotify/css/pnotify.custom.css" rel="stylesheet" />
+		<link href="${pageContext.request.contextPath}/assets/plugins/fullcalendar/css/fullcalendar.css" rel="stylesheet" />
+		<link href="${pageContext.request.contextPath}/assets/plugins/summernote/css/summernote.css" rel="stylesheet" />
+		<link href="${pageContext.request.contextPath}/assets/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css" rel="stylesheet" />
 
 	<!-- Theme CSS -->
 		<link href="${pageContext.request.contextPath}/assets/css/jquery.mmenu.css" rel="stylesheet" />
@@ -471,7 +474,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									<ul class="list-group">
 										<li class="list-group-item">
 <%-- 											<s:text cssClass="badge bk-bg-info" ></s:text>
- --%>											<span class="badge bk-bg-info" >
+ --%>											<span class="badge bk-bg-info" id="fileid">
  													<s:property value="%{model.id}"/> </span>
 											文件id
 										</li>
@@ -481,18 +484,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										</li>
 										<li class="list-group-item">
 											<span class="badge bk-bg-success">
-												<s:if test="%{model.kindid=='1'.toString()}">
-                                        		<span>资料</span>
-	                                        	</s:if>
-	                                        	<s:elseif test="%{model.kindid=='2'.toString()}">
-	                                        		<span>图片</span>
-	                                        	</s:elseif>
-	                                        	<s:elseif test="%{model.kindid=='3'.toString()}">
-	                                        		<span>视频</span>
-	                                        	</s:elseif>
-	                                        	<s:elseif test="%{model.kindid=='4'.toString()}">
-	                                        		<span>音乐</span>
-	                                        	</s:elseif>
+												<s:property value="%{model.kind}"/>
 											</span>
 											文件类型
 										</li>
@@ -503,7 +495,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											文件大小
 										</li>
 										<li class="list-group-item">
-											<span class="badge bk-bg-inverse-darker"><s:property value="%{model.userid}"/></span>
+											<span class="badge bk-bg-inverse-darker" id="userid"><s:property value="%{model.userid}"/></span>
 											上传用户id
 										</li>
 										<li class="list-group-item">
@@ -540,6 +532,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										<li class="list-group-item">
 											<span class="badge bk-bg-warning"><s:property value="%{model.uploaddate}"/></span>
 											上传时间
+										</li>
+										<li class="list-group-item">
+											<span class="badge bk-bg-info"><span id="ip"></span><span>:8080</span><span>${pageContext.request.contextPath}</span><s:property value="%{model.filepath}"/></span>
+											文件地址
 										</li>
 										<li class="list-group-item">
 
@@ -615,81 +611,57 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									<div class="bk-bg-very-light-gray text-center bk-padding-top-10 bk-padding-bottom-10">
 										<div class="row">
 											<div class="col-xs-8 text-left bk-vcenter">
-												<h5 class="bk-margin-off"><em>From the workfloor</em></h5>
+												<h5 class="bk-margin-off"><em>下载前三甲</em></h5>
 											</div>
 											<div class="col-xs-4 bk-vcenter text-right">
-												<i class="fa fa-comment-o fa-2x"></i>
+												<i class="fa fa-cloud-download fa-2x"></i>
 											</div>
 										</div>
 									</div>
 									<hr class="bk-margin-off" />
 									<div class="bs-example">
 										<div id="carousel-example-generic3" class="carousel bk-carousel-fade slide" data-ride="carousel">
-											<div class="carousel-inner">
-												<div class="item active">
-													<a class="panel-body bk-bg-very-light-gray bk-bg-lighten bk-padding-off-top bk-padding-off-bottom">
-														<div class="pull-left bk-margin-top-10 bk-margin-right-10">
-															<div class="bk-round bk-bg-darken bk-border-off bk-icon bk-icon-2x bk-icon-default bk-bg-warning">
-																<i class="fa fa-gift fa-2x"></i>
-															</div>
-														</div>
-														<h5 class="bk-fg-warning bk-fg-darken bk-margin-off-bottom"><strong>APP UPDATE</strong></h5>
-														<p>
-															<small>We've programmed in some easter-eggs for you all to find in our latest app for Android and IOS.</small>
-														</p>
-													</a>
-													<hr class="bk-margin-off" />
-													<div class="panel-body bk-bg-very-light-gray bk-padding-5 text-center">
-														<a href="#" class="bk-fg-warning bk-fg-lighten"><small><i class="fa fa-file-text-o"></i> Read more like this</small></a>
-													</div>
-												</div>
-												<div class="item">
-													<a class="panel-body bk-bg-very-light-gray bk-bg-lighten bk-padding-off-top bk-padding-off-bottom">
-														<div class="pull-left bk-margin-top-10 bk-margin-right-10">
-															<div class="bk-round bk-bg-darken bk-border-off bk-icon bk-icon-2x bk-icon-default bk-bg-info">
-																<i class="fa fa-send-o fa-2x"></i>
-															</div>
-														</div>
-														<h5 class="bk-fg-info bk-fg-darken bk-margin-off-bottom"><strong>OCTOBER NEWSLETTER</strong></h5>
-														<p>
-															<small>Read all about progress on our projects and new partnerships that will increase our business potential.</small>
-														</p>
-													</a>
-													<hr class="bk-margin-off" />
-													<div class="panel-body bk-bg-very-light-gray bk-padding-5 text-center">
-														<a href="#" class="bk-fg-info bk-fg-lighten"><small><i class="fa fa-file-text-o"></i> Read more like this</small></a>
-													</div>
-												</div>
-												<div class="item">
-													<a class="panel-body bk-bg-very-light-gray bk-bg-lighten bk-padding-off-top bk-padding-off-bottom">
-														<div class="pull-left bk-margin-top-10 bk-margin-right-10">
-															<div class="bk-round bk-bg-darken bk-border-off bk-icon bk-icon-2x bk-icon-default bk-bg-primary">
-																<i class="fa fa-map-marker fa-2x"></i>
-															</div>
-														</div>
-														<h5 class="bk-fg-primary bk-fg-darken bk-margin-off-bottom"><strong>WHERE YOU AT?</strong></h5>
-														<p>
-															<small>Some interesting locations have been added to our database and as usual we've also uploaded some pictures.</small>
-														</p>
-													</a>
-													<hr class="bk-margin-off" />
-													<div class="panel-body bk-bg-very-light-gray bk-padding-5 text-center">
-														<a href="#" class="bk-fg-primary bk-fg-lighten"><small><i class="fa fa-file-text-o"></i> Read more like this</small></a>
-													</div>
-												</div>
-											</div>
-											<a class="left carousel-control bk-carousel-control bk-carousel-control-white bk-carousel-hide-init" href="#carousel-example-generic3" role="button" data-slide="prev">
-												<span class="fa fa-angle-left icon-prev bk-bg-very-light-gray"></span>
-											</a>
-											<a class="right carousel-control bk-carousel-control bk-carousel-control-white bk-carousel-hide-init" href="#carousel-example-generic3" role="button" data-slide="next">
-												<span class="fa fa-angle-right icon-next"></span>
-											</a>
+
+
 										</div>
 									</div>
 								</div>
 							</div>                          
 						</div>
 					</div>
+
+
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="panel panel-default">
+								<div class="panel-heading bk-bg-white">
+									<h6><i class="fa fa-edit red"></i>文件审核</h6>
+									<div class="panel-actions">
+										<a href="#" class="btn-minimize"><i class="fa fa-caret-up"></i></a>
+										<a href="#" class="btn-close"><i class="fa fa-times"></i></a>
+									</div>
+								</div>
+								<div class="panel-body bk-bg-white bk-padding-top-30 bk-padding-bottom-20" style="height: 550px">
+									<form class="form-horizontal form-bordered" >
+										<div class="form-group">
+											<div class="col-md-10">
+											<textarea id="passcontent" name="content" data-plugin-markdown-editor rows="10" style="height: 300px"></textarea>
+											</div>
+											<div class="col-md-2">
+												<div class="checkbox-custom checkbox-default bk-margin-top-10">
+													<input id="pass" name="pass" type="checkbox">
+													<label for="pass">是否通过</label>
+												</div>
+												<hr/>
+												<button type="button" class="btn btn-primary" id="passbtn">提交</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
 				</div>
 				<!-- End Main Page -->
 
@@ -721,10 +693,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<script src="${pageContext.request.contextPath}/assets/plugins/flot/js/jquery.flot.stack.min.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/plugins/flot/js/jquery.flot.time.min.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/plugins/flot-tooltip/js/jquery.flot.tooltip.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/plugins/bootstrap-markdown/js/bootstrap-markdown.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/plugins/bootstrap-markdown/js/markdown.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/plugins/bootstrap-markdown/js/to-markdown.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/plugins/sparkline/js/jquery.sparkline.min.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/plugins/moment/js/moment.min.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/plugins/magnific-popup/js/magnific-popup.js"></script>
-	<script src="${pageContext.request.contextPath}/assets/plugins/pnotify/js/pnotify.custom.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/plugins/pnotify/js/pnotify.custom.js"></script>
 
 	<!-- Theme JS -->
 		<script src="${pageContext.request.contextPath}/assets/js/jquery.mmenu.min.js"></script>
@@ -733,22 +708,146 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<!-- Pages JS -->
 		<script src="${pageContext.request.contextPath}/assets/js/pages/widgets.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/js/pages/ui-lightbox.js"></script>
-	<script src="${pageContext.request.contextPath}/assets/js/pages/ui-modals.js"></script>
-
+		<script src="${pageContext.request.contextPath}/assets/js/pages/ui-modals.js"></script>
+		<script src="${pageContext.request.contextPath}/assets/js/pages/form-editors.js"></script>
 	<!-- end: JavaScript-->
 	<script type="text/javascript">
-	$(document).on('click', '#modal-confirm1', function (e) {
-		e.preventDefault();
-		$.magnificPopup.close();
-		var delid=$("#del").data('delid');
-		alert(delid);
-		new PNotify({
-			title: 'Success!',
-			text: 'Modal Confirm Message.',
-			type: 'success'
-		});
-	});
+		$(function () {
+            var ip_addr = document.location.hostname;
+			$("#ip").text(ip_addr);
+        })
 
+		$(document).on('click', '#modal-confirm1', function (e) {
+			e.preventDefault();
+			$.magnificPopup.close();
+			var delid=$("#del").data('delid');
+			alert(delid);
+			new PNotify({
+				title: 'Success!',
+				text: 'Modal Confirm Message.',
+				type: 'success'
+			});
+		});
+
+		$("#passbtn").click(function () {
+		    var passcontent=$("#passcontent").val();
+			var pass=document.getElementById("pass").checked;
+            var userid=$("#userid").text();
+            var fileid=$.trim($("#fileid").text());
+//            alert(passcontent);
+//            alert(pass);
+//			alert(userid);
+//			alert(fileid);
+			$.post("${pageContext.request.contextPath}/ajax/messageadd.action",{
+			    "title":"文件审核通知",
+			    "sender":"15422001",
+				"receiver":userid,
+				"fileid":fileid,
+				"content":passcontent,
+				"pass":pass
+			},function (data) {
+				if(data.addFlag){
+				    alert("文件审核成功");
+				    window.location.href="${pageContext.request.contextPath}/file_list.action";
+				}else{
+				    alert("文件审核失败");
+				}
+            });
+        })
+
+		function topfiles() {
+			$.post("${pageContext.request.contextPath}/ajax/topfile.action",function (data) {
+				var str="";
+				//alert(data.topfiles);
+				str+="\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-inner\">\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"item active\">\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"panel-body bk-bg-very-light-gray bk-bg-lighten bk-padding-off-top bk-padding-off-bottom\">\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pull-left bk-margin-top-10 bk-margin-right-10\">\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"bk-round bk-bg-darken bk-border-off bk-icon bk-icon-2x bk-icon-default bk-bg-warning\">\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"fa  fa-plane fa-2x\"></i>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"bk-fg-warning bk-fg-darken bk-margin-off-bottom\"><strong>" +
+					"No.1 "+
+					data.topfiles[0].name +
+					"</strong></h5>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<small>" +
+					data.topfiles[0].remark +
+					"</small>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t</p>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t</a>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t<hr class=\"bk-margin-off\" />\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"panel-body bk-bg-very-light-gray bk-padding-5 text-center\">\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"" +
+					"${pageContext.request.contextPath}/file_detail.action?id=" +
+                    data.topfiles[0].id	+
+					"\" class=\"bk-fg-warning bk-fg-lighten\"><small><i class=\"fa fa-file-text-o\"></i> 点击这里了解详情 </small></a>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"item\">\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"panel-body bk-bg-very-light-gray bk-bg-lighten bk-padding-off-top bk-padding-off-bottom\">\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pull-left bk-margin-top-10 bk-margin-right-10\">\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"bk-round bk-bg-darken bk-border-off bk-icon bk-icon-2x bk-icon-default bk-bg-info\">\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"fa  fa-truck fa-2x\"></i>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"bk-fg-info bk-fg-darken bk-margin-off-bottom\"><strong>" +
+                    "No.2 "+
+                    data.topfiles[1].name +
+					"</strong></h5>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<small>" +
+                    data.topfiles[1].remark +
+					"</small>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t</p>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t</a>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t<hr class=\"bk-margin-off\" />\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"panel-body bk-bg-very-light-gray bk-padding-5 text-center\">\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"" +
+                    "${pageContext.request.contextPath}/file_detail.action?id=" +
+                    data.topfiles[1].id	+
+					"\" class=\"bk-fg-info bk-fg-lighten\"><small><i class=\"fa fa-file-text-o\"></i> 点击这里了解详情 </small></a>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"item\">\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"panel-body bk-bg-very-light-gray bk-bg-lighten bk-padding-off-top bk-padding-off-bottom\">\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"pull-left bk-margin-top-10 bk-margin-right-10\">\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"bk-round bk-bg-darken bk-border-off bk-icon bk-icon-2x bk-icon-default bk-bg-primary\">\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-send-o fa-2x\"></i>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<h5 class=\"bk-fg-primary bk-fg-darken bk-margin-off-bottom\"><strong>" +
+                    "No.3 "+
+                    data.topfiles[2].name +
+					"</strong></h5>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<p>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<small>" +
+                    data.topfiles[2].remark+
+                	"</small>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t</p>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t</a>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t<hr class=\"bk-margin-off\" />\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"panel-body bk-bg-very-light-gray bk-padding-5 text-center\">\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"" +
+                    "${pageContext.request.contextPath}/file_detail.action?id=" +
+                    data.topfiles[2].id	+
+					"\" class=\"bk-fg-primary bk-fg-lighten\"><small><i class=\"fa fa-file-text-o\"></i> 点击这里了解详情 </small></a>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t"+"<a class=\"left carousel-control bk-carousel-control bk-carousel-control-white bk-carousel-hide-init\" href=\"#carousel-example-generic3\" role=\"button\" data-slide=\"prev\">\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"fa fa-angle-left icon-prev bk-bg-very-light-gray\"></span>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t</a>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t<a class=\"right carousel-control bk-carousel-control bk-carousel-control-white bk-carousel-hide-init\" href=\"#carousel-example-generic3\" role=\"button\" data-slide=\"next\">\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"fa fa-angle-right icon-next\"></span>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t\t</a>";
+				var topfilediv=$("#carousel-example-generic3");
+				topfilediv.append(str);
+            })
+        }
+        topfiles();
 	</script>
 	</body>
 	

@@ -12,9 +12,9 @@ public class KindService {
 		kindDao.add(kind);
 	}
 
-	public List<Kind> list() {
+	public List<Kind> list(int userkindid) {
 		KindDao kindDao = new KindDao();
-		return kindDao.list();
+		return kindDao.list(userkindid);
 	}
 
 	public Kind findById(int id) {
@@ -43,5 +43,11 @@ public class KindService {
 		// TODO Auto-generated method stub
 		KindDao kindDao = new KindDao();
 		kindDao.update(kind);
+	}
+
+	public List<Kind> leaflist() {
+		// TODO Auto-generated method stub
+		KindDao kindDao = new KindDao();
+		return kindDao.leaflist();
 	}
 }

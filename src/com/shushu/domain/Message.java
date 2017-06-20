@@ -12,10 +12,14 @@ public class Message {
 	private int hasread;// 接收人阅读标志 1未阅读 2 阅读
 	private int parentid;// 父级id
 	private int level;// 消息级别 默认0
+	private String sendername;// 发送人姓名
+	private String receivername;// 接收人姓名
+	private String senderpath;// 发件人头像地址
 
 	public Message(int id, String title, String content, String sender,
 			String receiver, String sendtime, int senderdisable,
-			int receiverdisable, int hasread, int parentid, int level) {
+			int receiverdisable, int hasread, int parentid, int level,
+			String sendername, String receivername, String senderpath) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -28,6 +32,9 @@ public class Message {
 		this.hasread = hasread;
 		this.parentid = parentid;
 		this.level = level;
+		this.sendername = sendername;
+		this.receivername = receivername;
+		this.senderpath = senderpath;
 	}
 
 	public Message() {
@@ -123,13 +130,39 @@ public class Message {
 		this.level = level;
 	}
 
+	public String getSendername() {
+		return sendername;
+	}
+
+	public void setSendername(String sendername) {
+		this.sendername = sendername;
+	}
+
+	public String getReceivername() {
+		return receivername;
+	}
+
+	public void setReceivername(String receivername) {
+		this.receivername = receivername;
+	}
+
+	public String getSenderpath() {
+		return senderpath;
+	}
+
+	public void setSenderpath(String senderpath) {
+		this.senderpath = senderpath;
+	}
+
 	@Override
 	public String toString() {
 		return "Message [id=" + id + ", title=" + title + ", content="
 				+ content + ", sender=" + sender + ", receiver=" + receiver
 				+ ", sendtime=" + sendtime + ", senderdisable=" + senderdisable
 				+ ", receiverdisable=" + receiverdisable + ", hasread="
-				+ hasread + ", parentid=" + parentid + ", level=" + level + "]";
+				+ hasread + ", parentid=" + parentid + ", level=" + level
+				+ ", sendername=" + sendername + ", receivername="
+				+ receivername + ", senderpath=" + senderpath + "]";
 	}
 
 }

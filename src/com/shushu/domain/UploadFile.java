@@ -3,7 +3,8 @@ package com.shushu.domain;
 public class UploadFile {
 	private int id; // 文件id 自增
 	private String name; // 文件名
-	private String kindid; // 类别id
+	private int kindid; // 类别id
+	private String kind;
 	private String remark; // 文件备注
 	private long filesize; // 文件大小
 	private String authorname1; // 第一作者
@@ -11,21 +12,22 @@ public class UploadFile {
 	private String authorname3; // 第三作者
 	private String authorname4; // 第四作者
 	private String authorname5; // 第五作者
-	private int open; // 是否开放下载 1：开放 0：不开放 默认不开放
+	private int open; // 是否开放下载 2：开放 1：不开放 默认不开放
 	private String userid; // 上传用户id
 	private String uploaddate; // 上传时间
 	private String filepath; // 文件对象的路径
 	private int downcount;
 
-	public UploadFile(int id, String name, String kindid, String remark,
-			long filesize, String authorname1, String authorname2,
-			String authorname3, String authorname4, String authorname5,
-			int open, String userid, String uploaddate, String filepath,
-			int downcount) {
+	public UploadFile(int id, String name, int kindid, String kind,
+			String remark, long filesize, String authorname1,
+			String authorname2, String authorname3, String authorname4,
+			String authorname5, int open, String userid, String uploaddate,
+			String filepath, int downcount) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.kindid = kindid;
+		this.kind = kind;
 		this.remark = remark;
 		this.filesize = filesize;
 		this.authorname1 = authorname1;
@@ -38,6 +40,14 @@ public class UploadFile {
 		this.uploaddate = uploaddate;
 		this.filepath = filepath;
 		this.downcount = downcount;
+	}
+
+	public String getKind() {
+		return kind;
+	}
+
+	public void setKind(String kind) {
+		this.kind = kind;
 	}
 
 	public int getDowncount() {
@@ -68,11 +78,11 @@ public class UploadFile {
 		this.name = name;
 	}
 
-	public String getKindid() {
+	public int getKindid() {
 		return kindid;
 	}
 
-	public void setKindid(String kindid) {
+	public void setKindid(int kindid) {
 		this.kindid = kindid;
 	}
 
