@@ -26,8 +26,8 @@ public class UploadFileDao {
 	@InputConfig(resultName = "uploadINPUT")
 	public void upload(UploadFile uploadFile) {
 		// TODO Auto-generated method stub
-		String sql = "insert into file (name,kindid,kind,remark,filesize,authorname1,authorname2,authorname3,authorname4,authorname5,open,userid,uploaddate,filepath,downcount) "
-				+ "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		String sql = "insert into file (name,kindid,kind,remark,filesize,authorname1,authorname2,authorname3,authorname4,authorname5,open,userid,uploaddate,filepath,downcount,privatefile) "
+				+ "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		Date nowDate = new Date();
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(
 				"yyyy-MM-dd HH:dd:ss");
@@ -38,7 +38,8 @@ public class UploadFileDao {
 				uploadFile.getFilesize(), uploadFile.getAuthorname1(),
 				uploadFile.getAuthorname2(), uploadFile.getAuthorname3(),
 				uploadFile.getAuthorname4(), uploadFile.getAuthorname5(), 1,
-				uploadFile.getUserid(), nowtime, uploadFile.getFilepath(), 0 };
+				uploadFile.getUserid(), nowtime, uploadFile.getFilepath(), 0,
+				uploadFile.getPrivatefile() };
 		try {
 			queryRunner.update(sql, params);
 		} catch (SQLException e) {
@@ -69,6 +70,10 @@ public class UploadFileDao {
 		}
 		if (uploadFile.getOpen() != 0) {
 			sql += " and open = " + uploadFile.getOpen() + " ";
+			// params.add(String.valueOf(uploadFile.getOpen()));
+		}
+		if (uploadFile.getPrivatefile() != 0) {
+			sql += " and privatefile = " + uploadFile.getPrivatefile() + " ";
 			// params.add(String.valueOf(uploadFile.getOpen()));
 		}
 		if (uploadFile.getKindid() != 0) {

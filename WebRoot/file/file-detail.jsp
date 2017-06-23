@@ -538,6 +538,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											文件地址
 										</li>
 										<li class="list-group-item">
+											<span class="badge bk-bg-primary">
+												<s:if test="%{model.privatefile==1}">
+													公开文件
+												</s:if>
+	                                       		 <s:else>
+													 个人文件
+												 </s:else>
+	                                        </span>
+											开放状态
+										</li>
+										<li class="list-group-item">
 
 											<span class="badge bk-bg-info">
 											<a class=" popup-with-zoom-anim btn btn-default" href="#small-dialog" style="background-color:#2dc9b7;font-size:10px;padding:0px;color:#fff;border-bottom:0px">点击查看详情</a>
@@ -559,21 +570,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                                 <i class="fa fa-search-plus "></i>
                                             </s:a>
                                             
-                                            <s:a cssClass="btn btn-info" action="file_editview" namespace="/">
-                                            	<s:param name="id" value="%{model.id}"></s:param>
-                                                <i class="fa fa-edit "></i>
-                                            </s:a>
-                                            
                                             <s:a cssClass="btn btn-primary" action="file_download" namespace="/">
                                             	<s:param name="id" value="%{model.id}"></s:param>
                                             	<i class="fa fa-download "></i>
                                             </s:a>
-                                           <%--  <s:a cssClass="btn btn-danger" action="file_delete" namespace="/">
+                                           	<input type="hidden" name="loginuserid" id="loginuserid" value="${loginUser.id }">
+                                            <s:a id="edit" cssClass="btn btn-info" action="file_editview" namespace="/">
                                             	<s:param name="id" value="%{model.id}"></s:param>
-                                                 <i class="fa fa-trash-o "></i>
-                                            </s:a> --%>
+                                                <i class="fa fa-edit "></i>
+                                            </s:a>
+                                            
+                                           
                                              <a id="del" class="modal-basic btn btn-danger" href="#modalIcon" data-delid=%{model.id}><i class="fa fa-trash-o "></i></a>
-                                        <div id="modalIcon" class="modal-block modal-block-primary mfp-hide">
+                                     	   <div id="modalIcon" class="modal-block modal-block-primary mfp-hide">
                                         <div class="panel panel-default">
                                         <div class="panel-heading">
                                         <h2 class="panel-title">请确认:</h2>
@@ -602,6 +611,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                         </div>
                                         </div>
                                         </div>
+                                    	
                                       </div>
 								</div>
 							</div>
@@ -629,7 +639,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</div>                          
 						</div>
 					</div>
-
+					<s:if test="%{#session.loginUser.role==1}">
 
 					<div class="row">
 						<div class="col-xs-12">
@@ -661,7 +671,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</div>
 						</div>
 					</div>
-
+					</s:if>
 				</div>
 				<!-- End Main Page -->
 
@@ -734,13 +744,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			var pass=document.getElementById("pass").checked;
             var userid=$("#userid").text();
             var fileid=$.trim($("#fileid").text());
+            var loginuserid=$("#loginuserid").val();
 //            alert(passcontent);
 //            alert(pass);
 //			alert(userid);
 //			alert(fileid);
 			$.post("${pageContext.request.contextPath}/ajax/messageadd.action",{
 			    "title":"文件审核通知",
-			    "sender":"15422001",
+			    "sender":loginuserid,
 				"receiver":userid,
 				"fileid":fileid,
 				"content":passcontent,
@@ -848,6 +859,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             })
         }
         topfiles();
+        
+       	function judge() {
+			var loginuserid=$("#loginuserid").val();
+			var userid=$.trim($("#userid").text());
+//			alert(loginuserid);
+//			alert(userid);
+			if(loginuserid==userid){
+//			    alert(1);
+			    $("#edit").show();
+			    $("#del").show();
+			}else {
+//			    alert(2);
+                $("#edit").hide();
+                $("#del").hide();
+			}
+        }
+        judge();
 	</script>
 	</body>
 	

@@ -36,7 +36,7 @@
            <!--  <result name="input" >/user/user-login.jsp</result> -->
             <result name="loginSUCCESS">/user/user-info.jsp</result>
             <result name="registINPUT">/user/user-regist.jsp</result>
-            <result name="registSUCCESS">/user/user-info.jsp</result>
+            <result name="registSUCCESS" type="redirect">/user/user-emailok.jsp</result>
             <result name="listSUCCESS">/user/user-list.jsp</result>
             <result name="deleteSUCCESS" type="redirectAction">user_list</result>
             <result name="viewSUCCESS">/user/user-info.jsp</result>
@@ -44,6 +44,10 @@
             <result name="editSUCCESS" type="redirectAction">user_list</result>
             <result name="editINPUT">/user/user-edit.jsp</result>
             <result name="indexSUCCESS">/user/user-info.jsp</result>
+            <result name="logoutSUCCESS">/user/user-login.jsp</result>
+            <result name="activeSUCCESS">/user/user-login.jsp</result>
+            <result name="recoverSUCCESS">/user/user-resetpwd.jsp</result>
+            <result name="recoveremailSUCCESS">/user/user-resetemailok.jsp</result>
             <!-- 设置上传参数 -->
 			<interceptor-ref name="defaultStack">
 				<!-- 只允许上传 png和jpg文件 -->
@@ -54,7 +58,7 @@
 			<!-- 配置自定义拦截器参数 -->
 			<interceptor-ref name="myStack">
 				<!-- 向拦截器传参数 -->
-				<param name="login.excludeMethods">user_login,user_index,user_regist</param>
+				<param name="login.excludeMethods">user_login,user_index,user_regist,user_logout,user_active,user_recover</param>
 			</interceptor-ref>
         </action>
 		
@@ -92,11 +96,23 @@
     		<result name="detailSUCCESS">/message/message-detail.jsp</result>
     		<result name="deleteSUCCESS">/message/message-inbox.jsp</result>
     	</action>
+    	<!-- 文章操作 -->
+    	<action name="article_*" class="com.shushu.web.action.ArticleAction" method="{1}">
+    		<result name="detailSUCCESS">/article/article-detail.jsp</result>
+    		<result name="deleteSUCCESS">/message/message-inbox.jsp</result>
+    	</action>
     </package>
 
 	<package name="myjson" namespace="/ajax" extends="json-default">
 		<action name="checkid" class="com.shushu.web.action.UserAction" method="checkid">
 			<result name="checkidSUCCESS" type="json">
+				<param name="root">
+					action
+				</param>
+			</result>
+		</action>
+		<action name="checkemail" class="com.shushu.web.action.UserAction" method="checkemail">
+			<result name="checkemailSUCCESS" type="json">
 				<param name="root">
 					action
 				</param>
@@ -160,6 +176,53 @@
 		</action>
 		<action name="checksendmsg" class="com.shushu.web.action.MessageAction" method="checksendmsg">
 			<result name="checksendmsgSUCCESS" type="json">
+				<param name="root">
+					action
+				</param>
+			</result>
+		</action>
+		<action name="setadmin" class="com.shushu.web.action.UserAction" method="setadmin">
+			<result name="setadminSUCCESS" type="json">
+				<param name="root">
+					action
+				</param>
+			</result>
+		</action>
+		<action name="articleadd" class="com.shushu.web.action.ArticleAction" method="articleadd">
+			<result name="articleaddSUCCESS" type="json">
+				<param name="root">
+					action
+				</param>
+			</result>
+			<result name="articleaddINPUT" type="json">
+				<param name="root">
+					action
+				</param>
+			</result>
+		</action>
+		<action name="checknewarticle" class="com.shushu.web.action.ArticleAction" method="checknewarticle">
+			<result name="checknewarticleSUCCESS" type="json">
+				<param name="root">
+					action
+				</param>
+			</result>
+		</action>
+		<action name="checkmyarticle" class="com.shushu.web.action.ArticleAction" method="checkmyarticle">
+			<result name="checkmyarticleSUCCESS" type="json">
+				<param name="root">
+					action
+				</param>
+			</result>
+		</action>
+		<action name="commentadd" class="com.shushu.web.action.CommentAction" method="commentadd">
+			<result name="commentaddSUCCESS" type="json">
+				<param name="root">
+					action
+				</param>
+			</result>
+		</action>
+		<action name="checkcomment" class="com.shushu.web.action.CommentAction" method="checkcomment">
+			<result name="checkcommentSUCCESS" type="json">
 				<param name="root">
 					action
 				</param>

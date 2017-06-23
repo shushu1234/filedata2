@@ -8,14 +8,14 @@
 <html lang="en">
 
 	<head>
-	
-		<!-- Basic -->
-    	<meta charset="UTF-8" />
 
-		<title>Compose | Fire - Admin Template</title>
-	
+		<!-- Basic -->
+		<meta charset="UTF-8" />
+
+		<title>Inbox | Fire - Admin Template</title>
+
 		<!-- Mobile Metas -->
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 		<!-- Favicon and touch icons -->
 		<link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/ico/favicon.ico" type="image/x-icon" />
@@ -27,41 +27,37 @@
 		<link rel="apple-touch-icon" sizes="120x120" href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-120x120.png" />
 		<link rel="apple-touch-icon" sizes="144x144" href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-144x144.png" />
 		<link rel="apple-touch-icon" sizes="152x152" href="${pageContext.request.contextPath}/assets/ico/apple-touch-icon-152x152.png" />
-		
-	    <!-- start: CSS file-->
-		
+
+		<!-- start: CSS file-->
+
 		<!-- Vendor CSS-->
 		<link href="${pageContext.request.contextPath}/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 		<link href="${pageContext.request.contextPath}/assets/vendor/skycons/css/skycons.css" rel="stylesheet" />
 		<link href="${pageContext.request.contextPath}/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 		<link href="${pageContext.request.contextPath}/assets/vendor/css/pace.preloader.css" rel="stylesheet" />
-		
+
 		<!-- Plugins CSS-->
 		<link href="${pageContext.request.contextPath}/assets/plugins/bootkit/css/bootkit.css" rel="stylesheet" />
-		<link href="${pageContext.request.contextPath}/assets/plugins/fullcalendar/css/fullcalendar.css" rel="stylesheet" />
-		<link href="${pageContext.request.contextPath}/assets/plugins/summernote/css/summernote.css" rel="stylesheet" />
-		<link href="${pageContext.request.contextPath}/assets/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css" rel="stylesheet" />
-
 
 		<!-- Theme CSS -->
 		<link href="${pageContext.request.contextPath}/assets/css/jquery.mmenu.css" rel="stylesheet" />
-		
-		<!-- Page CSS -->		
+
+		<!-- Page CSS -->
 		<link href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet" />
 		<link href="${pageContext.request.contextPath}/assets/css/add-ons.min.css" rel="stylesheet" />
-		
-		<!-- end: CSS file-->	
-	    
-		
+
+		<!-- end: CSS file-->
+
+
 		<!-- Head Libs -->
 		<script src="${pageContext.request.contextPath}/assets/plugins/modernizr/js/modernizr.js"></script>
-		
+
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->		
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
 		
 	</head>
 	
@@ -438,162 +434,128 @@
 				<!-- End Sidebar -->
 		
 				<!-- Main Page -->
-				<div class="main">
+				<div class="main ">
 					<!-- Page Header -->
 					<div class="page-header">
 						<div class="pull-left">
 							<ol class="breadcrumb visible-sm visible-md visible-lg">								
 								<li><a href="index.jsp"><i class="icon fa fa-home"></i>Home</a></li>
 								<li><a href="#"><i class="fa fa-envelope"></i>Mail</a></li>
-								<li class="active"><i class="fa fa-pencil-square-o"></i>Compose</li>
+								<li class="active"><i class="fa fa-inbox"></i>Inbox</li>
 							</ol>						
 						</div>
 						<div class="pull-right">
-							<h2>Compose</h2>
+							<h2>Inbox</h2>
 						</div>					
 					</div>
 					<!-- End Page Header -->
 					<div class="row mailbox">
-						<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-							<div class="panel">
-								<div class="panel-body bk-bg-very-light-gray mailbox-menu">
-									<a href="message-compose.html" class="btn btn-primary btn-block">栏目</a>
-									<ul>
-										<li>
-											<a href="${pageContext.request.contextPath}/message/message-inbox.jsp">收件箱</a>
-										</li>
-										<li>
-											<a href="${pageContext.request.contextPath}/message/message-compose.jsp">发邮件</a>
-										</li>
-										<li>
-											<a href="#">垃圾箱</a>
-										</li>
 
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 							<div class="panel">
 								<div class="panel-body bk-bg-very-light-gray">
 									<div class="mailbox-email-header">
 										<h3 class="mailbox-email-subject bk-fg-primary">
-											发送信息
+											所有文章
 										</h3>
 									</div>
 								</div>
 							</div>
 							<div class="panel bk-bg-white">
 								<div class="panel-body">
-									<form class="form-horizontal bk-margin-top-10" role="form"  >
-										<div class="form-group">
-											<label for="id" class="col-sm-1 control-label">To(id):</label>
-											<div class="col-sm-11">
-	 											<input type="text" class="form-control bk-border-off" id="id" name="receiver" value='<s:property value="%{#parameters.id}"/>'/>
-												<div id="useridinfo" style="color: red;display: none;">该账号不存在,请检查</div>
-											</div>
-											<input type="hidden" value="${loginUser.id}" name="sender" id="sender" />
-										</div>
-										<hr />
-										<div class="form-group">
-											<label for="title" class="col-sm-1 control-label">标题:</label>
-											<div class="col-sm-11">
-												<input type="text" class="form-control bk-border-off" id="title" name="title" />
-											</div>
-										</div>
-
-										<hr />
-										<div class="form-group">
-											<div class="col-md-12">
-											<textarea name="content" data-plugin-markdown-editor rows="10" id="content"></textarea>
-											</div>
-										</div>
-
-										<div class="mailbox-compose bk-padding-bottom-20 bk-margin-left-5">
-											<button type="button" class="btn btn-primary bk-margin-top-5" id="sendbtn"><i class="fa fa-send-o"></i> 发送</button>
-										</div>
-									</form>
+									<%--<div class="col-md-12">--%>
+										<%--<div class="btn-group bk-margin-bottom-10 bk-margin-top-10 pull-right">--%>
+											<%--<button class="btn btn-sm btn-default">1-10 of 500</button>--%>
+											<%--<button class="btn btn-sm btn-default"><span class="fa fa-chevron-left"></span></button>--%>
+											<%--<button class="btn btn-sm btn-default"><span class="fa fa-chevron-right"></span></button>--%>
+										<%--</div>--%>
+									<%--</div>--%>
 								</div>
-							</div>	
-						</div>	
-					</div>							
+								<div class="panel-body">
+									<div class="col-md-12">
+										<ul class="messages-list" id="article-list">
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<!-- End Main Page -->		
-
+				<!-- End Main Page -->	
+			
 			</div>
 		</div><!--/container-->
-		
+			
 		
 		<div class="clearfix"></div>		
 		
 		
 		<!-- start: JavaScript-->
-		
-		<!-- Vendor JS-->				
+
+		<!-- Vendor JS-->
 		<script src="${pageContext.request.contextPath}/assets/vendor/js/jquery.min.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/vendor/js/jquery-2.1.1.min.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/vendor/js/jquery-migrate-1.2.1.min.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-		<script src="${pageContext.request.contextPath}/assets/vendor/skycons/js/skycons.js"></script>	
+		<script src="${pageContext.request.contextPath}/assets/vendor/skycons/js/skycons.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/vendor/js/pace.min.js"></script>
-		
+
 		<!-- Plugins JS-->
-		<script src="${pageContext.request.contextPath}/assets/plugins/moment/js/moment.min.js"></script>	
-		<script src="${pageContext.request.contextPath}/assets/plugins/fullcalendar/js/fullcalendar.min.js"></script>
-		<script src="${pageContext.request.contextPath}/assets/plugins/summernote/js/summernote.js"></script>
-		<script src="${pageContext.request.contextPath}/assets/plugins/bootstrap-markdown/js/bootstrap-markdown.js"></script>
-		<script src="${pageContext.request.contextPath}/assets/plugins/bootstrap-markdown/js/markdown.js"></script>
-		<script src="${pageContext.request.contextPath}/assets/plugins/bootstrap-markdown/js/to-markdown.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/plugins/sparkline/js/jquery.sparkline.min.js"></script>
 
-
-		<!-- Theme JS -->		
+		<!-- Theme JS -->
 		<script src="${pageContext.request.contextPath}/assets/js/jquery.mmenu.min.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/js/core.min.js"></script>
-		
+
 		<!-- Pages JS -->
 		<script src="${pageContext.request.contextPath}/assets/js/pages/mailbox.js"></script>
-		<script src="${pageContext.request.contextPath}/assets/js/pages/form-editors.js"></script>
+		
 		<!-- end: JavaScript-->
 		<script type="text/javascript">
-            $("#id").blur(function () {
-                var userid=$("#id").val();
-// alert(userid);
-                $.post("${pageContext.request.contextPath}/ajax/checkid.action",{"userid":userid},function (data) {
-                    if (data.isExist==false){
-                        $("#useridinfo").show();
-                    }
-                });
-            })
 
-            $("#id").keydown(function () {
-                $("#useridinfo").hide();
-            })
+            $(function () {
+                setInterval(checkmessage,2000);
 
-			$("#sendbtn").click(function () {
-			    var receiver=$("#id").val();
-			    var title=$("#title").val();
-			    var content=$("#content").val();
-			    var sender=$("#sender").val();
-//			    alert(receiver);
-//			    alert(title);
-//			    alert(content);
-//			    alert(sender);
-				$.post("${pageContext.request.contextPath}/ajax/useraddmsg.action",{
-				    "receiver":receiver,
-					"title":title,
-					"content":content,
-					"sender":sender
-				},function (data) {
-                    if(data.addFlag){
-                        alert("信息发送成功");
-                        window.location.href="${pageContext.request.contextPath}/message/message-inbox.jsp";
-                    }else{
-                        alert("信息发送失败");
-                    }
-                })
-            })
+                function checkmessage() {
+                    $.post("${pageContext.request.contextPath}/ajax/checknewarticle.action",function (data) {
+                        var str="";
+                        var ul=$("#article-list");
+                        ul.find("li").remove(); 
+                        var articlelsits=data.articlelsits;
+                        $.each(articlelsits,function (n,article) {
 
+							str+="<li>";
+
+                            str+="<a href=\"" +
+                                "${pageContext.request.contextPath}/article_detail.action?id=" +
+                                article.id+
+                                "\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"header\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"from\">" +
+                                article.username +
+                                "</span>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"date\"><i class=\"fa fa-paperclip\"></i>" +
+                                article.addtime +
+                                "</span>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"title\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"action\"><i class=\"fa fa-star\"></i></span>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t\t" +
+                                article.title +
+                                "\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\t\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"description\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t\t" +
+                                "\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t</a>\t\t\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t</li>"
+                        })
+                        ul.append(str)
+                    })
+                }
+
+            })
 		</script>
 	</body>
 	

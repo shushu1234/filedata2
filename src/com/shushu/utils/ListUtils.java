@@ -8,7 +8,7 @@ import java.util.TreeSet;
 
 import com.shushu.domain.Kind;
 
-public class ListUitls {
+public class ListUtils {
 	public List<Kind> removedRepeat(List<Kind> srcList) {
 		Set<Kind> s = new TreeSet<Kind>(new Comparator<Kind>() {
 

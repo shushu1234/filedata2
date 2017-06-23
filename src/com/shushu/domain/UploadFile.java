@@ -16,7 +16,8 @@ public class UploadFile {
 	private String userid; // 上传用户id
 	private String uploaddate; // 上传时间
 	private String filepath; // 文件对象的路径
-	private int downcount;
+	private int downcount;// 下载次数
+	private int privatefile;// 私人文件 1-公开 2-私人
 
 	public UploadFile(int id, String name, int kindid, String kind,
 			String remark, long filesize, String authorname1,
@@ -40,6 +41,14 @@ public class UploadFile {
 		this.uploaddate = uploaddate;
 		this.filepath = filepath;
 		this.downcount = downcount;
+	}
+
+	public int getPrivatefile() {
+		return privatefile;
+	}
+
+	public void setPrivatefile(int privatefile) {
+		this.privatefile = privatefile;
 	}
 
 	public String getKind() {
@@ -176,13 +185,15 @@ public class UploadFile {
 
 	@Override
 	public String toString() {
-		return "File [id=" + id + ", name=" + name + ", kindid=" + kindid
-				+ ", remark=" + remark + ", filesize=" + filesize
-				+ ", authorname1=" + authorname1 + ", authorname2="
+		return "UploadFile [id=" + id + ", name=" + name + ", kindid=" + kindid
+				+ ", kind=" + kind + ", remark=" + remark + ", filesize="
+				+ filesize + ", authorname1=" + authorname1 + ", authorname2="
 				+ authorname2 + ", authorname3=" + authorname3
 				+ ", authorname4=" + authorname4 + ", authorname5="
 				+ authorname5 + ", open=" + open + ", userid=" + userid
-				+ ", uploaddate=" + uploaddate + ", filepath=" + filepath + "]";
+				+ ", uploaddate=" + uploaddate + ", filepath=" + filepath
+				+ ", downcount=" + downcount + ", privatefile=" + privatefile
+				+ "]";
 	}
 
 }

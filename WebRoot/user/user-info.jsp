@@ -299,7 +299,7 @@
                             </s:a>
                         </li>
                         <li>
-                            <a href="${pageContext.request.contextPath}/user/user-login.jsp"><i class="fa fa-power-off"></i> 注 销 </a>
+                            <a href="${pageContext.request.contextPath}/user_logout.action"><i class="fa fa-power-off"></i> 注 销 </a>
                         </li>
                     </ul>
                 </div>
@@ -366,7 +366,7 @@
                                     <li><a href="${pageContext.request.contextPath }/message/message-compose.jsp"><span class="text"> 发邮件</span></a>
                                     </li>
                                     <li><a href="${pageContext.request.contextPath }/message/message-detail.jsp"><span class="text"> 邮件详情</span></a></li>
-                                    <li><a href="page-register.html"><span class="text"> Register Page</span></a></li>
+                                    <li><a href="${pageContext.request.contextPath }/user/user-resetpwd.jsp"><span class="text"> 重置密码</span></a></li>
                                     <li><a href="page-recover-password.html"><span class="text"> Recover Password</span></a>
                                     </li>
                                     <li><a href="page-lockscreen1.html"><span class="text"> Lock Screen 1</span></a>
@@ -420,13 +420,13 @@
                             </li>
                             <li class="nav-parent">
                                 <a>
-                                    <i class="fa fa-table" aria-hidden="true"></i><span>Tables</span>
+                                    <i class="fa fa-table" aria-hidden="true"></i><span>文章</span>
                                 </a>
                                 <ul class="nav nav-children">
-                                    <li><a href="table-basic.html"><span class="text"> Basic</span></a></li>
-                                    <li><a href="table-advanced.html"><span class="text"> Advanced</span></a></li>
-                                    <li><a href="table-responsive.html"><span class="text"> Responsive</span></a></li>
-                                    <li><a href="table-editable.html"><span class="text"> Editable</span></a></li>
+                                    <li><a href="${pageContext.request.contextPath }/article/article-edit.jsp"><span class="text"> 撰写文章</span></a></li>
+                                    <li><a href="${pageContext.request.contextPath }/article/article-list.jsp"><span class="text"> 文章列表</span></a></li>
+                                    <li><a href="${pageContext.request.contextPath }/article/article-detail.jsp"><span class="text"> 文章详情</span></a></li>
+                                    <li><a href="${pageContext.request.contextPath }/article/article-my.jsp"><span class="text"> 个人文章</span></a></li>
                                 </ul>
                             </li>
                             <li class="nav-parent">
@@ -623,13 +623,40 @@
                                         </span>
                                     </div>
                                     <div class="col-12-4 col-md-12 col-sm-12 col-xs-12 bk-bg-white bk-padding-top-10">
-                                        <i class="fa fa-tablet"></i> +62 2569 2568 256
+                                        <i class="fa fa-user"></i>
+                                        <span id="role">
+                                             <s:if test="%{op=='login'}">
+                                                 <s:if test="%{#session.loginUser.role=='1'.toString()}">管理员</s:if>
+                                                 <s:else>用户</s:else>
+                                             </s:if>
+                                        <s:elseif test="%{model==null}">
+                                            <s:if test="%{#session.loginUser.role=='1'.toString()}">管理员</s:if>
+                                                 <s:else>用户</s:else>
+                                        </s:elseif>
+                                        <s:else>
+                                            <s:if test="%{model.role=='1'.toString()}">管理员</s:if>
+                                                 <s:else>用户</s:else>
+                                        </s:else>
+                                        </span>
                                     </div>
                                     <div class="col-12-4 col-md-12 col-sm-12 col-xs-12 bk-bg-white bk-padding-top-10">
                                         <i class="fa fa-envelope"></i> jhonsmith@mail.com
                                     </div>
+
                                 </div>
                             </div>
+
+                            <s:if test="%{#session.loginUser.role==1}">
+                            <div class="form-group">
+                                <div class="col-md-9">
+                                    <div class="checkbox-custom checkbox-inline">
+                                        <input type="checkbox" id="admin" name="inline-checkbox1" value="option1">
+                                        <label for="admin">设为管理员</label>
+                                    </div>
+                                    <button class="bk-margin-5 btn btn-info" id="adminbtn">提交</button>
+                                </div>
+                            </div>
+                            </s:if>
                         </div>
                     </div>
                 </div>
@@ -735,19 +762,40 @@
                     "</div>\n" +
                     "                                </time>\n" +
                     "                            </div>\n" +
-                    "                            <div class=\"tm-box\">\n" +
+                    "                        <a href=\'" +
+                     " ${pageContext.request.contextPath}/file_detail.action?id="+
+                        file.id+
+                    "\'>    <div class=\"tm-box\">\n" +
                     "                                <p>\n" +
                     "上传文件："+file.name +
                     " <span class=\"text-primary\"></span>\n" +
                     "                                </p>\n" +
-                    "                            </div>\n" +
+                    "                            </div></a>\n" +
                     "                        </li>";
 
             })
             ol.append(str);
+
+
+
         })
     }
     activity();
+
+    $("#adminbtn").click(function () {
+
+            if ($("#admin").is(":checked")){
+                var userid=$.trim($("#userid").text());
+               // alert(userid);
+                $.post("${pageContext.request.contextPath}/ajax/setadmin.action",{"userid":userid},function (data) {
+                    if (data.setadmin){
+                        alert("设置管理员成功");
+                    }else {
+                        alert("设置管理员失败");
+                    }
+                })
+            }
+    })
 </script>
 
 </body>

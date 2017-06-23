@@ -141,46 +141,35 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label>学/工 号</label>
-                                        <!-- 												<input name="id" type="text" class="form-control" placeholder="请输入学/工号" id="id"/>
-                                         --> <s:textfield name="id" cssClass="form-control" id="id"
-                                                          placeholder="请输入学/工号"> </s:textfield>
-                                        <s:fielderror fieldName="id" cssClass="fielderrors"></s:fielderror>
-                                        <div id="useridinfo" style="color: red;display: none;">该学/工号已存在,去登录或换其他学/工号</div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</label>
+                                        <label>呢&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称</label>
                                         <!-- 												<input name="name" type="text" class="form-control" placeholder="请输入姓名" id="name"/>
                                          --> <s:textfield name="name" cssClass="form-control" placeholder="请输入姓名"
                                                           id="name"></s:textfield>
                                         <s:fielderror fieldName="name" cssClass="fielderrors"></s:fielderror>
                                     </div>
                                     <div class="form-group">
-                                        <label>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</label>
-                                        <!-- 												<input name="gender" type="radio" value="男" checked="checked" style="margin-left: 2%">男
-                                                                                        <input name="gender" type="radio" value="女" style="margin-left: 2%">女
-                                         --> <s:radio list="{'男','女'}" name="gender"></s:radio>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话</label>
-                                        <!-- 												<input name="tel" type="tel" class="form-control" placeholder="请输入电话号码" id="tel"/>
-                                         --> <s:textfield name="tel" cssClass="form-control" placeholder="请输入电话号码"
-                                                          id="tel"></s:textfield>
-                                        <s:fielderror fieldName="tel" cssClass="fielderrors"></s:fielderror>
-                                    </div>
-                                    <div class="form-group">
                                         <label>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱</label>
                                         <!-- 												<input name="email" type="email" class="form-control" placeholder="请输入邮箱" id="email"/>
                                          --> <s:textfield name="email" cssClass="form-control" placeholder="请输入邮箱"
-                                                          id="email"></s:textfield>
+                                                              id="useremail"></s:textfield>
                                         <s:fielderror fieldName="email" cssClass="fielderrors"></s:fielderror>
+                                        <span style="color: red;display: none;" id="emailinfo">该邮箱已注册账户:(</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</label>
+                                    <s:radio list="{'男','女'}" name="gender" value="男"></s:radio>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话</label>
+                                      <s:textfield name="tel" cssClass="form-control" placeholder="请输入电话号码"
+                                        id="tel"></s:textfield>
+                                        <s:fielderror fieldName="tel" cssClass="fielderrors"></s:fielderror>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <label>密码</label>
-                                                <!-- 														<input name="pwd" type="password" class="form-control bk-margin-bottom-10" placeholder="请输入密码" id="pwd"/>
-                                                 --> <s:password name="pwd" cssClass="form-control bk-margin-bottom-10"
+                                                <s:password name="pwd" cssClass="form-control bk-margin-bottom-10"
                                                                  placeholder="请输入密码" id="pwd"></s:password>
                                             </div>
                                             <div class="col-sm-6">
@@ -203,7 +192,7 @@
                                             <button type="submit" class="btn btn-primary hidden-xs"> 注 册</button>
                                             <button type="submit"
                                                     class="btn btn-primary btn-block btn-lg visible-xs bk-margin-top-20">
-                                                Register
+                                                注 册
                                             </button>
                                         </div>
                                     </div>
@@ -245,6 +234,7 @@
 <!-- end: JavaScript-->
 <script type="text/javascript">
 
+
     function previewFile() {
         var preview = document.getElementById('preview');
         var file = document.querySelector('input[type=file]').files[0];
@@ -259,20 +249,19 @@
         }
     }
 
-    $("#id").blur(function () {
-        var userid=$("#id").val();
-       // alert(userid);
-        $.post("${pageContext.request.contextPath}/ajax/checkid.action",{"userid":userid},function (data) {
-            if (data.isExist==true){
-                $("#useridinfo").show();
+    $("#useremail").blur(function () {
+        var useremail=$("#useremail").val();
+        alert(useremail);
+        $.post("${pageContext.request.contextPath}/ajax/checkemail.action",{"useremail":useremail},function (data) {
+            if (data.isExist == true) {
+                $("#emailinfo").show();
             }
-        });
-    })
 
-    $("#id").keydown(function () {
-        $("#useridinfo").hide();
-    })
-
+        })
+    });
+     $("#useremail").keydown(function () {
+         $("#emailinfo").hide();
+     })
 </script>
 
 </body>

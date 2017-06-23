@@ -1,8 +1,8 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib uri="/struts-tags" prefix="s"%>
 <%
-	String path = request.getContextPath();
-	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,8 +12,8 @@
 		<!-- Basic -->
     	<meta charset="UTF-8" />
 
-		<title>Compose | Fire - Admin Template</title>
-	
+		<title>Editors | Fire - Admin Template</title>
+		
 		<!-- Mobile Metas -->
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
@@ -41,8 +41,7 @@
 		<link href="${pageContext.request.contextPath}/assets/plugins/fullcalendar/css/fullcalendar.css" rel="stylesheet" />
 		<link href="${pageContext.request.contextPath}/assets/plugins/summernote/css/summernote.css" rel="stylesheet" />
 		<link href="${pageContext.request.contextPath}/assets/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css" rel="stylesheet" />
-
-
+		
 		<!-- Theme CSS -->
 		<link href="${pageContext.request.contextPath}/assets/css/jquery.mmenu.css" rel="stylesheet" />
 		
@@ -80,7 +79,7 @@
 					<!-- Search Form -->					
 					<form class="search navbar-form">
 						<div class="input-group input-search">
-							<input type="text" class="form-control bk-radius" name="q" id="q" placeholder="Search...">
+							<input type="text" class="form-control bk-radius" name="q" id="q" placeholder="Search${pageContext.request.contextPath}.">
 							<span class="input-group-btn">
 								<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
 							</span>
@@ -242,7 +241,7 @@
 									</div>							
 								</li>	
 								<li>
-									<a href="page-profile.html"><i class="fa fa-user"></i> Profile</a>
+									<a href="${pageContext.request.contextPath}/page-profile.html"><i class="fa fa-user"></i> Profile</a>
 								</li>
 								<li>
 									<a href="#"><i class="fa fa-wrench"></i> Settings</a>
@@ -254,7 +253,7 @@
 									<a href="#"><i class="fa fa-file"></i> File</a>
 								</li>
 								<li>
-									<a href="page-login.html"><i class="fa fa-power-off"></i> Logout</a>
+									<a href="${pageContext.request.contextPath}/page-login.html"><i class="fa fa-power-off"></i> Logout</a>
 								</li>
 							</ul>
 						</div>						
@@ -287,12 +286,12 @@
 										</div>
 									</div>
 									<li>
-										<a href="index.jsp">
+										<a href="${pageContext.request.contextPath}/index.jsp">
 											<i class="fa fa-laptop" aria-hidden="true"></i><span>Dashboard</span>
 										</a>
 									</li>
-									<li class="active">
-										<a href="mailbox-inbox.html">
+									<li>
+										<a href="${pageContext.request.contextPath}/mailbox-inbox.html">
 											<span class="pull-right label label-danger">235</span>
 											<i class="fa fa-envelope" aria-hidden="true"></i><span>Mail</span>
 										</a>
@@ -302,18 +301,18 @@
 											<i class="fa fa-copy" aria-hidden="true"></i><span>Pages</span>
 										</a>
 										<ul class="nav nav-children">
-											<li><a href="page-profile.html"><span class="text"> Profile</span></a></li>
-											<li><a href="page-activity.html"><span class="text"> Activity</span></a></li>
-											<li><a href="page-timeline.html"><span class="text"> Timeline</span></a></li>
-											<li><a href="page-invoice.html"><span class="text"> Invoice</span></a></li>
-											<li><a href="page-pricing-tables.html"><span class="text"> Pricing Tables</span></a></li>
-											<li><a href="page-login.html"><span class="text"> Login Page</span></a></li>
-											<li><a href="page-register.html"><span class="text"> Register Page</span></a></li>
-											<li><a href="page-recover-password.html"><span class="text"> Recover Password</span></a></li>
-											<li><a href="page-lockscreen1.html"><span class="text"> Lock Screen 1</span></a></li>
-											<li><a href="page-lockscreen2.html"><span class="text"> Lock Screen 2</span></a></li>
-											<li><a href="page-404.html"><span class="text"> Page 404</span></a></li>
-											<li><a href="page-500.html"><span class="text"> Page 500</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/page-profile.html"><span class="text"> Profile</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/page-activity.html"><span class="text"> Activity</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/page-timeline.html"><span class="text"> Timeline</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/page-invoice.html"><span class="text"> Invoice</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/page-pricing-tables.html"><span class="text"> Pricing Tables</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/page-login.html"><span class="text"> Login Page</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/page-register.html"><span class="text"> Register Page</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/page-recover-password.html"><span class="text"> Recover Password</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/page-lockscreen1.html"><span class="text"> Lock Screen 1</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/page-lockscreen2.html"><span class="text"> Lock Screen 2</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/page-404.html"><span class="text"> Page 404</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/page-500.html"><span class="text"> Page 500</span></a></li>
 										</ul>
 									</li>
 									<li class="nav-parent">
@@ -321,32 +320,32 @@
 											<i class="fa fa-tasks" aria-hidden="true"></i><span>UI Elements</span>
 										</a>
 										<ul class="nav nav-children">
-											<li><a href="ui-basic-elements.html"><span class="text"> Basic Elements</span></a></li>
-											<li><a href="ui-nestable-list.html"><span class="text"> Nestable</span></a></li>
-											<li><a href="ui-buttons.html"><span class="text"> Buttons</span></a></li>
-											<li><a href="ui-progress-bars.html"><span class="text"> Progress Bars</span></a></li>
-											<li><a href="ui-sliders.html"><span class="text"> Sliders</span></a></li>
-											<li><a href="ui-panels.html"><span class="text"> Panels</span></a></li>
-											<li><a href="ui-tabs.html"><span class="text"> Tabs</span></a></li>
-											<li><a href="ui-notifications.html"><span class="text"> Notifications</span></a></li>
-											<li><a href="ui-modals.html"><span class="text"> Modals</span></a></li>
-											<li><a href="ui-portlets.html"><span class="text"> Portlets</span></a></li>	
-											<li><a href="ui-lightbox.html"><span class="text"> Lightbox</span></a></li>
-											<li><a href="ui-carousels.html"><span class="text"> Carousels</span></a></li>
-											<li><a href="ui-animation.html"><span class="text"> Animation</span></a></li>											
+											<li><a href="${pageContext.request.contextPath}/ui-basic-elements.html"><span class="text"> Basic Elements</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/ui-nestable-list.html"><span class="text"> Nestable</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/ui-buttons.html"><span class="text"> Buttons</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/ui-progress-bars.html"><span class="text"> Progress Bars</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/ui-sliders.html"><span class="text"> Sliders</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/ui-panels.html"><span class="text"> Panels</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/ui-tabs.html"><span class="text"> Tabs</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/ui-notifications.html"><span class="text"> Notifications</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/ui-modals.html"><span class="text"> Modals</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/ui-portlets.html"><span class="text"> Portlets</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/ui-lightbox.html"><span class="text"> Lightbox</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/ui-carousels.html"><span class="text"> Carousels</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/ui-animation.html"><span class="text"> Animation</span></a></li>
 										</ul>
 									</li>
-									<li class="nav-parent">
+									<li class="nav-parent nav-expanded active">
 										<a>
 											<i class="fa fa-list-alt" aria-hidden="true"></i><span>Forms</span>
 										</a>
 										<ul class="nav nav-children">
-											<li><a href="form-elements.html"><span class="text"> Elements</span></a></li>
-											<li><a href="form-wizard.html"><span class="text"> Wizard</span></a></li>
-											<li><a href="form-validation.html"><span class="text"> Validation</span></a></li>
-											<li><a href="form-dropzone.html"><span class="text"> Dropzone Upload</span></a></li>
-											<li><a href="form-editors.html"><span class="text"> Editors</span></a></li>
-											<li><a href="form-x-editable.html"><span class="text"> X-Editable</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/form-elements.html"><span class="text"> Elements</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/form-wizard.html"><span class="text"> Wizard</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/form-validation.html"><span class="text"> Validation</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/form-dropzone.html"><span class="text"> Dropzone Upload</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/form-editors.html"><span class="text"> Editors</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/form-x-editable.html"><span class="text"> X-Editable</span></a></li>
 										</ul>
 									</li>
 									<li class="nav-parent">
@@ -354,10 +353,10 @@
 											<i class="fa fa-table" aria-hidden="true"></i><span>Tables</span>
 										</a>
 										<ul class="nav nav-children">
-											<li><a href="table-basic.html"><span class="text"> Basic</span></a></li>
-											<li><a href="table-advanced.html"><span class="text"> Advanced</span></a></li>
-											<li><a href="table-responsive.html"><span class="text"> Responsive</span></a></li>
-											<li><a href="table-editable.html"><span class="text"> Editable</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/table-basic.html"><span class="text"> Basic</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/table-advanced.html"><span class="text"> Advanced</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/table-responsive.html"><span class="text"> Responsive</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/table-editable.html"><span class="text"> Editable</span></a></li>
 										</ul>
 									</li>
 									<li class="nav-parent">
@@ -365,23 +364,23 @@
 											<i class="fa fa-random" aria-hidden="true"></i><span>Visual Chart</span>
 										</a>
 										<ul class="nav nav-children">
-											<li><a href="chart-flot.html"><span class="text"> Flot Chart</span></a></li>
-											<li><a href="chart-xchart.html"><span class="text"> xChart</span></a></li>
-											<li><a href="chart-other.html"><span class="text"> Other</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/chart-flot.html"><span class="text"> Flot Chart</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/chart-xchart.html"><span class="text"> xChart</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/chart-other.html"><span class="text"> Other</span></a></li>
 										</ul>
 									</li>									
 									<li>
-										<a href="widgets.html">
+										<a href="${pageContext.request.contextPath}/widgets.html">
 											<i class="fa fa-life-bouy" aria-hidden="true"></i><span>Widgets</span>
 										</a>
 									</li>
 									<li>
-										<a href="gallery.html">
+										<a href="${pageContext.request.contextPath}/gallery.html">
 											<i class="fa fa-picture-o" aria-hidden="true"></i><span>Gallery</span>
 										</a>
 									</li>
 									<li>
-										<a href="calendar.html">
+										<a href="${pageContext.request.contextPath}/calendar.html">
 											<i class="fa fa-calendar" aria-hidden="true"></i><span>Calendar</span>
 										</a>
 									</li>
@@ -390,12 +389,12 @@
 											<i class="fa fa-map-marker" aria-hidden="true"></i><span>Maps</span>
 										</a>
 										<ul class="nav nav-children">
-											<li><a href="map-basic.html"><span class="text"> Basic</span></a></li>
-											<li><a href="map-vector.html"><span class="text"> Vector</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/map-basic.html"><span class="text"> Basic</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/map-vector.html"><span class="text"> Vector</span></a></li>
 										</ul>
 									</li>
 									<li>
-										<a href="typography.html">
+										<a href="${pageContext.request.contextPath}/typography.html">
 											<i class="fa fa-font" aria-hidden="true"></i><span>Typography</span>
 										</a>
 									</li>
@@ -404,9 +403,9 @@
 											<i class="fa fa-bolt" aria-hidden="true"></i><span>Icons</span>
 										</a>
 										<ul class="nav nav-children">
-											<li><a href="icons-font-awesome.html"><span class="text"> Font Awesome</span></a></li>
-											<li><a href="icons-weathericons.html"><span class="text"> Weather Icons</span></a></li>
-											<li><a href="icons-glyphicons.html"><span class="text"> Glyphicons</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/icons-font-awesome.html"><span class="text"> Font Awesome</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/icons-weathericons.html"><span class="text"> Weather Icons</span></a></li>
+											<li><a href="${pageContext.request.contextPath}/icons-glyphicons.html"><span class="text"> Glyphicons</span></a></li>
 										</ul>
 									</li>
 								</ul>
@@ -436,93 +435,70 @@
 					<!-- End Sidebar Footer-->
 				</div>
 				<!-- End Sidebar -->
+			
 		
 				<!-- Main Page -->
-				<div class="main">
+				<div class="main ">
 					<!-- Page Header -->
 					<div class="page-header">
 						<div class="pull-left">
 							<ol class="breadcrumb visible-sm visible-md visible-lg">								
-								<li><a href="index.jsp"><i class="icon fa fa-home"></i>Home</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i>Mail</a></li>
-								<li class="active"><i class="fa fa-pencil-square-o"></i>Compose</li>
+								<li><a href="${pageContext.request.contextPath}/index.jsp"><i class="icon fa fa-home"></i>Home</a></li>
+								<li><a href="#"><i class="icon fa fa-list-alt"></i>Forms</a></li>
+								<li class="active"><i class="fa fa-pencil-square-o"></i>Editors</li>								
 							</ol>						
 						</div>
 						<div class="pull-right">
-							<h2>Compose</h2>
+							<h2>Editors</h2>
 						</div>					
 					</div>
 					<!-- End Page Header -->
-					<div class="row mailbox">
-						<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-							<div class="panel">
-								<div class="panel-body bk-bg-very-light-gray mailbox-menu">
-									<a href="message-compose.html" class="btn btn-primary btn-block">栏目</a>
-									<ul>
-										<li>
-											<a href="${pageContext.request.contextPath}/message/message-inbox.jsp">收件箱</a>
-										</li>
-										<li>
-											<a href="${pageContext.request.contextPath}/message/message-compose.jsp">发邮件</a>
-										</li>
-										<li>
-											<a href="#">垃圾箱</a>
-										</li>
 
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
-							<div class="panel">
-								<div class="panel-body bk-bg-very-light-gray">
-									<div class="mailbox-email-header">
-										<h3 class="mailbox-email-subject bk-fg-primary">
-											发送信息
-										</h3>
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="panel panel-default">
+								<div class="panel-heading bk-bg-white">
+									<h6><i class="fa fa-edit red"></i>文章编辑<h4 style="color: red">(注意:markdown编辑器换行需要回车两次)</h4></h6>
+									<div class="panel-actions">
+										<a href="#" class="btn-minimize"><i class="fa fa-caret-up"></i></a>
+										<a href="#" class="btn-close"><i class="fa fa-times"></i></a>
 									</div>
-								</div>
-							</div>
-							<div class="panel bk-bg-white">
-								<div class="panel-body">
-									<form class="form-horizontal bk-margin-top-10" role="form"  >
-										<div class="form-group">
-											<label for="id" class="col-sm-1 control-label">To(id):</label>
-											<div class="col-sm-11">
-	 											<input type="text" class="form-control bk-border-off" id="id" name="receiver" value='<s:property value="%{#parameters.id}"/>'/>
-												<div id="useridinfo" style="color: red;display: none;">该账号不存在,请检查</div>
-											</div>
-											<input type="hidden" value="${loginUser.id}" name="sender" id="sender" />
-										</div>
-										<hr />
+								</div>							
+								<div class="panel-body bk-bg-white bk-padding-top-30 bk-padding-bottom-20" style="height: 800px">
+									<form class="form-horizontal form-bordered">
 										<div class="form-group">
 											<label for="title" class="col-sm-1 control-label">标题:</label>
 											<div class="col-sm-11">
-												<input type="text" class="form-control bk-border-off" id="title" name="title" />
+												<input type="text" class="form-control bk-border-off" id="title" name="title" placeholder="请在此输入标题"/>
 											</div>
 										</div>
+										<input type="hidden" name="loginuserid" id="loginuserid" value="${loginUser.id }">
 
-										<hr />
-										<div class="form-group">
-											<div class="col-md-12">
-											<textarea name="content" data-plugin-markdown-editor rows="10" id="content"></textarea>
+										<div class="form-group">											
+											<div class="col-md-10">
+											<textarea id="content" name="content" data-plugin-markdown-editor rows="10" style="height: 560px" placeholder="请输入你要发布的文章:)"></textarea>
 											</div>
-										</div>
-
-										<div class="mailbox-compose bk-padding-bottom-20 bk-margin-left-5">
-											<button type="button" class="btn btn-primary bk-margin-top-5" id="sendbtn"><i class="fa fa-send-o"></i> 发送</button>
-										</div>
+											<div class="col-md-2">
+												<div class="checkbox-custom checkbox-default bk-margin-top-10">
+													<input id="open" name="rememberme" type="checkbox">
+													<label for="open">个人作品</label>
+												</div>
+												<hr/>
+												<button type="button" class="btn btn-primary" id="subbtn">提交</button>
+											</div>
+										</div>										
 									</form>
 								</div>
-							</div>	
-						</div>	
-					</div>							
+							</div>
+						</div>
+					</div>    
 				</div>
-				<!-- End Main Page -->		
+				<!-- End Main Page -->				
+		
 
 			</div>
 		</div><!--/container-->
-		
+			
 		
 		<div class="clearfix"></div>		
 		
@@ -534,65 +510,51 @@
 		<script src="${pageContext.request.contextPath}/assets/vendor/js/jquery-2.1.1.min.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/vendor/js/jquery-migrate-1.2.1.min.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-		<script src="${pageContext.request.contextPath}/assets/vendor/skycons/js/skycons.js"></script>	
+		<script src="${pageContext.request.contextPath}/assets/vendor/skycons/js/skycons.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/vendor/js/pace.min.js"></script>
 		
 		<!-- Plugins JS-->
-		<script src="${pageContext.request.contextPath}/assets/plugins/moment/js/moment.min.js"></script>	
+		<script src="${pageContext.request.contextPath}/assets/plugins/moment/js/moment.min.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/plugins/fullcalendar/js/fullcalendar.min.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/plugins/summernote/js/summernote.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/plugins/bootstrap-markdown/js/bootstrap-markdown.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/plugins/bootstrap-markdown/js/markdown.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/plugins/bootstrap-markdown/js/to-markdown.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/plugins/sparkline/js/jquery.sparkline.min.js"></script>
-
-
+		
 		<!-- Theme JS -->		
 		<script src="${pageContext.request.contextPath}/assets/js/jquery.mmenu.min.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/js/core.min.js"></script>
 		
 		<!-- Pages JS -->
-		<script src="${pageContext.request.contextPath}/assets/js/pages/mailbox.js"></script>
 		<script src="${pageContext.request.contextPath}/assets/js/pages/form-editors.js"></script>
+		
 		<!-- end: JavaScript-->
 		<script type="text/javascript">
-            $("#id").blur(function () {
-                var userid=$("#id").val();
-// alert(userid);
-                $.post("${pageContext.request.contextPath}/ajax/checkid.action",{"userid":userid},function (data) {
-                    if (data.isExist==false){
-                        $("#useridinfo").show();
-                    }
-                });
-            })
-
-            $("#id").keydown(function () {
-                $("#useridinfo").hide();
-            })
-
-			$("#sendbtn").click(function () {
-			    var receiver=$("#id").val();
-			    var title=$("#title").val();
-			    var content=$("#content").val();
-			    var sender=$("#sender").val();
-//			    alert(receiver);
-//			    alert(title);
-//			    alert(content);
-//			    alert(sender);
-				$.post("${pageContext.request.contextPath}/ajax/useraddmsg.action",{
-				    "receiver":receiver,
-					"title":title,
-					"content":content,
-					"sender":sender
+			$("#subbtn").click(function () {
+                var content=$("#content").val();
+                var pass=document.getElementById("open").checked;
+                var userid=$("#loginuserid").val();
+                var title=$("#title").val();
+//                alert(content);
+//                alert(pass);
+//                alert(userid);
+//                alert(title);
+                $.post("${pageContext.request.contextPath}/ajax/articleadd.action",{
+                    "content":content,
+                    "pass":pass,
+				    "userid":userid,
+					"title":title
 				},function (data) {
-                    if(data.addFlag){
-                        alert("信息发送成功");
-                        window.location.href="${pageContext.request.contextPath}/message/message-inbox.jsp";
-                    }else{
-                        alert("信息发送失败");
-                    }
+					if (data.addflag){
+					    alert("文章添加成功:)");
+					    window.location.href="${pageContext.request.contextPath}/article/article-list.jsp";
+					}else{
+						alert("文章添加失败:(");
+					}
                 })
             })
+
 
 		</script>
 	</body>

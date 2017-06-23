@@ -71,4 +71,15 @@ public class UserService {
 		UserDao userDao = new UserDao();
 		return userDao.checkid(userid);
 	}
+
+	public User findByCode(String code) {
+		// TODO Auto-generated method stub
+		UserDao userDao = new UserDao();
+		return userDao.findByCode(code);
+	}
+
+	public boolean checkemail(String useremail) {
+		UserDao userDao = new UserDao();
+		return userDao.checkemail(useremail);
+	}
 }

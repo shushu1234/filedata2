@@ -327,7 +327,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                     </li>
                                     <li><a href="page-login.html"><span class="text"> Login Page</span></a></li>
                                     <li><a href="page-register.html"><span class="text"> Register Page</span></a></li>
-                                    <li><a href="page-recover-password.html"><span class="text"> Recover Password</span></a>
+                                    <li><a href="user-recover.html"><span class="text"> Recover Password</span></a>
                                     </li>
                                     <li><a href="page-lockscreen1.html"><span class="text"> Lock Screen 1</span></a>
                                     </li>

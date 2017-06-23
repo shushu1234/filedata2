@@ -1,9 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
 <%@taglib uri="/struts-tags" prefix="s" %>
-<%
-    String path = request.getContextPath();
-    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
-%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,10 +8,11 @@
     <!-- Basic -->
     <meta charset="UTF-8"/>
 
-    <title>文件资料管理系统</title>
+    <title>用户注册</title>
 
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
 
     <!-- Favicon and touch icons -->
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/assets/ico/favicon.ico" type="image/x-icon"/>
@@ -60,7 +57,45 @@
     </style>
 
     <!-- end: CSS file-->
+    <style>
+        .fielderrors {
+            list-style: none;
+            color: red;
+            padding-top: 5px;
+        }
+    </style>
+    <style>
+        .file {
+            position: relative;
+            display: inline-block;
+            background: #D0EEFF;
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            padding: 4px 12px;
+            overflow: hidden;
+            color: #1E88C7;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+        }
 
+        .file input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+
+        .file:hover {
+            background: #AADFFD;
+            border-color: #78C3F3;
+            color: #004974;
+            text-decoration: none;
+        }
+
+        }
+    </style>
 
     <!-- Head Libs -->
     <script src="${pageContext.request.contextPath}/assets/plugins/modernizr/js/modernizr.js"></script>
@@ -81,75 +116,57 @@
         <!-- Main Page -->
         <div id="content" class="col-sm-12 full">
             <div class="row">
-                <div class="login-box">
+                <div class="register-box">
                     <div class="panel">
                         <div class="panel-body">
                             <div class="header bk-margin-bottom-20 text-center">
                                 <img src="${pageContext.request.contextPath}/assets/img/logo.png"
                                      style="padding-left: 0px" class="img-responsive" alt=""/>
-                                <h4> 用 户 登 录 </h4>
+                                <h4> 重 置 密 码 </h4>
                             </div>
-                            <%-- 									<form class="form-horizontal login" action="${pageContext.request.contextPath}/user_login.action" method="post"> --%>
-                            <s:form action="user_login" namespace="/" method="post" cssClass="form-horizontal login"
-                                    theme="simple">
-                                <s:actionerror cssStyle="list-style:none;" cssClass="alert alert-danger"/>
+                            <form class="form-horizontal login" action="${pageContext.request.contextPath}/user_recover.action" method="post">
+                            	<input type="hidden" name="id" value='<s:property value="id"/>'>
                                 <div class="bk-padding-left-20 bk-padding-right-20">
                                     <div class="form-group">
-                                        <label>学/工 号</label>
+                                        <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</label>
                                         <div class="input-group input-group-icon">
-                                            <!-- <input type="text" class="form-control bk-radius" name="id" placeholder="请输入学号或工号"/> -->
-                                            <s:textfield name="id" cssClass="form-control bk-radius"
-                                                         placeholder="请输入学号或工号" id="id"></s:textfield>
-                                            <span class="input-group-addon">
-														<span class="icon">
-															<i class="fa fa-user"></i>
-														</span>
-													</span>
-                                        </div>
-                                        <s:fielderror fieldName="id"
-                                                      cssStyle="margin-top:5px;color: #ff0714;list-style: none;"></s:fielderror>
-                                        <div id="useridinfo" style="color: red;display: none;">该学/工号不存在,请检查或去注册</div>
-
-                                    </div>
-                                    <div class="form-group">
-                                        <label> 密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码 </label>
-                                        <div class="input-group input-group-icon">
-                                            <!-- 								<input type="password" class="form-control bk-radius" name="pwd" placeholder="请输入密码"/> -->
-                                            <s:password name="pwd" cssClass="form-control bk-radius"
-                                                        placeholder="请输入密码"></s:password>
+                                            <input type="password" class="form-control bk-radius" name="pwd"
+                                                   placeholder="请输入密码"/>
                                             <span class="input-group-addon">
 														<span class="icon">
 															<i class="fa fa-key"></i>
 														</span>
 													</span>
                                         </div>
-                                        <s:fielderror fieldName="pwd"
-                                                      cssStyle="margin-top:5px;color: #ff0714;list-style: none;"></s:fielderror>
+                                    </div>
+                                    <div class="form-group">
+                                        <label> 确认密码 </label>
+                                        <div class="input-group input-group-icon">
+                                            <input type="password" class="form-control bk-radius" id="password"
+                                                   placeholder="请确认密码"/>
+                                            <span class="input-group-addon">
+														<span class="icon">
+															<i class="fa fa-key"></i>
+														</span>
+													</span>
+                                        </div>
                                     </div>
                                     <div class="row bk-margin-top-20 bk-margin-bottom-10">
                                         <div class="col-sm-8">
                                             <div class="checkbox-custom checkbox-default">
-                                                <input id="RememberMe" name="rememberme" type="checkbox"/>
-                                                <label for="RememberMe">记住该账户</label>
                                             </div>
                                         </div>
                                         <div class="col-sm-4 text-right">
-                                            <button type="submit" class="btn btn-primary hidden-xs"> 登 录</button>
+                                            <button type="submit" class="btn btn-primary hidden-xs">  重 置</button>
                                             <button type="submit"
                                                     class="btn btn-primary btn-block btn-lg visible-xs bk-margin-top-20">
-                                                登 录
+                                                重 置
                                             </button>
                                         </div>
                                     </div>
 
-                                    <p class="text-center">
-                                        忘记了密码？<a
-                                            href="${pageContext.request.contextPath}/user/user-recover.jsp">去重置!&nbsp;&nbsp;</a>还没有账户？<a
-                                            href="${pageContext.request.contextPath}/user/user-regist.jsp">去注册!</a>
-                                    </p>
                                 </div>
-                            </s:form>
-                            <!-- </form> -->
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -158,6 +175,7 @@
         <!-- End Main Page -->
     </div>
 </div><!--/container-->
+<!-- Modal Dialog -->
 
 
 <!-- start: JavaScript-->
@@ -177,25 +195,14 @@
 <script src="${pageContext.request.contextPath}/assets/js/core.min.js"></script>
 
 <!-- Pages JS -->
-<script src="${pageContext.request.contextPath}/assets/js/pages/page-login.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/pages/page-register.js"></script>
 
 <!-- end: JavaScript-->
 <script type="text/javascript">
-    $("#id").blur(function () {
-        var userid = $("#id").val();
-// alert(userid);
-        $.post("${pageContext.request.contextPath}/ajax/checkid.action", {"userid": userid}, function (data) {
-            if (data.isExist == false) {
-                $("#useridinfo").show();
-            }
-        });
-    })
 
-    $("#id").keydown(function () {
-        $("#useridinfo").hide();
-    })
 
 </script>
+
 </body>
 
 </html>

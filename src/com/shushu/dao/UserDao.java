@@ -33,10 +33,10 @@ public class UserDao {
 	 * 用户注册
 	 */
 	public void regist(User user) {
-		String sql = "insert into user values(?,?,?,?,?,?,?,?,?)";
+		String sql = "insert into user(id,name,pwd,gender,tel,email,role,defunct,avatarpath,activecode) values(?,?,?,?,?,?,?,?,?,?)";
 		Object[] params = { user.getId(), user.getName(), user.getPwd(),
 				user.getGender(), user.getTel(), user.getEmail(), 0, "N",
-				user.getAvatarpath() };
+				user.getAvatarpath(), user.getActivecode() };
 		try {
 			queryRunner.update(sql, params);
 		} catch (SQLException e) {
@@ -126,9 +126,11 @@ public class UserDao {
 			}
 		} else {
 			// 没有上传头像
-			String sql = "update user set name = ?, gender = ?, tel = ?, email = ? where id = ?";
-			Object[] params = { user.getName(), user.getGender(),
-					user.getTel(), user.getEmail(), user.getId() };
+			String sql = "update user set name = ?,pwd=?, gender = ?, tel = ?, email = ?, state= ?,activecode=? ,role=? where id = ?";
+			Object[] params = { user.getName(), user.getPwd(),
+					user.getGender(), user.getTel(), user.getEmail(),
+					user.getState(), user.getActivecode(), user.getRole(),
+					user.getId() };
 			try {
 				queryRunner.update(sql, params);
 			} catch (SQLException e) {
@@ -144,6 +146,37 @@ public class UserDao {
 		try {
 			User user = queryRunner.query(sql,
 					new BeanHandler<User>(User.class), userid);
+			if (user == null) {
+				return false;
+			} else {
+				return true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			throw new RuntimeException();
+		}
+	}
+
+	public User findByCode(String code) {
+		// TODO Auto-generated method stub
+		String sql = "select * from user where activecode = ?";
+		try {
+			User user = queryRunner.query(sql,
+					new BeanHandler<User>(User.class), code);
+			return user;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			throw new RuntimeException();
+		}
+	}
+
+	public boolean checkemail(String useremail) {
+		String sql = "select * from user where email = ?";
+		try {
+			User user = queryRunner.query(sql,
+					new BeanHandler<User>(User.class), useremail);
 			if (user == null) {
 				return false;
 			} else {

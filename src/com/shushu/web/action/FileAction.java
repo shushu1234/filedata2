@@ -11,12 +11,14 @@ import java.util.List;
 import java.util.UUID;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.opensymphony.xwork2.interceptor.annotations.InputConfig;
 import com.shushu.domain.UploadFile;
+import com.shushu.domain.User;
 import com.shushu.service.UploadFileService;
 import com.sun.mail.util.BASE64EncoderStream;
 
@@ -31,6 +33,17 @@ public class FileAction extends ActionSupport implements
 	private String queryuserid;
 	private List<UploadFile> userfiles = new ArrayList<UploadFile>();
 	private List<UploadFile> topfiles;
+	private Logger log = Logger.getLogger(FileAction.class);
+	private String loginuserid;
+
+	public String getLoginuserid() {
+		return loginuserid;
+	}
+
+	public void setLoginuserid(String loginuserid) {
+		this.loginuserid = ((User) ServletActionContext.getRequest()
+				.getSession().getAttribute("loginUser")).getId();
+	}
 
 	public List<UploadFile> getTopfiles() {
 		return topfiles;
@@ -101,6 +114,8 @@ public class FileAction extends ActionSupport implements
 			uploadFile.setFilesize(upload.length());
 			uploadFile.setName(uploadFileName.replace(" ", "-"));
 		}
+		log.info(uploadFile.getUserid() + "上传文件" + uploadFile.getName()
+				+ " 文件路径为" + uploadFile.getFilepath());
 		uploadFileService.upload(uploadFile);
 		return "uploadSUCCESS";
 	}
@@ -112,7 +127,16 @@ public class FileAction extends ActionSupport implements
 	 */
 	public String list() {
 		UploadFileService uploadFileService = new UploadFileService();
-		uploadFiles = uploadFileService.list(uploadFile);
+		User user = (User) ServletActionContext.getRequest().getSession()
+				.getAttribute("loginUser");
+		if (user.getRole() == 1) {
+			uploadFiles = uploadFileService.list(uploadFile);
+		} else {
+			// uploadFile.setUserid(user.getId());
+			uploadFile.setPrivatefile(1);
+			uploadFile.setOpen(2);
+			uploadFiles = uploadFileService.list(uploadFile);
+		}
 		return "listSUCCESS";
 	}
 
@@ -122,6 +146,7 @@ public class FileAction extends ActionSupport implements
 	public String download() {
 		UploadFileService uploadFileService = new UploadFileService();
 		uploadFile = uploadFileService.findById(uploadFile.getId());
+		log.info(loginuserid + "下载文件" + uploadFile.getName());
 		return "downloadSUCCESS";
 	}
 
@@ -231,6 +256,7 @@ public class FileAction extends ActionSupport implements
 	public String edit() {
 		UploadFileService uploadFileService = new UploadFileService();
 		uploadFileService.edit(uploadFile);
+		log.info(loginuserid + "修改文件" + uploadFile.getName());
 		return "editSUCCESS";
 	}
 
@@ -248,6 +274,7 @@ public class FileAction extends ActionSupport implements
 			file.delete();
 		}
 		uploadFileService.delete(uploadFile.getId());
+		log.info(loginuserid + "删除文件" + uploadFile.getName());
 		return "deleteSUCCESS";
 	}
 

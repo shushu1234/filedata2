@@ -10,7 +10,7 @@ import com.opensymphony.xwork2.ModelDriven;
 import com.shushu.domain.Kind;
 import com.shushu.domain.User;
 import com.shushu.service.KindService;
-import com.shushu.utils.ListUitls;
+import com.shushu.utils.ListUtils;
 
 public class KindAction extends ActionSupport implements ModelDriven<Kind> {
 	private Kind kind = new Kind();
@@ -121,7 +121,7 @@ public class KindAction extends ActionSupport implements ModelDriven<Kind> {
 	public String leaflist() {
 		KindService kindService = new KindService();
 		leaflist = kindService.leaflist();
-		leaflist = new ListUitls().removedRepeat(leaflist);
+		leaflist = new ListUtils().removedRepeat(leaflist);
 		return "leaflistSUCCESS";
 	}
 

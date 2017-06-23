@@ -11,6 +11,24 @@ public class User {
 	private String defunct; // 删除标志 Y-删除 N-未删除
 	private String avatarpath;// 头像UUID
 	private int kindid;// 类别的父id
+	private int state;// 激活状态 1-未激活 2-激活
+	private String activecode;// 激活码
+
+	public int getState() {
+		return state;
+	}
+
+	public void setState(int state) {
+		this.state = state;
+	}
+
+	public String getActivecode() {
+		return activecode;
+	}
+
+	public void setActivecode(String activecode) {
+		this.activecode = activecode;
+	}
 
 	public int getKindid() {
 		return kindid;
@@ -97,7 +115,8 @@ public class User {
 		return "User [id=" + id + ", name=" + name + ", pwd=" + pwd
 				+ ", gender=" + gender + ", tel=" + tel + ", email=" + email
 				+ ", role=" + role + ", defunct=" + defunct + ", avatarpath="
-				+ avatarpath + ", kindid=" + kindid + "]";
+				+ avatarpath + ", kindid=" + kindid + ", state=" + state
+				+ ", activecode=" + activecode + "]";
 	}
 
 }

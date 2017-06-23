@@ -547,6 +547,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												</div>
 											</div>
 											<div id="w4-confirm" class="tab-pane">
+
+												<div class="form-group">
+													<label class="col-md-3 control-label">文件所属</label>
+													<div class="col-md-9">
+														<div class="radio-custom radio-inline">
+															<input type="radio" id="inline-radio1" name="privatefile" value="1" checked="checked">
+															<label for="inline-radio1"> 公开文件</label>
+														</div>
+														<div class="radio-custom radio-inline">
+															<input type="radio" id="inline-radio2" name="privatefile" value="2">
+															<label for="inline-radio2"> 个人文件</label>
+														</div>
+													</div>
+												</div>
+
+
 												<div class="form-group">
 													<label class="col-md-3 control-label" for="textarea-input">文件备注</label>
 													<div class="col-md-9">

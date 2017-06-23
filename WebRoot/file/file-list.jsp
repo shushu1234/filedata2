@@ -513,13 +513,16 @@
                         <s:textfield id="name" name="name" cssClass="form-control" placeholder="请输入文件名称"></s:textfield>
                     </div>
                 </div>
+                <s:if test="%{#session.loginUser.role==1 }">
                 <div class="form-group col-md-4">
-                    <label class="col-md-3 control-label" for="name">用户id</label>
+                    <label class="col-md-3 control-label" for="userid">用户id</label>
                     <div class="col-md-9">
                         <s:textfield id="userid" name="userid" cssClass="form-control"
                                      placeholder="请输入上传用户id"></s:textfield>
                     </div>
                 </div>
+               
+                
                 <div class="form-group col-md-4">
                     <label class="col-md-3 control-label" for="open">状态</label>
                     <div class="col-md-9">
@@ -531,6 +534,7 @@
                     </select>
                     </div>
                 </div>
+                 </s:if>
                 <div class="form-group col-md-4">
                     <label class="col-md-3 control-label" for="kindid">类别</label>
                     <div class="col-md-9" id="kindlist">
@@ -614,20 +618,22 @@
                                                 <s:param name="id" value="id"></s:param>
                                                 <i class="fa fa-search-plus "></i>
                                             </s:a>
-
+                                            <s:a cssClass="btn btn-primary" action="file_download" namespace="/">
+                                                <s:param name="id" value="id"></s:param>
+                                                <i class="fa fa-download "></i>
+                                            </s:a>
+                                            
+											<s:if test="%{#session.loginUser.id==userid}">
                                             <s:a cssClass="btn btn-info" action="file_editview" namespace="/">
                                                 <s:param name="id" value="id"></s:param>
                                                 <i class="fa fa-edit "></i>
                                             </s:a>
 
-                                            <s:a cssClass="btn btn-primary" action="file_download" namespace="/">
-                                                <s:param name="id" value="id"></s:param>
-                                                <i class="fa fa-download "></i>
-                                            </s:a>
                                             <s:a cssClass="btn btn-danger" action="file_delete" namespace="/">
                                                 <s:param name="id" value="id"></s:param>
                                                 <i class="fa fa-trash-o "></i>
                                             </s:a>
+                                            </s:if>
                                         </td>
                                     </tr>
                                 </s:iterator>
