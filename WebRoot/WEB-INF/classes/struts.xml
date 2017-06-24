@@ -41,13 +41,14 @@
             <result name="deleteSUCCESS" type="redirectAction">user_list</result>
             <result name="viewSUCCESS">/user/user-info.jsp</result>
             <result name="editviewSUCCESS">/user/user-edit.jsp</result>
-            <result name="editSUCCESS" type="redirectAction">user_list</result>
+            <result name="editSUCCESS" type="redirectAction">user_login</result>
             <result name="editINPUT">/user/user-edit.jsp</result>
             <result name="indexSUCCESS">/user/user-info.jsp</result>
             <result name="logoutSUCCESS">/user/user-login.jsp</result>
             <result name="activeSUCCESS">/user/user-login.jsp</result>
             <result name="recoverSUCCESS">/user/user-resetpwd.jsp</result>
             <result name="recoveremailSUCCESS">/user/user-resetemailok.jsp</result>
+            <result name="recoversendSUCCESS">/user/user-recover.jsp</result>
             <!-- 设置上传参数 -->
 			<interceptor-ref name="defaultStack">
 				<!-- 只允许上传 png和jpg文件 -->
@@ -75,6 +76,7 @@
 			<result name="editSUCCESS" type="redirectAction">file_list</result>
 			<result name="deleteSUCCESS" type="redirectAction">file_list</result>
 			<result name="detailSUCCESS">/file/file-detail.jsp</result>
+			<result name="uploadviewSUCCESS">/file/file-upload.jsp</result>
 			<interceptor-ref name="defaultStack">
 				<!-- 限制最大上传文件大小为20M -->
 				<param name="fileUpload.maximumSize">20971520</param>
@@ -89,17 +91,25 @@
     		<result name="detailSUCCESS">/kind/kind-detail.jsp</result>
     		<result name="updateviewSUCCESS">/kind/kind-edit.jsp</result>
     		<result name="updateSUCCESS" type="redirectAction">kind_list</result>
+    		<result name="addviewSUCCESS">/kind/kind-add.jsp</result>
     	</action>
     	
     	<!-- 信息操作 -->
     	<action name="message_*" class="com.shushu.web.action.MessageAction" method="{1}">
     		<result name="detailSUCCESS">/message/message-detail.jsp</result>
     		<result name="deleteSUCCESS">/message/message-inbox.jsp</result>
+    		<result name="listSUCCESS">/message/message-inbox.jsp</result>
+    		<result name="composeviewSUCCESS">/message/message-compose.jsp</result>
+    		<result name="sendviewSUCCESS">/message/message-send.jsp</result>
+    		<result name="deleteviewSUCCESS">/message/message-delete.jsp</result>
+    		<result name="inboxSUCCESS">/message/message-inbox.jsp</result>
     	</action>
     	<!-- 文章操作 -->
     	<action name="article_*" class="com.shushu.web.action.ArticleAction" method="{1}">
     		<result name="detailSUCCESS">/article/article-detail.jsp</result>
-    		<result name="deleteSUCCESS">/message/message-inbox.jsp</result>
+    		<result name="listSUCCESS">/article/article-list.jsp</result>
+    		<result name="editviewSUCCESS">/article/article-edit.jsp</result>
+    		<result name="myviewSUCCESS">/article/article-my.jsp</result>
     	</action>
     </package>
 

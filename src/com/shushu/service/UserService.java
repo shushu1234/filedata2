@@ -15,7 +15,7 @@ public class UserService {
 	 * @return
 	 */
 	public User login(User user) {
-		return userDao.checkLoginIdAndPwd(user);
+		return userDao.checkPwd(user);
 	}
 
 	public void regist(User user) {

@@ -12,7 +12,7 @@
     <!-- Basic -->
     <meta charset="UTF-8"/>
 
-    <title>文件资料管理系统</title>
+    <title>Fileware</title>
 
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -95,11 +95,11 @@
                                 <s:actionerror cssStyle="list-style:none;" cssClass="alert alert-danger"/>
                                 <div class="bk-padding-left-20 bk-padding-right-20">
                                     <div class="form-group">
-                                        <label>学/工 号</label>
+                                        <label>账号/邮箱 </label>
                                         <div class="input-group input-group-icon">
                                             <!-- <input type="text" class="form-control bk-radius" name="id" placeholder="请输入学号或工号"/> -->
-                                            <s:textfield name="id" cssClass="form-control bk-radius"
-                                                         placeholder="请输入学号或工号" id="id"></s:textfield>
+                                            <s:textfield name="info" cssClass="form-control bk-radius"
+                                                         placeholder="请输入账号或邮箱" id="info"></s:textfield>
                                             <span class="input-group-addon">
 														<span class="icon">
 															<i class="fa fa-user"></i>
@@ -108,11 +108,11 @@
                                         </div>
                                         <s:fielderror fieldName="id"
                                                       cssStyle="margin-top:5px;color: #ff0714;list-style: none;"></s:fielderror>
-                                        <div id="useridinfo" style="color: red;display: none;">该学/工号不存在,请检查或去注册</div>
-
+                                        <div id="useridinfo1" style="color: red;display: none;">该账号不存在,请检查或去注册</div>
+                                        <div id="useridinfo2" style="color: red;display: none;">该邮箱不存在,请检查或去注册</div>
                                     </div>
                                     <div class="form-group">
-                                        <label> 密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码 </label>
+                                        <label> 密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码 </label>
                                         <div class="input-group input-group-icon">
                                             <!-- 								<input type="password" class="form-control bk-radius" name="pwd" placeholder="请输入密码"/> -->
                                             <s:password name="pwd" cssClass="form-control bk-radius"
@@ -129,8 +129,8 @@
                                     <div class="row bk-margin-top-20 bk-margin-bottom-10">
                                         <div class="col-sm-8">
                                             <div class="checkbox-custom checkbox-default">
-                                                <input id="RememberMe" name="rememberme" type="checkbox"/>
-                                                <label for="RememberMe">记住该账户</label>
+                                                <%--<input id="RememberMe" name="rememberme" type="checkbox"/>--%>
+                                                <%--<label for="RememberMe">记住该账户</label>--%>
                                             </div>
                                         </div>
                                         <div class="col-sm-4 text-right">
@@ -181,18 +181,31 @@
 
 <!-- end: JavaScript-->
 <script type="text/javascript">
-    $("#id").blur(function () {
-        var userid = $("#id").val();
-// alert(userid);
-        $.post("${pageContext.request.contextPath}/ajax/checkid.action", {"userid": userid}, function (data) {
-            if (data.isExist == false) {
-                $("#useridinfo").show();
-            }
-        });
+    $("#info").blur(function () {
+        var userid = $("#info").val();
+        var test=userid.split(".")[1];
+        if(test=="com"){
+           // alert(1);
+            $.post("${pageContext.request.contextPath}/ajax/checkemail.action", {"useremail": userid}, function (data) {
+                if (data.isExist == false) {
+                    $("#useridinfo2").show();
+                }
+            });
+        }
+        else{
+            //alert(2);
+ //alert(userid);
+            $.post("${pageContext.request.contextPath}/ajax/checkid.action", {"userid": userid}, function (data) {
+                if (data.isExist == false) {
+                    $("#useridinfo1").show();
+                }
+            });
+        }
     })
 
     $("#id").keydown(function () {
-        $("#useridinfo").hide();
+        $("#useridinfo1").hide();
+        $("#useridinfo2").hide();
     })
 
 </script>

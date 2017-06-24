@@ -157,4 +157,26 @@ public class MessageAction extends ActionSupport implements
 		messageService.delete(message.getId(), userid);
 		return "deleteSUCCESS";
 	}
+
+	public String composeview() {
+		String receid = ServletActionContext.getRequest().getParameter("id");
+		ServletActionContext.getRequest().setAttribute("id", receid);
+		return "composeviewSUCCESS";
+	}
+
+	public String list() {
+		return "listSUCCESS";
+	}
+
+	public String sendview() {
+		return "sendviewSUCCESS";
+	}
+
+	public String deleteview() {
+		return "deleteviewSUCCESS";
+	}
+
+	public String inbox() {
+		return "inboxSUCCESS";
+	}
 }

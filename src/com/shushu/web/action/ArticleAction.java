@@ -95,4 +95,16 @@ public class ArticleAction extends ActionSupport implements
 		ServletActionContext.getRequest().setAttribute("content", content);
 		return "detailSUCCESS";
 	}
+
+	public String list() {
+		return "listSUCCESS";
+	}
+
+	public String editview() {
+		return "editviewSUCCESS";
+	}
+
+	public String myview() {
+		return "myviewSUCCESS";
+	}
 }

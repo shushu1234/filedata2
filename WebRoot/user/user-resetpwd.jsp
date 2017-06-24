@@ -8,7 +8,7 @@
     <!-- Basic -->
     <meta charset="UTF-8"/>
 
-    <title>用户注册</title>
+    <title>修改密码</title>
 
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>

@@ -87,6 +87,13 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 	@InputConfig(resultName = "loginINPUT")
 	public String login() {
 		// 登录数据在user中，传递业务层，查询
+		String info = ServletActionContext.getRequest().getParameter("info");
+		// System.out.println(info);
+		if (info.indexOf(".") != -1) {
+			user.setEmail(info);
+		} else {
+			user.setId(info);
+		}
 		User loginUser = userService.login(user);
 		// 判断是否登录成功
 		if (loginUser == null) {
@@ -95,6 +102,9 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 		} else if (loginUser.getState() == 1) {
 			// 登录失败
 			this.addActionError(this.getText("loginfail"));
+			return "loginINPUT";
+		} else if (loginUser.getDefunct().equals("Y")) {
+			this.addActionError(this.getText("userfail"));
 			return "loginINPUT";
 		} else {
 			// 登录成功
@@ -171,8 +181,15 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 	public String list() {
 		// 获得查询结果,放到值栈里面
 		// System.out.println(user.toString());
-		log.info(user.getId() + "查询用户");
-		users = userService.list(user);
+		User user1 = (User) ServletActionContext.getRequest().getSession()
+				.getAttribute("loginUser");
+		if (user1.getRole() == 0) {
+			user.setDefunct("N");
+			users = userService.list(user);
+		} else {
+			users = userService.list(user);
+		}
+		log.info(user1.getId() + "查询用户");
 		return "listSUCCESS";
 	}
 
@@ -225,6 +242,7 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 	 */
 	@InputConfig(resultName = "editINPUT")
 	public String edit() throws IOException {
+		user.setPwd(userService.findById(user.getId()).getPwd());
 		if (upload == null) {
 			// 用户没有上传新头像
 			// System.out.println("not " + user.toString());
@@ -326,5 +344,9 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 		userService.edit(user, false);
 		setadmin = true;
 		return "setadminSUCCESS";
+	}
+
+	public String recoversend() {
+		return "recoversendSUCCESS";
 	}
 }

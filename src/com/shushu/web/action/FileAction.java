@@ -318,4 +318,8 @@ public class FileAction extends ActionSupport implements
 		topfiles = uploadFileService.topfiles();
 		return "topfileSUCCESS";
 	}
+
+	public String uploadview() {
+		return "uploadviewSUCCESS";
+	}
 }

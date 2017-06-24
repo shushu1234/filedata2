@@ -8,7 +8,7 @@
 		<!-- Basic -->
     	<meta charset="UTF-8" />
 
-		<title>用户注册</title>
+		<title>个人信息修改</title>
 
 		<!-- Mobile Metas -->
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -129,9 +129,8 @@
 												</a>
 											</div>
 										</div>
-										<s:debug></s:debug>
 											<div class="form-group">
-												<label>学/工 号</label>
+												<label>账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</label>
  												<s:textfield name="id" cssClass="form-control" id="id" readonly="true"  > </s:textfield>
 												<s:fielderror fieldName="id" cssClass="fielderrors"></s:fielderror>
 											</div>
@@ -151,10 +150,10 @@
 											</div>
 											<div class="form-group">
 												<label>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱</label>
-												<s:textfield name="email" cssClass="form-control" value="%{model.email}" id="email"></s:textfield>
+												<s:textfield name="email" cssClass="form-control" value="%{model.email}" id="email" readonly="true"></s:textfield>
 												<s:fielderror fieldName="email" cssClass="fielderrors"></s:fielderror>
 											</div>
-											
+											<span style="color:red">修改成功后需重新登录系统:)</span>
 											<div class="row bk-margin-top-20 bk-margin-bottom-10">
 												<div class="col-sm-4 text-right">
 													<button type="button" class="btn btn-success hidden-xs" onclick="history.go(-1)" style="width:100%;"> 返 回 </button>

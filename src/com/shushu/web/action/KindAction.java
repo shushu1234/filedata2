@@ -135,4 +135,10 @@ public class KindAction extends ActionSupport implements ModelDriven<Kind> {
 		alllist = kindService.list(userkindid);
 		return "alllistSUCCESS";
 	}
+
+	public String addview() {
+		String testid = ServletActionContext.getRequest().getParameter("id");
+		ServletActionContext.getRequest().setAttribute("id", testid);
+		return "addviewSUCCESS";
+	}
 }

@@ -3,17 +3,7 @@
 <!DOCTYPE validators PUBLIC
         "-//Apache Struts//XWork Validator 1.0.3//EN"
         "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
-<validators>
-    <field name="id">
-        <field-validator type="requiredstring">
-            <message key="id.required"></message>
-        </field-validator>
-        <field-validator type="stringlength">
-            <param name="minLength">8</param>
-            <param name="maxLength">8</param>
-            <message key="id.length"></message>
-        </field-validator>
-    </field>
+<validators>    
     <field name="pwd">
         <field-validator type="requiredstring">
             <message key="pwd.required"></message>

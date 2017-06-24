@@ -164,6 +164,7 @@
                                       <s:textfield name="tel" cssClass="form-control" placeholder="请输入电话号码"
                                         id="tel"></s:textfield>
                                         <s:fielderror fieldName="tel" cssClass="fielderrors"></s:fielderror>
+                                        <span style="color: red;display: none;" id="telinfo">电话号码输入不正确</span>
                                     </div>
                                     <div class="form-group">
                                         <div class="row">
@@ -180,12 +181,13 @@
                                             </div>
                                         </div>
                                         <s:fielderror fieldName="pwd" cssClass="fielderrors"></s:fielderror>
+                                        <span style="color: red;display: none;" id="pwdinfo">两次密码不一致,请检查</span>
                                     </div>
                                     <div class="row bk-margin-top-20 bk-margin-bottom-10">
                                         <div class="col-sm-8">
                                             <div class="checkbox-custom checkbox-default">
-                                                <input id="AgreeTerms" name="agreeterms" type="checkbox"/>
-                                                <label for="AgreeTerms">我同意 <a href="#">用户协议</a></label>
+                                                <%--<input id="AgreeTerms" name="agreeterms" type="checkbox"/>--%>
+                                                <%--<label for="AgreeTerms">我同意 <a href="#">用户协议</a></label>--%>
                                             </div>
                                         </div>
                                         <div class="col-sm-4 text-right">
@@ -251,7 +253,7 @@
 
     $("#useremail").blur(function () {
         var useremail=$("#useremail").val();
-        alert(useremail);
+//        alert(useremail);
         $.post("${pageContext.request.contextPath}/ajax/checkemail.action",{"useremail":useremail},function (data) {
             if (data.isExist == true) {
                 $("#emailinfo").show();
@@ -262,6 +264,31 @@
      $("#useremail").keydown(function () {
          $("#emailinfo").hide();
      })
+    $("#tel").blur(function () {
+        var tel=$("#tel").val();
+        if (tel.length<11){
+            $("#telinfo").show();
+        }
+    })
+
+    $("#tel").keydown(function () {
+        $("#telinfo").hide();
+    })
+
+    $("#pwdConfirm").blur(function () {
+        var pwd=$("#pwd").val();
+        var pwdcon=$("#pwdConfirm").val();
+
+        if (pwd!=pwdcon){
+            $("#pwdinfo").show();
+        }
+    })
+    $("#pwd").keydown(function () {
+        $("#pwdinfo").hide();
+    })
+    $("#pwdConfirm").keydown(function () {
+        $("#pwdinfo").hide();
+    })
 </script>
 
 </body>

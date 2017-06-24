@@ -17,11 +17,21 @@ public class UserDao {
 	/**
 	 * 登录查询
 	 */
-	public User checkLoginIdAndPwd(User user) {
-		String sql = "select * from user where id = ? and pwd = ?";
+	public User checkPwd(User user) {
+		String sql;
+		Object[] param;
+		if (user.getEmail() == null) {
+			sql = "select * from user where id = ? and pwd = ?";
+			Object[] parmas = { user.getId(), user.getPwd() };
+			param = parmas;
+		} else {
+			sql = "select * from user where email = ? and pwd = ?";
+			Object[] parmas = { user.getEmail(), user.getPwd() };
+			param = parmas;
+		}
 		try {
 			User loginUser = queryRunner.query(sql, new BeanHandler<User>(
-					User.class), user.getId(), user.getPwd());
+					User.class), param);
 			return loginUser;
 		} catch (SQLException e) {
 			e.printStackTrace();
