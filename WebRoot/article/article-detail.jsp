@@ -379,7 +379,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				} )
             })
             $(function () {
-                setInterval(checkcomment,15000);
+                setInterval(checkcomment,10000);
 
                 function checkcomment() {
                     var fileid=$("#fileid").val();
@@ -389,6 +389,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						var div=$("#commentlist");
 						var str="";
 						div.find("div").remove();
+						alert(data);
 						var commentlist=data.commentlist;
 						$.each(commentlist,function (n,comment) {
 							str+="<div class=\"media\">\n" +

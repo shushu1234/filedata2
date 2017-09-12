@@ -444,7 +444,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     var kind=data.alllist;
                     if (kind.length==0){
                         alert("对不起，你暂时还未添加任何类别，请先添加类别再上传文件:)");
-                        window.location.href="${pageContext.request.contextPath}/kind_addview.action"; 	
+                        window.location.href="${pageContext.request.contextPath}/kind_addview.action";
 					}
                     $.each(kind,function (n,kind) {
                         if (kind.leaf==2){

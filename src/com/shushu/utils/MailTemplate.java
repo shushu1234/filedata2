@@ -167,7 +167,7 @@ public class MailTemplate {
 				+ "\n"
 				+ "                                                            <td borderspacing=\"0\" valign=\"middle\" height=\"38\" style=\"-webkit-text-size-adjust: none; background-color: #4ABA4F; font-size: 14px\">\n"
 				+ "                                                                <a class=\"action-btn-middle\" style=\"color: #ffffff; font-weight: 700; text-decoration: none; font-size: 14px !important; padding-top:10px; padding-bottom:10px\" href=\""
-				+ "http://localhost:8080/filedata2/user_active.action?code="
+				+ "http://47.94.254.242:8080/filedata2/user_active.action?code="
 				+ code
 				+ "\" target=\"_blank\">点击这里激活账号</a>\n"
 				+ "                                                            </td>\n"
@@ -381,7 +381,7 @@ public class MailTemplate {
 				+ "\n"
 				+ "                                                            <td borderspacing=\"0\" valign=\"middle\" height=\"38\" style=\"-webkit-text-size-adjust: none; background-color: #de2121; font-size: 14px\">\n"
 				+ "                                                                <a class=\"action-btn-middle\" style=\"color: #ffffff; font-weight: 700; text-decoration: none; font-size: 14px !important; padding-top:10px; padding-bottom:10px\" href=\""
-				+ "http://localhost:8080/filedata2/user_recover.action?id="
+				+ "http://47.94.254.242:8080/filedata2/user_recover.action?id="
 				+ id
 				+ "\" target=\"_blank\">点击这里重置密码</a>\n"
 				+ "                                                            </td>\n"

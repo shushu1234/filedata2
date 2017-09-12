@@ -342,7 +342,7 @@
 		<script type="text/javascript">
 
             $(function () {
-                setInterval(checkmessage,10000);
+                setInterval(checkmessage,2000);
 
                 function checkmessage() {
                     $.post("${pageContext.request.contextPath}/ajax/checknewmsg.action",function (data) {

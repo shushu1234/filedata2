@@ -125,8 +125,9 @@
                                 <h4> 用 户 注 册 </h4>
                             </div>
 
-                            <s:form cssClass="form-horizontal register" action="user_regist" method="post" namespace="/"
-                                    theme="simple" enctype="multipart/form-data">
+                            <s:form cssClass="form-horizontal register" action="user-regist" method="post" namespace="/"
+                                    theme="simple" enctype="multipart/form-data" name="regist-form">
+                                    <s:token></s:token>
                                 <s:actionerror cssStyle="list-style:none;" cssClass="alert alert-danger"/>
                                 <div class="bk-padding-left-20 bk-padding-right-20">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bk-vcenter text-center">
@@ -191,7 +192,7 @@
                                             </div>
                                         </div>
                                         <div class="col-sm-4 text-right">
-                                            <button type="submit" class="btn btn-primary hidden-xs"> 注 册</button>
+                                            <button type="submit" class="btn btn-primary hidden-xs"  > 注 册</button>
                                             <button type="submit"
                                                     class="btn btn-primary btn-block btn-lg visible-xs bk-margin-top-20">
                                                 注 册

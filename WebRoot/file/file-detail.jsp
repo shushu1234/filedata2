@@ -257,12 +257,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div class="page-header">
 						<div class="pull-left">
 							<ol class="breadcrumb visible-sm visible-md visible-lg">								
-								<li><a href="index.jsp"><i class="icon fa fa-home"></i>Home</a></li>
-								<li class="active"><i class="fa fa-life-bouy"></i>Widgets</li>
+								
 							</ol>						
 						</div>
 						<div class="pull-right">
-							<h2>Widgets</h2>
+							<h2>文件详情</h2>
 						</div>					
 					</div>
 					<!-- End Page Header -->
@@ -535,7 +534,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!-- end: JavaScript-->
 	<script type="text/javascript">
 		$(function () {
-            var ip_addr = document.location.hostname;
+            var ip_addr = "47.94.254.242";
 			$("#ip").text(ip_addr);
         })
 

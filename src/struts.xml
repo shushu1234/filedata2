@@ -31,6 +31,14 @@
 		</global-results>
     	
         <!--用户操作-->
+        <action name="user-*"  class="com.shushu.web.action.UserAction" method="{1}">
+        		<interceptor-ref name="defaultStack"></interceptor-ref>
+			 	<interceptor-ref name="token"></interceptor-ref> 
+        	 <result name="registINPUT">/user/user-regist.jsp</result>
+            <result name="registSUCCESS" type="redirect">/user/user-emailok.jsp</result>
+            <result name="invalid.token">/user/user-regist.jsp</result>
+        </action>
+        
         <action name="user_*" class="com.shushu.web.action.UserAction" method="{1}">
             <result name="loginINPUT" >/user/user-login.jsp</result>
            <!--  <result name="input" >/user/user-login.jsp</result> -->

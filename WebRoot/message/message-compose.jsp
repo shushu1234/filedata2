@@ -398,7 +398,7 @@
 				},function (data) {
                     if(data.addFlag){
                         alert("信息发送成功");
-                        window.location.href="${pageContext.request.contextPath}/message/message-inbox.jsp";
+                        window.location.href="${pageContext.request.contextPath}/message_inbox.action";
                     }else{
                         alert("信息发送失败");
                     }

@@ -12,7 +12,10 @@ import java.util.UUID;
 public class FileUtils {
 	// 写文件，支持中文字符，在linux redhad下测试过
 	public static String write(String str) {
-		String path = "/home/shushu/fileware/file/"
+		// String path =
+		// "/home/tomcat/apache-tomcat-8.5.8/webapps/filedata2/log/"
+		// + UUID.randomUUID().toString() + ".md";
+		String path = "/home/shushu/filedata2/log/"
 				+ UUID.randomUUID().toString() + ".md";
 		try {
 			File file = new File(path);

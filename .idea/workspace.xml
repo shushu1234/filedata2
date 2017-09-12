@@ -2,50 +2,81 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f15936a3-31f5-4de4-9675-5aa831ca3050" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebRoot/file/mail.html" afterPath="$PROJECT_DIR$/WebRoot/no/mail.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebRoot/user/user-detail.jsp" afterPath="$PROJECT_DIR$/WebRoot/no/user-detail.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WebRoot/user/user-token.jsp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/calendar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/chart-flot.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/chart-other.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/chart-xchart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/file-editors.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/file-list.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/file-upload2.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/form-dropzone.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/form-editors.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/form-elements.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/form-validation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/form-wizard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/form-x-editable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/gallery.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/icons-font-awesome.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/icons-glyphicons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/icons-weathericons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/mailbox-compose.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/mailbox-inbox.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/mailbox-message.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/map-basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/map-vector.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/page-404.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/page-500.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/page-activity.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/page-invoice.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/page-lockscreen1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/page-lockscreen2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/page-login.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/page-pricing-tables.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/page-profile.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/page-profile2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/page-profile3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/page-profile4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/page-recover-password.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/page-register.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/page-timeline.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/table-advanced.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/table-basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/table-editable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/table-responsive.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/typography.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/ui-animation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/ui-basic-elements.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/ui-buttons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/ui-carousels.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/ui-lightbox.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/ui-modals.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/ui-nestable-list.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/ui-notifications.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/ui-panels.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/ui-portlets.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/ui-progress-bars.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/ui-sliders.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/ui-tabs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/user-list.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebRoot/widgets.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/shushu/dao/UserDao.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/shushu/dao/UserDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/shushu/service/UserService.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/shushu/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/shushu/web/action/FileAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/shushu/web/action/FileAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/shushu/web/action/UserAction.class" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/shushu/web/action/UserAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/shushu/web/action/UserAction-user_login-validation.xml" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/shushu/web/action/UserAction-user_login-validation.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/c3p0-config.xml" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/c3p0-config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/log4j.properties" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/log4j.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/messages.properties" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/messages.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/struts.xml" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/article/article-detail.jsp" afterPath="$PROJECT_DIR$/WebRoot/article/article-detail.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/article/article-edit.jsp" afterPath="$PROJECT_DIR$/WebRoot/article/article-edit.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/article/article-list.jsp" afterPath="$PROJECT_DIR$/WebRoot/article/article-list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/article/article-my.jsp" afterPath="$PROJECT_DIR$/WebRoot/article/article-my.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/file/file-detail.jsp" afterPath="$PROJECT_DIR$/WebRoot/file/file-detail.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/file/file-edit.jsp" afterPath="$PROJECT_DIR$/WebRoot/file/file-edit.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/file/file-list.jsp" afterPath="$PROJECT_DIR$/WebRoot/file/file-list.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/file/file-upload.jsp" afterPath="$PROJECT_DIR$/WebRoot/file/file-upload.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/index.jsp" afterPath="$PROJECT_DIR$/WebRoot/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/kind/kind-add.jsp" afterPath="$PROJECT_DIR$/WebRoot/kind/kind-add.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/kind/kind-detail.jsp" afterPath="$PROJECT_DIR$/WebRoot/kind/kind-detail.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/kind/kind-edit.jsp" afterPath="$PROJECT_DIR$/WebRoot/kind/kind-edit.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/kind/kind-list.jsp" afterPath="$PROJECT_DIR$/WebRoot/kind/kind-list.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/message/message-compose.jsp" afterPath="$PROJECT_DIR$/WebRoot/message/message-compose.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/message/message-delete.jsp" afterPath="$PROJECT_DIR$/WebRoot/message/message-delete.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/message/message-detail.jsp" afterPath="$PROJECT_DIR$/WebRoot/message/message-detail.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/message/message-inbox.jsp" afterPath="$PROJECT_DIR$/WebRoot/message/message-inbox.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/message/message-send.jsp" afterPath="$PROJECT_DIR$/WebRoot/message/message-send.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/user/user-edit.jsp" afterPath="$PROJECT_DIR$/WebRoot/user/user-edit.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/user/user-info.jsp" afterPath="$PROJECT_DIR$/WebRoot/user/user-info.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/user/user-list.jsp" afterPath="$PROJECT_DIR$/WebRoot/user/user-list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/user/user-login.jsp" afterPath="$PROJECT_DIR$/WebRoot/user/user-login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/user/user-recover.jsp" afterPath="$PROJECT_DIR$/WebRoot/user/user-recover.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/user/user-regist.jsp" afterPath="$PROJECT_DIR$/WebRoot/user/user-regist.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/user/user-resetpwd.jsp" afterPath="$PROJECT_DIR$/WebRoot/user/user-resetpwd.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/c3p0-config.xml" afterPath="$PROJECT_DIR$/src/c3p0-config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shushu/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/com/shushu/dao/UserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shushu/service/UserService.java" afterPath="$PROJECT_DIR$/src/com/shushu/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shushu/web/action/ArticleAction.java" afterPath="$PROJECT_DIR$/src/com/shushu/web/action/ArticleAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shushu/web/action/FileAction.java" afterPath="$PROJECT_DIR$/src/com/shushu/web/action/FileAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shushu/web/action/KindAction.java" afterPath="$PROJECT_DIR$/src/com/shushu/web/action/KindAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shushu/web/action/MessageAction.java" afterPath="$PROJECT_DIR$/src/com/shushu/web/action/MessageAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shushu/web/action/UserAction-user_login-validation.xml" afterPath="$PROJECT_DIR$/src/com/shushu/web/action/UserAction-user_login-validation.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shushu/web/action/UserAction.java" afterPath="$PROJECT_DIR$/src/com/shushu/web/action/UserAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shushu/utils/FileUtils.java" afterPath="$PROJECT_DIR$/src/com/shushu/utils/FileUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/shushu/utils/MailTemplate.java" afterPath="$PROJECT_DIR$/src/com/shushu/utils/MailTemplate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/log4j.properties" afterPath="$PROJECT_DIR$/src/log4j.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/messages.properties" afterPath="$PROJECT_DIR$/src/messages.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/struts.xml" afterPath="$PROJECT_DIR$/src/struts.xml" />
     </list>
@@ -70,6 +101,7 @@
     <expand />
     <select />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="filedata2" />
   </component>
@@ -78,39 +110,41 @@
       <file leaf-file-name="article-list.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebRoot/article/article-list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="324" column="27" lean-forward="true" selection-start-line="324" selection-start-column="27" selection-end-line="324" selection-end-column="27" />
+            <state relative-caret-position="7776">
+              <caret line="324" column="27" lean-forward="false" selection-start-line="324" selection-start-column="27" selection-end-line="324" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="file-detail.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebRoot/file/file-detail.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="537" column="52" lean-forward="false" selection-start-line="537" selection-start-column="26" selection-end-line="537" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="file-upload.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="file-upload.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebRoot/file/file-upload.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="446" column="104" lean-forward="false" selection-start-line="446" selection-start-column="104" selection-end-line="446" selection-end-column="104" />
+            <state relative-caret-position="6096">
+              <caret line="254" column="30" lean-forward="false" selection-start-line="254" selection-start-column="30" selection-end-line="254" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="file-edit.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="file-edit.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebRoot/file/file-edit.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-210">
-              <caret line="133" column="20" lean-forward="false" selection-start-line="133" selection-start-column="20" selection-end-line="133" selection-end-column="20" />
+            <state relative-caret-position="24">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user-regist.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebRoot/user/user-regist.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <marker date="1498672282521" expanded="true" signature="13652:13659" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -118,18 +152,18 @@
       <file leaf-file-name="article-edit.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebRoot/article/article-edit.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
+            <state relative-caret-position="8592">
               <caret line="358" column="89" lean-forward="false" selection-start-line="358" selection-start-column="89" selection-end-line="358" selection-end-column="89" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user-emailok.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebRoot/user/user-emailok.jsp">
+      <file leaf-file-name="user-token.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebRoot/user/user-token.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-62">
-              <caret line="80" column="117" lean-forward="false" selection-start-line="80" selection-start-column="117" selection-end-line="80" selection-end-column="117" />
+            <state relative-caret-position="1752">
+              <caret line="73" column="8" lean-forward="false" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -138,18 +172,8 @@
       <file leaf-file-name="message-inbox.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebRoot/message/message-inbox.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="344" column="43" lean-forward="false" selection-start-line="344" selection-start-column="43" selection-end-line="344" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="message-detail.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebRoot/message/message-detail.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-773">
-              <caret line="259" column="36" lean-forward="false" selection-start-line="259" selection-start-column="36" selection-end-line="259" selection-end-column="36" />
+            <state relative-caret-position="8232">
+              <caret line="343" column="27" lean-forward="false" selection-start-line="343" selection-start-column="27" selection-end-line="343" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -158,7 +182,7 @@
       <file leaf-file-name="article-my.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebRoot/article/article-my.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1016">
+            <state relative-caret-position="6384">
               <caret line="266" column="46" lean-forward="false" selection-start-line="266" selection-start-column="46" selection-end-line="266" selection-end-column="46" />
               <folding />
             </state>
@@ -168,11 +192,11 @@
       <file leaf-file-name="article-detail.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebRoot/article/article-detail.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="381" column="43" lean-forward="false" selection-start-line="381" selection-start-column="43" selection-end-line="381" selection-end-column="43" />
+            <state relative-caret-position="9144">
+              <caret line="381" column="42" lean-forward="false" selection-start-line="381" selection-start-column="42" selection-end-line="381" selection-end-column="42" />
               <folding>
-                <marker date="1498287268686" expanded="true" signature="16665:17139" ph="..." />
-                <marker date="1498287268686" expanded="true" signature="16922:17139" ph="..." />
+                <marker date="1498665958991" expanded="true" signature="16664:17138" ph="..." />
+                <marker date="1498665958991" expanded="true" signature="16921:17138" ph="..." />
               </folding>
             </state>
           </provider>
@@ -189,7 +213,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>btn-dange</find>
       <find>btn-danger</find>
       <find>3 months ago.</find>
       <find>logout</find>
@@ -219,6 +242,7 @@
       <find>fileid</find>
       <find>../assets</find>
       <find>assets</find>
+      <find>submit</find>
     </findStrings>
     <replaceStrings>
       <replace>message-compose.html</replace>
@@ -266,11 +290,9 @@
         <option value="$PROJECT_DIR$/WebRoot/form-elements.html" />
         <option value="$PROJECT_DIR$/WebRoot/article/article-edit.html" />
         <option value="$PROJECT_DIR$/WebRoot/user/user-login.jsp" />
-        <option value="$PROJECT_DIR$/WebRoot/user/user-regist.jsp" />
         <option value="$PROJECT_DIR$/WebRoot/user/user-recover.jsp" />
         <option value="$PROJECT_DIR$/WebRoot/user/user-info.jsp" />
         <option value="$PROJECT_DIR$/WebRoot/file/file-list.jsp" />
-        <option value="$PROJECT_DIR$/WebRoot/file/file-edit.jsp" />
         <option value="$PROJECT_DIR$/WebRoot/message/message-compose.jsp" />
         <option value="$PROJECT_DIR$/WebRoot/message/message-delete.jsp" />
         <option value="$PROJECT_DIR$/WebRoot/message/message-detail.jsp" />
@@ -283,10 +305,13 @@
         <option value="$PROJECT_DIR$/WebRoot/kind/kind-list.jsp" />
         <option value="$PROJECT_DIR$/WebRoot/user/user-list.jsp" />
         <option value="$PROJECT_DIR$/WebRoot/article/article-edit.jsp" />
-        <option value="$PROJECT_DIR$/WebRoot/article/article-detail.jsp" />
         <option value="$PROJECT_DIR$/WebRoot/message/message-inbox.jsp" />
         <option value="$PROJECT_DIR$/WebRoot/file/file-detail.jsp" />
         <option value="$PROJECT_DIR$/WebRoot/file/file-upload.jsp" />
+        <option value="$PROJECT_DIR$/WebRoot/article/article-detail.jsp" />
+        <option value="$PROJECT_DIR$/WebRoot/user/user-regist.jsp" />
+        <option value="$PROJECT_DIR$/WebRoot/user/user-token.jsp" />
+        <option value="$PROJECT_DIR$/WebRoot/file/file-edit.jsp" />
       </list>
     </option>
   </component>
@@ -302,11 +327,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2618" />
-    <option name="y" value="-4" />
-    <option name="width" value="962" />
-    <option name="height" value="1078" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="308" />
+    <option name="y" value="216" />
+    <option name="width" value="1438" />
+    <option name="height" value="756" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -354,62 +379,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="filedata2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filedata2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filedata2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filedata2" type="462c0819:PsiDirectoryNode" />
-              <item name="WebRoot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filedata2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filedata2" type="462c0819:PsiDirectoryNode" />
-              <item name="WebRoot" type="462c0819:PsiDirectoryNode" />
-              <item name="article" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filedata2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filedata2" type="462c0819:PsiDirectoryNode" />
-              <item name="WebRoot" type="462c0819:PsiDirectoryNode" />
-              <item name="file" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filedata2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filedata2" type="462c0819:PsiDirectoryNode" />
-              <item name="WebRoot" type="462c0819:PsiDirectoryNode" />
-              <item name="kind" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filedata2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filedata2" type="462c0819:PsiDirectoryNode" />
-              <item name="WebRoot" type="462c0819:PsiDirectoryNode" />
-              <item name="message" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filedata2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filedata2" type="462c0819:PsiDirectoryNode" />
-              <item name="WebRoot" type="462c0819:PsiDirectoryNode" />
-              <item name="no" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="filedata2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="filedata2" type="462c0819:PsiDirectoryNode" />
-              <item name="WebRoot" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -424,17 +398,17 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/WebRoot/no" />
-      <recent name="$PROJECT_DIR$/WebRoot/article" />
-      <recent name="$PROJECT_DIR$/WebRoot/user" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/WebRoot/user/avatars" />
       <recent name="$PROJECT_DIR$/WebRoot/article" />
       <recent name="$PROJECT_DIR$/WebRoot" />
       <recent name="$PROJECT_DIR$/WebRoot/user" />
       <recent name="$PROJECT_DIR$/WebRoot/message" />
-      <recent name="$PROJECT_DIR$/WebRoot/assets/plugins/bootstrap-markdown/js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/WebRoot/user" />
+      <recent name="$PROJECT_DIR$/WebRoot/no" />
+      <recent name="$PROJECT_DIR$/WebRoot/article" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -450,13 +424,20 @@
     </option>
   </component>
   <component name="RunManager" selected="JavaScript Debug.mailbox-inbox.html">
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
+    <configuration default="false" name="page-timeline.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/filedata2/WebRoot/page-timeline.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="file-editors.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/filedata2/WebRoot/file-editors.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="mail.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/filedata2/WebRoot/file/mail.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="form-elements.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/filedata2/WebRoot/form-elements.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="mailbox-inbox.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/filedata2/WebRoot/mailbox-inbox.html">
+      <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
@@ -495,6 +476,15 @@
       <option name="filePath" />
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run" />
       <scripts />
@@ -515,11 +505,6 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration name="file-editors.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/filedata2/WebRoot/file-editors.html" />
-    <configuration name="form-elements.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/filedata2/WebRoot/form-elements.html" />
-    <configuration name="mail.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/filedata2/WebRoot/file/mail.html" />
-    <configuration name="mailbox-inbox.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/filedata2/WebRoot/mailbox-inbox.html" />
-    <configuration name="page-timeline.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/filedata2/WebRoot/page-timeline.html" />
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.page-timeline.html" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.file-editors.html" />
@@ -567,12 +552,15 @@
       <workItem from="1498118981667" duration="13706000" />
       <workItem from="1498187180821" duration="18927000" />
       <workItem from="1498237143670" duration="6954000" />
-      <workItem from="1498266772514" duration="18209000" />
+      <workItem from="1498266772514" duration="18808000" />
+      <workItem from="1498665845462" duration="1364000" />
+      <workItem from="1498671821023" duration="944000" />
+      <workItem from="1499237563649" duration="124000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168309000" />
+    <option name="totallyTimeSpent" value="171340000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -584,59 +572,44 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1919" y="-4" width="1922" height="1085" extended-state="6" />
-    <editor active="true" />
+    <frame x="308" y="216" width="1438" height="756" extended-state="0" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16295265" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16025642" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="processedProjectFiles" value="true" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/WebRoot/message/message-inbox.jsp</url>
-          <line>355</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/WebRoot/message/message-compose.jsp</url>
-          <line>263</line>
-          <properties />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
@@ -646,65 +619,15 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WebRoot/page-recover-password.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/user/user-emailok.html" />
-    <entry file="file://$PROJECT_DIR$/WebRoot/page-login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2600">
-          <caret line="104" column="48" lean-forward="false" selection-start-line="104" selection-start-column="48" selection-end-line="109" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/page-login.html" />
     <entry file="file://$PROJECT_DIR$/WebRoot/user/user-recover.html" />
-    <entry file="file://$PROJECT_DIR$/WebRoot/form-dropzone.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/file-upload2.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/table-responsive.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/form-elements.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="624" column="46" lean-forward="true" selection-start-line="624" selection-start-column="46" selection-end-line="624" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/ui-buttons.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/form-validation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="486" column="104" lean-forward="true" selection-start-line="486" selection-start-column="48" selection-end-line="486" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/form-dropzone.html" />
+    <entry file="file://$PROJECT_DIR$/WebRoot/file-upload2.jsp" />
+    <entry file="file://$PROJECT_DIR$/WebRoot/table-responsive.html" />
+    <entry file="file://$PROJECT_DIR$/WebRoot/form-elements.html" />
+    <entry file="file://$PROJECT_DIR$/WebRoot/ui-buttons.html" />
+    <entry file="file://$PROJECT_DIR$/WebRoot/form-validation.html" />
     <entry file="file://$PROJECT_DIR$/WebRoot/article/article-edit.html" />
     <entry file="file://$PROJECT_DIR$/WebRoot/assets/plugins/bootstrap-markdown/js/bootstrap-markdown.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -748,75 +671,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/chart-flot.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/page-activity.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12225">
-          <caret line="579" column="32" lean-forward="false" selection-start-line="504" selection-start-column="36" selection-end-line="579" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/form-editors.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="520" column="43" lean-forward="true" selection-start-line="520" selection-start-column="43" selection-end-line="520" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/mailbox-inbox.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13925">
-          <caret line="557" column="64" lean-forward="false" selection-start-line="557" selection-start-column="51" selection-end-line="557" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/widgets.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/form-x-editable.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8025">
-          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/file-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="3" column="10" lean-forward="true" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/no/mail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1399">
-          <caret line="400" column="51" lean-forward="true" selection-start-line="400" selection-start-column="51" selection-end-line="400" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/chart-flot.html" />
+    <entry file="file://$PROJECT_DIR$/WebRoot/page-activity.html" />
+    <entry file="file://$PROJECT_DIR$/WebRoot/form-editors.html" />
+    <entry file="file://$PROJECT_DIR$/WebRoot/mailbox-inbox.html" />
+    <entry file="file://$PROJECT_DIR$/WebRoot/widgets.html" />
+    <entry file="file://$PROJECT_DIR$/WebRoot/form-x-editable.html" />
+    <entry file="file://$PROJECT_DIR$/WebRoot/file-list.html" />
+    <entry file="file://$PROJECT_DIR$/WebRoot/no/mail.html" />
     <entry file="file://$PROJECT_DIR$/WebRoot/message/message-compose.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="498">
           <caret line="285" column="24" lean-forward="false" selection-start-line="285" selection-start-column="24" selection-end-line="285" selection-end-column="24" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -824,10 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
           <caret line="282" column="24" lean-forward="false" selection-start-line="282" selection-start-column="24" selection-end-line="282" selection-end-column="24" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -835,10 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="634">
           <caret line="245" column="36" lean-forward="false" selection-start-line="245" selection-start-column="36" selection-end-line="245" selection-end-column="36" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -846,7 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -854,26 +711,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="556">
           <caret line="146" column="49" lean-forward="true" selection-start-line="146" selection-start-column="49" selection-end-line="146" selection-end-column="107" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/user/user-resetpwd.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/user/user-resetpwd.jsp" />
     <entry file="file://$PROJECT_DIR$/WebRoot/kind/kind-add.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
           <caret line="259" column="36" lean-forward="false" selection-start-line="259" selection-start-column="36" selection-end-line="259" selection-end-column="36" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -881,10 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -892,7 +733,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="14" column="15" lean-forward="false" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -900,10 +740,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="634">
           <caret line="246" column="36" lean-forward="false" selection-start-line="246" selection-start-column="36" selection-end-line="246" selection-end-column="36" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -911,10 +747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -922,10 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="721">
           <caret line="303" column="23" lean-forward="true" selection-start-line="303" selection-start-column="23" selection-end-line="303" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#7;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1498284324157" expanded="false" signature="21050:21057" ph="×" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -933,113 +761,99 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
           <caret line="291" column="16" lean-forward="true" selection-start-line="291" selection-start-column="16" selection-end-line="291" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/user/user-recover.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="30" column="40" lean-forward="false" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/user/user-regist.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="274" column="29" lean-forward="false" selection-start-line="274" selection-start-column="29" selection-end-line="274" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/user/user-resetemailok.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/user/user-emailok.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-62">
-          <caret line="80" column="117" lean-forward="false" selection-start-line="80" selection-start-column="117" selection-end-line="80" selection-end-column="117" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/message/message-inbox.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="344" column="43" lean-forward="false" selection-start-line="344" selection-start-column="43" selection-end-line="344" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/user/user-recover.jsp" />
+    <entry file="file://$PROJECT_DIR$/WebRoot/user/user-resetemailok.jsp" />
     <entry file="file://$PROJECT_DIR$/WebRoot/message/message-detail.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-773">
+        <state relative-caret-position="6475">
           <caret line="259" column="36" lean-forward="false" selection-start-line="259" selection-start-column="36" selection-end-line="259" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/article/article-detail.jsp">
+    <entry file="file://$PROJECT_DIR$/WebRoot/file/file-detail.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="381" column="43" lean-forward="false" selection-start-line="381" selection-start-column="43" selection-end-line="381" selection-end-column="43" />
-          <folding>
-            <marker date="1498287268686" expanded="true" signature="16665:17139" ph="..." />
-            <marker date="1498287268686" expanded="true" signature="16922:17139" ph="..." />
-          </folding>
+        <state relative-caret-position="13400">
+          <caret line="536" column="41" lean-forward="false" selection-start-line="536" selection-start-column="41" selection-end-line="536" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/article/article-my.jsp">
+    <entry file="file://$PROJECT_DIR$/WebRoot/file/file-upload.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1016">
-          <caret line="266" column="46" lean-forward="false" selection-start-line="266" selection-start-column="46" selection-end-line="266" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/article/article-edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="358" column="89" lean-forward="false" selection-start-line="358" selection-start-column="89" selection-end-line="358" selection-end-column="89" />
+        <state relative-caret-position="6096">
+          <caret line="254" column="30" lean-forward="false" selection-start-line="254" selection-start-column="30" selection-end-line="254" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/article/article-list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="324" column="27" lean-forward="true" selection-start-line="324" selection-start-column="27" selection-end-line="324" selection-end-column="27" />
+        <state relative-caret-position="7776">
+          <caret line="324" column="27" lean-forward="false" selection-start-line="324" selection-start-column="27" selection-end-line="324" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/article/article-my.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6384">
+          <caret line="266" column="46" lean-forward="false" selection-start-line="266" selection-start-column="46" selection-end-line="266" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/message/message-inbox.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8232">
+          <caret line="343" column="27" lean-forward="false" selection-start-line="343" selection-start-column="27" selection-end-line="343" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/article/article-edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8592">
+          <caret line="358" column="89" lean-forward="false" selection-start-line="358" selection-start-column="89" selection-end-line="358" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/user/user-regist.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <marker date="1498672282521" expanded="true" signature="13652:13659" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/user/user-emailok.jsp" />
+    <entry file="file://$PROJECT_DIR$/WebRoot/user/user-token.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1752">
+          <caret line="73" column="8" lean-forward="false" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/article/article-detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9144">
+          <caret line="381" column="42" lean-forward="false" selection-start-line="381" selection-start-column="42" selection-end-line="381" selection-end-column="42" />
+          <folding>
+            <marker date="1498665958991" expanded="true" signature="16664:17138" ph="..." />
+            <marker date="1498665958991" expanded="true" signature="16921:17138" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebRoot/file/file-edit.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="133" column="20" lean-forward="false" selection-start-line="133" selection-start-column="20" selection-end-line="133" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/file/file-detail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="537" column="52" lean-forward="false" selection-start-line="537" selection-start-column="26" selection-end-line="537" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/file/file-upload.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="446" column="104" lean-forward="false" selection-start-line="446" selection-start-column="104" selection-end-line="446" selection-end-column="104" />
+        <state relative-caret-position="24">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>

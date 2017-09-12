@@ -127,8 +127,14 @@ public class UserDao {
 			Object[] params = { user.getName(), user.getGender(),
 					user.getTel(), user.getEmail(), user.getAvatarpath(),
 					user.getId() };
+			String sql1 = "update article set userpath = ? where userid = ?";
+			String sql2 = "update comment set avatarpath = ? where userid = ?";
+			String sql3 = "update message set senderpath = ? where sender = ?";
 			try {
 				queryRunner.update(sql, params);
+				queryRunner.update(sql1, user.getAvatarpath(), user.getId());
+				queryRunner.update(sql2, user.getAvatarpath(), user.getId());
+				queryRunner.update(sql3, user.getAvatarpath(), user.getId());
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
